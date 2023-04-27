@@ -1,5 +1,6 @@
-## Measure the detection performance - Kibok Lee
+# Measure the detection performance - Kibok Lee
 from __future__ import print_function
+import matplotlib.pyplot as plt
 import torch
 from torch.autograd import Variable
 import torch.nn as nn
@@ -14,18 +15,20 @@ from scipy import misc
 
 import matplotlib
 matplotlib.use('Agg')
-import matplotlib.pyplot as plt
 
-def get_curve(dir_name, stypes = ['Baseline', 'Gaussian_LDA']):
+
+def get_curve(dir_name, stypes=['Baseline', 'Gaussian_LDA']):
     tp, fp = dict(), dict()
     tnr_at_tpr95 = dict()
     for stype in stypes:
-        known = np.loadtxt('{}/confidence_{}_In.txt'.format(dir_name, stype), delimiter='\n')
-        novel = np.loadtxt('{}/confidence_{}_Out.txt'.format(dir_name, stype), delimiter='\n')
+        known = np.loadtxt(
+            '{}/confidence_{}_In.txt'.format(dir_name, stype), delimiter=' ')
+        novel = np.loadtxt(
+            '{}/confidence_{}_Out.txt'.format(dir_name, stype), delimiter=' ')
         known.sort()
         novel.sort()
         end = np.max([np.max(known), np.max(novel)])
-        start = np.min([np.min(known),np.min(novel)])
+        start = np.min([np.min(known), np.min(novel)])
         num_k = known.shape[0]
         num_n = novel.shape[0]
         tp[stype] = -np.ones([num_k+num_n+1], dtype=int)
@@ -54,7 +57,8 @@ def get_curve(dir_name, stypes = ['Baseline', 'Gaussian_LDA']):
         tnr_at_tpr95[stype] = 1. - fp[stype][tpr95_pos] / num_n
     return tp, fp, tnr_at_tpr95
 
-def metric(dir_name, stypes = ['Bas', 'Gau'], verbose=False):
+
+def metric(dir_name, stypes=['Bas', 'Gau'], verbose=False):
     tp, fp, tnr_at_tpr95 = get_curve(dir_name, stypes)
     results = dict()
     mtypes = ['TNR', 'AUROC', 'DTACC', 'AUIN', 'AUOUT']
@@ -63,18 +67,18 @@ def metric(dir_name, stypes = ['Bas', 'Gau'], verbose=False):
         for mtype in mtypes:
             print(' {mtype:6s}'.format(mtype=mtype), end='')
         print('')
-        
+
     for stype in stypes:
         if verbose:
             print('{stype:5s} '.format(stype=stype), end='')
         results[stype] = dict()
-        
+
         # TNR
         mtype = 'TNR'
         results[stype][mtype] = tnr_at_tpr95[stype]
         if verbose:
             print(' {val:6.3f}'.format(val=100.*results[stype][mtype]), end='')
-        
+
         # AUROC
         mtype = 'AUROC'
         tpr = np.concatenate([[1.], tp[stype]/tp[stype][0], [0.]])
@@ -82,13 +86,14 @@ def metric(dir_name, stypes = ['Bas', 'Gau'], verbose=False):
         results[stype][mtype] = -np.trapz(1.-fpr, tpr)
         if verbose:
             print(' {val:6.3f}'.format(val=100.*results[stype][mtype]), end='')
-        
+
         # DTACC
         mtype = 'DTACC'
-        results[stype][mtype] = .5 * (tp[stype]/tp[stype][0] + 1.-fp[stype]/fp[stype][0]).max()
+        results[stype][mtype] = .5 * \
+            (tp[stype]/tp[stype][0] + 1.-fp[stype]/fp[stype][0]).max()
         if verbose:
             print(' {val:6.3f}'.format(val=100.*results[stype][mtype]), end='')
-        
+
         # AUIN
         mtype = 'AUIN'
         denom = tp[stype]+fp[stype]
@@ -98,7 +103,7 @@ def metric(dir_name, stypes = ['Bas', 'Gau'], verbose=False):
         results[stype][mtype] = -np.trapz(pin[pin_ind], tpr[pin_ind])
         if verbose:
             print(' {val:6.3f}'.format(val=100.*results[stype][mtype]), end='')
-        
+
         # AUOUT
         mtype = 'AUOUT'
         denom = tp[stype][0]-tp[stype]+fp[stype][0]-fp[stype]
@@ -109,5 +114,5 @@ def metric(dir_name, stypes = ['Bas', 'Gau'], verbose=False):
         if verbose:
             print(' {val:6.3f}'.format(val=100.*results[stype][mtype]), end='')
             print('')
-    
+
     return results
