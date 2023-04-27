@@ -22,7 +22,7 @@ parser.add_argument('--batch_size', type=int, default=200,
 parser.add_argument('--dataset', required=True,
                     help='cifar10 | cifar100 | svhn')
 parser.add_argument('--dataroot', default='./data', help='path to dataset')
-parser.add_argument('--outf', default='./output/',
+parser.add_argument('--outf', default='output/',
                     help='folder to output results')
 parser.add_argument('--num_classes', type=int,
                     default=10, help='the # of classes')
