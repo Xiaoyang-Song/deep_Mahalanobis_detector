@@ -48,7 +48,8 @@ def main():
     if args.dataset == 'svhn':
         out_dist_list = ['cifar10', 'imagenet_resize', 'lsun_resize']
     else:
-        out_dist_list = ['svhn', 'imagenet_resize', 'lsun_resize']
+        # out_dist_list = ['svhn', 'imagenet_resize', 'lsun_resize']
+        out_dist_list = ['svhn']
 
     # load networks
     if args.net_type == 'densenet':
