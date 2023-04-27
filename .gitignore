@@ -1,8 +1,10 @@
 *.pyc
+
+.DS_Store
 lib/__pycache__
 data/*
 output/*
-pre_trained/*
+# pre_trained/*
 adv_output/*
 libs/__pycache__
 libs/transformations/__pycache__
