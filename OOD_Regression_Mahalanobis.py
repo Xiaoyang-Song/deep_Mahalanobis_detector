@@ -19,7 +19,8 @@ print(args)
 
 def main():
     # initial setup
-    dataset_list = ['cifar10']
+    # dataset_list = ['cifar10']
+    dataset_list = ['mnist23689']
     score_list = ['Mahalanobis_0.0', 'Mahalanobis_0.01', 'Mahalanobis_0.005',
                   'Mahalanobis_0.002', 'Mahalanobis_0.0014', 'Mahalanobis_0.001', 'Mahalanobis_0.0005']
 
@@ -31,6 +32,8 @@ def main():
         out_list = ['svhn']
         if dataset == 'svhn':
             out_list = ['cifar10', 'imagenet_resize', 'lsun_resize']
+        elif dataset == 'mnist23689':
+            out_list = ['mnist17']
 
         list_best_results_out, list_best_results_index_out = [], []
         for out in out_list:
