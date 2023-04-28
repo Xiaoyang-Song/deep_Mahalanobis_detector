@@ -47,9 +47,11 @@ def main():
         args.num_classes = 100
     if args.dataset == 'svhn':
         out_dist_list = ['cifar10', 'imagenet_resize', 'lsun_resize']
-    else:
+    elif args.dataset == 'cifar10':
         # out_dist_list = ['svhn', 'imagenet_resize', 'lsun_resize']
         out_dist_list = ['svhn']
+    elif args.dataset == 'mnist23689':
+        out_dist_list = ['mnist17']
 
     # load networks
     if args.net_type == 'densenet':
@@ -68,6 +70,12 @@ def main():
             pre_trained_net, map_location="cuda:" + str(args.gpu)))
         in_transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize(
             (0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)), ])
+    elif args.net_type == "dcd":
+        if args.dataset == 'mnist23689':
+            model = models.DC_D(5,  {'H': 28, 'W': 28, 'C': 1})
+            model.load_state_dict(torch.load(
+                pre_trained_net, map_location="cuda:" + str(args.gpu)))
+
     model.cuda()
     print('load model: ' + args.net_type)
 
