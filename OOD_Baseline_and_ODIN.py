@@ -59,6 +59,9 @@ def main():
     elif args.dataset == 'fm07':
         out_dist_list = ['fm89']
 
+    elif args.dataset == 'mnist':
+        out_dist_list = ['fm']
+
     elif args.dataset == 'svhn07':
         out_dist_list = ['svhn89']
 
@@ -97,6 +100,12 @@ def main():
                 (0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)), ])
         elif args.dataset == 'fm07':
             model = models.DC_D(8,  {'H': 28, 'W': 28, 'C': 1})
+            model.load_state_dict(torch.load(
+                pre_trained_net, map_location="cuda:" + str(args.gpu)))
+            in_transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize(
+                (0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)), ])
+        elif args.dataset == 'mnist':
+            model = models.DC_D(10,  {'H': 28, 'W': 28, 'C': 1})
             model.load_state_dict(torch.load(
                 pre_trained_net, map_location="cuda:" + str(args.gpu)))
             in_transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize(
