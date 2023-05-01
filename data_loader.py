@@ -103,6 +103,12 @@ def getTargetDataSet(data_type, batch_size, input_TF, dataroot):
         train_loader = dset.ind_train_loader
         test_loader = dset.ind_val_loader
 
+    elif data_type == 'fm07':
+        dset = DSET('FashionMNIST', True, batch_size,
+                    batch_size, [0, 1, 2, 3, 4, 5, 6, 7], [8, 9])
+        train_loader = dset.ind_train_loader
+        test_loader = dset.ind_val_loader
+
     elif data_type == 'svhn07':
         dset = DSET('SVHN', True, batch_size,
                     batch_size, [0, 1, 2, 3, 4, 5, 6, 7], [8, 9])
@@ -139,6 +145,11 @@ def getNonTargetDataSet(data_type, batch_size, input_TF, dataroot):
         test_loader = dset.ood_val_loader
     elif data_type == 'svhn89':
         dset = DSET('SVHN', True, batch_size,
+                    batch_size, [0, 1, 2, 3, 4, 5, 6, 7], [8, 9])
+        test_loader = dset.ood_val_loader
+
+    elif data_type == 'fm89':
+        dset = DSET('FashionMNIST', True, batch_size,
                     batch_size, [0, 1, 2, 3, 4, 5, 6, 7], [8, 9])
         test_loader = dset.ood_val_loader
     return test_loader
