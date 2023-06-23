@@ -104,6 +104,14 @@ def main():
                 pre_trained_net, map_location="cuda:" + str(args.gpu)))
             in_transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize(
                 (0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)), ])
+            
+        # CIFAR10-SVHN Between-Dataset Experiment
+        elif args.dataset == 'cifar10':
+            model = models.DenseNet3(100, num_channels=3, num_classes=10)
+            model.load_state_dict(torch.load(
+                pre_trained_net, map_location="cuda:" + str(args.gpu)))
+            in_transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize(
+                (0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)), ])
 
         else:
             model = torch.load(
@@ -117,20 +125,6 @@ def main():
             pre_trained_net, map_location="cuda:" + str(args.gpu)))
         in_transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize(
             (0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)), ])
-
-    elif args.net_type == "dcd":
-        if args.dataset == 'mnist23689':
-            model = models.DC_D(5,  {'H': 28, 'W': 28, 'C': 1})
-            model.load_state_dict(torch.load(
-                pre_trained_net, map_location="cuda:" + str(args.gpu)))
-            in_transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize(
-                (0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)), ])
-        elif args.dataset == 'mnist':
-            model = models.DC_D(10,  {'H': 28, 'W': 28, 'C': 1})
-            model.load_state_dict(torch.load(
-                pre_trained_net, map_location="cuda:" + str(args.gpu)))
-            in_transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize(
-                (0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)), ])
 
     model.cuda()
     print('load model: ' + args.net_type)

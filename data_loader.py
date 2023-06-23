@@ -88,32 +88,41 @@ def getCIFAR100(batch_size, TF, data_root='/tmp/public_dataset/pytorch', train=T
 
 
 def getTargetDataSet(data_type, batch_size, input_TF, dataroot):
+
+    # CIFAR10-SVHN Between-Dataset Experiment: InD
     if data_type == 'cifar10':
         train_loader, test_loader = getCIFAR10(
             batch_size=batch_size, TF=input_TF, data_root=dataroot, num_workers=1)
+        
     elif data_type == 'cifar100':
         train_loader, test_loader = getCIFAR100(
             batch_size=batch_size, TF=input_TF, data_root=dataroot, num_workers=1)
     elif data_type == 'svhn':
         train_loader, test_loader = getSVHN(
             batch_size=batch_size, TF=input_TF, data_root=dataroot, num_workers=1)
+        
+    # MNIST Within-Dataset Experiment: InD
     elif data_type == 'mnist23689':
         dset = DSET('MNIST', True, batch_size,
                     batch_size, [2, 3, 6, 8, 9], [1, 7])
         train_loader = dset.ind_train_loader
         test_loader = dset.ind_val_loader
 
+    # FashionMNIST Within-Dataset Experiment: InD
     elif data_type == 'fm07':
         dset = DSET('FashionMNIST', True, batch_size,
                     batch_size, [0, 1, 2, 3, 4, 5, 6, 7], [8, 9])
         train_loader = dset.ind_train_loader
         test_loader = dset.ind_val_loader
+
+    # MNIST-FashionMNIST Between-Dataset Experiment: InD
     elif data_type == 'mnist':
         dset = DSET('MNIST-FashionMNIST', False, batch_size,
                     batch_size, None, None)
         train_loader = dset.ind_train_loader
         test_loader = dset.ind_val_loader
 
+    # SVHN Within-Dataset Experiment: InD
     elif data_type == 'svhn07':
         dset = DSET('SVHN', True, batch_size,
                     batch_size, [0, 1, 2, 3, 4, 5, 6, 7], [8, 9])
@@ -124,6 +133,8 @@ def getTargetDataSet(data_type, batch_size, input_TF, dataroot):
 
 
 def getNonTargetDataSet(data_type, batch_size, input_TF, dataroot):
+
+    # CIFAR10-SVHN Between-Dataset Experiment: OoD
     if data_type == 'cifar10':
         _, test_loader = getCIFAR10(
             batch_size=batch_size, TF=input_TF, data_root=dataroot, num_workers=1)
@@ -144,20 +155,26 @@ def getNonTargetDataSet(data_type, batch_size, input_TF, dataroot):
         testsetout = datasets.ImageFolder(dataroot, transform=input_TF)
         test_loader = torch.utils.data.DataLoader(
             testsetout, batch_size=batch_size, shuffle=False, num_workers=1)
+        
+    # MNIST Within-Dataset Experiment: OoD 
     elif data_type == 'mnist17':
         dset = DSET('MNIST', True, batch_size,
                     batch_size, [2, 3, 6, 8, 9], [1, 7])
         test_loader = dset.ood_val_loader
+
+    # SVHN Within-Dataset Experiment: OoD
     elif data_type == 'svhn89':
         dset = DSET('SVHN', True, batch_size,
                     batch_size, [0, 1, 2, 3, 4, 5, 6, 7], [8, 9])
         test_loader = dset.ood_val_loader
 
+    # FashionMNIST Within-Dataset Experiment: OoD
     elif data_type == 'fm89':
         dset = DSET('FashionMNIST', True, batch_size,
                     batch_size, [0, 1, 2, 3, 4, 5, 6, 7], [8, 9])
         test_loader = dset.ood_val_loader
 
+    # MNIST-FashionMNIST Between-Dataset Experiment: OoD
     elif data_type == 'fm':
         dset = DSET('MNIST-FashionMNIST', False, batch_size,
                     batch_size, None, None)
