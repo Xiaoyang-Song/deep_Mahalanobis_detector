@@ -49,19 +49,23 @@ def main():
     if args.dataset == 'svhn':
         out_dist_list = ['cifar10', 'imagenet_resize', 'lsun_resize']
 
+    # CIFAR10-SVHN Between-Dataset Experiment
     elif args.dataset == 'cifar10':
-        # out_dist_list = ['svhn', 'imagenet_resize', 'lsun_resize']
         out_dist_list = ['svhn']
 
+    # MNIST Within-Dataset Experiment
     elif args.dataset == 'mnist23689':
         out_dist_list = ['mnist17']
 
+    # FashionMNIST Within-Dataset Experiment
     elif args.dataset == 'fm07':
         out_dist_list = ['fm89']
 
+    # MNIST-FashionMNIST Between-Dataset Experiment
     elif args.dataset == 'mnist':
         out_dist_list = ['fm']
 
+    # SVHN Within-Dataset Experiment
     elif args.dataset == 'svhn07':
         out_dist_list = ['svhn89']
 
