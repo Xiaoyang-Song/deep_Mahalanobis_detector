@@ -1,4 +1,4 @@
-from densenet import *
+from models.densenet import *
 from dataset import *
 from tqdm import tqdm
 import os
