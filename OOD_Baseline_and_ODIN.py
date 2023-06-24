@@ -90,8 +90,7 @@ def main():
             model = models.DenseNet3(100, num_channels=1, num_classes=8)
             model.load_state_dict(torch.load(
                 pre_trained_net, map_location="cuda:" + str(args.gpu)))
-            in_transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize(
-                (0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)), ])
+            in_transform = transforms.Compose([transforms.ToTensor()])
             
         # MNIST Within-Dataset Experiment
         elif args.dataset == 'mnist23689':
