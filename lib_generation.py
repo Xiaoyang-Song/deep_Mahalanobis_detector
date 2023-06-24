@@ -200,7 +200,7 @@ def get_Mahalanobis_score(model, test_loader, num_classes, outf, out_flag, net_t
 
     return Mahalanobis
 
-def get_posterior(model, net_type, test_loader, magnitude, temperature, outf, out_flag):
+def get_posterior(model, net_type, C, test_loader, magnitude, temperature, outf, out_flag):
     '''
     Compute the maximum value of (processed) posterior distribution - ODIN
     return: null
@@ -236,8 +236,9 @@ def get_posterior(model, net_type, test_loader, magnitude, temperature, outf, ou
         gradient = (gradient.float() - 0.5) * 2
         if net_type == 'densenet':
             gradient.index_copy_(1, torch.LongTensor([0]).cuda(), gradient.index_select(1, torch.LongTensor([0]).cuda()) / (63.0/255.0))
-            gradient.index_copy_(1, torch.LongTensor([1]).cuda(), gradient.index_select(1, torch.LongTensor([1]).cuda()) / (62.1/255.0))
-            gradient.index_copy_(1, torch.LongTensor([2]).cuda(), gradient.index_select(1, torch.LongTensor([2]).cuda()) / (66.7/255.0))
+            if C == 3:
+                gradient.index_copy_(1, torch.LongTensor([1]).cuda(), gradient.index_select(1, torch.LongTensor([1]).cuda()) / (62.1/255.0))
+                gradient.index_copy_(1, torch.LongTensor([2]).cuda(), gradient.index_select(1, torch.LongTensor([2]).cuda()) / (66.7/255.0))
         elif net_type == 'resnet':
             gradient.index_copy_(1, torch.LongTensor([0]).cuda(), gradient.index_select(1, torch.LongTensor([0]).cuda()) / (0.2023))
             gradient.index_copy_(1, torch.LongTensor([1]).cuda(), gradient.index_select(1, torch.LongTensor([1]).cuda()) / (0.1994))

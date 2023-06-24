@@ -151,7 +151,7 @@ def main():
             magnitude = m
             temperature = T
             lib_generation.get_posterior(
-                model, args.net_type, test_loader, magnitude, temperature, args.outf, True)
+                model, args.net_type, 1, test_loader, magnitude, temperature, args.outf, True)
             out_count = 0
             print('Temperature: ' + str(temperature) +
                   ' / noise: ' + str(magnitude))
