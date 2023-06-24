@@ -48,7 +48,7 @@ dset = DSET("FashionMNIST", True, 50, 64, [0, 1, 2, 3, 4, 5, 6, 7], [8, 9])
 
 ind_tri_loader = dset.ind_train_loader
 ind_val_loader = dset.ind_val_loader
-max_epoch = 16
+max_epoch = 64
 
 
 criterion = nn.CrossEntropyLoss()
