@@ -160,7 +160,7 @@ def main():
                     out_dist, args.batch_size, in_transform, args.dataroot)
                 print('Out-distribution: ' + out_dist)
                 lib_generation.get_posterior(
-                    model, args.net_type, out_test_loader, magnitude, temperature, args.outf, False)
+                    model, args.net_type, 1, out_test_loader, magnitude, temperature, args.outf, False)
                 if temperature == 1 and magnitude == 0:
                     test_results = callog.metric(args.outf, ['PoT'])
                     base_line_list.append(test_results)
