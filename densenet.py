@@ -67,7 +67,7 @@ class DenseBlock(nn.Module):
 
 class DenseNet3(nn.Module):
     def __init__(self, depth, num_classes, growth_rate=12,
-                 reduction=0.5, bottleneck=True, dropRate=0.0):
+                 reduction=0.5, bottleneck=True, dropRate=0.0, input_channel=1):
         super(DenseNet3, self).__init__()
         in_planes = 2 * growth_rate
         n = (depth - 4) / 3
@@ -77,7 +77,7 @@ class DenseNet3(nn.Module):
         else:
             block = BasicBlock
         # 1st conv before any dense block
-        self.conv1 = nn.Conv2d(3, in_planes, kernel_size=3, stride=1,
+        self.conv1 = nn.Conv2d(input_channel, in_planes, kernel_size=3, stride=1,
                                padding=1, bias=False)
         # 1st block
         self.block1 = DenseBlock(n, in_planes, growth_rate, block, dropRate)
