@@ -188,7 +188,7 @@ def main():
             print('Out-distribution: ' + out_dist)
             for i in range(num_output):
                 M_out = lib_generation.get_Mahalanobis_score(model, out_test_loader, args.num_classes, args.outf,
-                                                             False, args.net_type, sample_mean, precision, i, magnitude)
+                                                             False, args.net_type, sample_mean, precision, i, magnitude, C=C)
                 M_out = np.asarray(M_out, dtype=np.float32)
                 if i == 0:
                     Mahalanobis_out = M_out.reshape((M_out.shape[0], -1))
