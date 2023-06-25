@@ -3,6 +3,7 @@ from __future__ import print_function
 import numpy as np
 import os
 import calculate_log as callog
+from collections import Counter
 
 from scipy.spatial.distance import pdist, cdist, squareform
 
@@ -17,7 +18,9 @@ def block_split(X, Y, out):
         partition = 26032
     else:
         partition = 10000
+    print(Counter(Y))
     X_adv, Y_adv = X[:partition], Y[:partition]
+    print(Counter(Y_adv))
     X_norm, Y_norm = X[partition: :], Y[partition: :]
     num_train = 1000
 
