@@ -2,6 +2,7 @@ import math
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+from icecream import ic
 
 
 class BasicBlock(nn.Module):
@@ -146,9 +147,9 @@ class DenseNet3(nn.Module):
         out = self.block3(out)
         out = self.relu(self.bn1(out))
         out_list.append(out)
-        out = F.avg_pool2d(out, 7)
+        out = F.avg_pool2d(out, 8)
         out = out.view(-1, self.in_planes)
-
+        ic(out_list)
         return self.fc(out), out_list
 
     def intermediate_forward(self, x, layer_index):
