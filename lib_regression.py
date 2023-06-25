@@ -22,13 +22,16 @@ def block_split(X, Y, out):
     X_adv, Y_adv = X[:partition], Y[:partition]
     print(Counter(Y_adv))
     X_norm, Y_norm = X[partition: :], Y[partition: :]
+    print(Counter(Y_norm))
     num_train = 1000
 
     X_train = np.concatenate((X_norm[:num_train], X_adv[:num_train]))
     Y_train = np.concatenate((Y_norm[:num_train], Y_adv[:num_train]))
+    print(Counter(Y_train))
 
     X_test = np.concatenate((X_norm[num_train:], X_adv[num_train:]))
     Y_test = np.concatenate((Y_norm[num_train:], Y_adv[num_train:]))
+    print(Counter(Y_test))
 
     return X_train, Y_train, X_test, Y_test
 
