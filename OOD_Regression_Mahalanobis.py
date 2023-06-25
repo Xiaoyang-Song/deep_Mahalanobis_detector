@@ -21,7 +21,8 @@ def main():
     # initial setup
     # dataset_list = ['cifar10']
     # dataset_list = ['mnist23689']
-    dataset_list = ['fm07']
+    # dataset_list = ['fm07']
+    dataset_list = ['svhn07']
     score_list = ['Mahalanobis_0.0', 'Mahalanobis_0.01', 'Mahalanobis_0.005',
                   'Mahalanobis_0.002', 'Mahalanobis_0.0014', 'Mahalanobis_0.001', 'Mahalanobis_0.0005']
 
