@@ -151,7 +151,7 @@ def main():
     # set information about feature extaction
     model.eval()
     if C == 1:
-        temp_x = torch.rand(2, 1, 28, 28)
+        temp_x = torch.rand(2, 1, 28, 28).cuda()
     else:
         temp_x = torch.rand(2, C, 32, 32).cuda()
     temp_x = Variable(temp_x)
