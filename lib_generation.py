@@ -101,7 +101,7 @@ def sample_estimator(model, num_classes, feature_list, train_loader):
     for num_feature in feature_list:
         temp_list = torch.Tensor(num_classes, int(num_feature)).cuda()
         for j in range(num_classes):
-            ic(list_features[out_count][j])
+            # ic(list_features[out_count][j])
             temp_list[j] = torch.mean(list_features[out_count][j], 0)
         sample_class_mean.append(temp_list)
         out_count += 1
