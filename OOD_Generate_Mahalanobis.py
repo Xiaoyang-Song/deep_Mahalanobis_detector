@@ -33,6 +33,7 @@ print(args)
 
 
 def main():
+    C = 3
     # set the path to pre-trained model and output
     pre_trained_net = './pre_trained/' + args.net_type + '_' + args.dataset + '.pth'
     args.outf = args.outf + args.net_type + '_' + args.dataset + '/'
@@ -54,14 +55,17 @@ def main():
     # MNIST Within-Dataset Experiment
     elif args.dataset == 'mnist23689':
         out_dist_list = ['mnist17']
+        C = 1
 
     # FashionMNIST Within-Dataset Experiment
     elif args.dataset == 'fm07':
         out_dist_list = ['fm89']
+        C = 1
 
     # MNIST-FashionMNIST Between-Dataset Experiment
     elif args.dataset == 'mnist':
         out_dist_list = ['fm']
+        C = 1
 
     # SVHN Within-Dataset Experiment
     elif args.dataset == 'svhn07':
@@ -146,7 +150,7 @@ def main():
 
     # set information about feature extaction
     model.eval()
-    temp_x = torch.rand(2, 3, 32, 32).cuda()
+    temp_x = torch.rand(2, C, 32, 32).cuda()
     temp_x = Variable(temp_x)
     temp_list = model.feature_list(temp_x)[1]
     num_output = len(temp_list)
@@ -167,7 +171,7 @@ def main():
         for i in range(num_output):
             M_in = lib_generation.get_Mahalanobis_score(model, test_loader, args.num_classes, args.outf,
                                                         True, args.net_type, sample_mean, precision, i,
-                                                        magnitude, C=1)
+                                                        magnitude, C=C)
             M_in = np.asarray(M_in, dtype=np.float32)
             if i == 0:
                 Mahalanobis_in = M_in.reshape((M_in.shape[0], -1))
