@@ -173,7 +173,7 @@ class DenseNet3(nn.Module):
         out = self.trans2(self.block2(out))
         out = self.block3(out)
         penultimate = self.relu(self.bn1(out))
-        out = F.avg_pool2d(penultimate, 8)
+        out = F.avg_pool2d(penultimate, 7)
         out = out.view(-1, self.in_planes)
         return self.fc(out), penultimate
     
