@@ -149,7 +149,7 @@ class DenseNet3(nn.Module):
         out_list.append(out)
         out = F.avg_pool2d(out, 7)
         out = out.view(-1, self.in_planes)
-        ic(out_list)
+        # ic(out_list)
         return self.fc(out), out_list
 
     def intermediate_forward(self, x, layer_index):
@@ -176,3 +176,24 @@ class DenseNet3(nn.Module):
         out = F.avg_pool2d(penultimate, 8)
         out = out.view(-1, self.in_planes)
         return self.fc(out), penultimate
+    
+
+if __name__ == '__main__':
+    model = DenseNet3(100, 10, 1)
+    input = torch.ones((1, 1, 28, 28))
+    out = model(input)
+    print(out.shape)
+    feat, out_lst = model.feature_list(input)
+    print(feat.shape)
+    for out in out_lst:
+        print(out.shape)
+
+    # 3-channel
+    model = DenseNet3(100, 10, 3)
+    input = torch.ones((1, 3, 32, 32))
+    out = model(input)
+    print(out.shape)
+    feat, out_lst = model.feature_list(input)
+    print(feat.shape)
+    for out in out_lst:
+        print(out.shape)

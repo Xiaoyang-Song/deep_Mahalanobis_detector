@@ -150,7 +150,10 @@ def main():
 
     # set information about feature extaction
     model.eval()
-    temp_x = torch.rand(2, C, 32, 32).cuda()
+    if C == 1:
+        temp_x = torch.rand(2, 1, 28, 28)
+    else:
+        temp_x = torch.rand(2, C, 32, 32).cuda()
     temp_x = Variable(temp_x)
     temp_list = model.feature_list(temp_x)[1]
     num_output = len(temp_list)
