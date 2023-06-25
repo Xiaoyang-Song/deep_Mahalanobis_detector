@@ -20,7 +20,8 @@ print(args)
 def main():
     # initial setup
     # dataset_list = ['cifar10']
-    dataset_list = ['mnist23689']
+    # dataset_list = ['mnist23689']
+    dataset_list = ['fm07']
     score_list = ['Mahalanobis_0.0', 'Mahalanobis_0.01', 'Mahalanobis_0.005',
                   'Mahalanobis_0.002', 'Mahalanobis_0.0014', 'Mahalanobis_0.001', 'Mahalanobis_0.0005']
 
@@ -32,8 +33,18 @@ def main():
         out_list = ['svhn']
         if dataset == 'svhn':
             out_list = ['cifar10', 'imagenet_resize', 'lsun_resize']
+        # MNIST Within-Dataset Experiment
         elif dataset == 'mnist23689':
             out_list = ['mnist17']
+        # FashionMNIST Within-Dataset Experiment
+        elif dataset == 'fm07':
+            out_list = ['fm89']
+        # MNIST-FashionMNIST Between-Dataset Experiment
+        elif dataset == 'mnist':
+            out_list = ['fm']
+        # SVHN Within-Dataset Experiment
+        elif dataset == 'svhn07':
+            out_list = ['svhn89']
 
         list_best_results_out, list_best_results_index_out = [], []
         for out in out_list:
@@ -76,6 +87,19 @@ def main():
         out_list = ['svhn', 'imagenet_resize', 'lsun_resize']
         if dataset_list[count_in] == 'svhn':
             out_list = ['cifar10', 'imagenet_resize', 'lsun_resize']
+        # MNIST Within-Dataset Experiment
+        elif dataset_list[count_in] == 'mnist23689':
+            out_list = ['mnist17']
+        # FashionMNIST Within-Dataset Experiment
+        elif dataset_list[count_in] == 'fm07':
+            out_list = ['fm89']
+        # MNIST-FashionMNIST Between-Dataset Experiment
+        elif dataset_list[count_in] == 'mnist':
+            out_list = ['fm']
+        # SVHN Within-Dataset Experiment
+        elif dataset_list[count_in] == 'svhn07':
+            out_list = ['svhn89']
+            
         count_out = 0
         for results in in_list:
             print('out_distribution: ' + out_list[count_out])

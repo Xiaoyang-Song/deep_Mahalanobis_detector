@@ -43,24 +43,83 @@ def main():
     # check the in-distribution dataset
     if args.dataset == 'cifar100':
         args.num_classes = 100
+
     if args.dataset == 'svhn':
         out_dist_list = ['cifar10', 'imagenet_resize', 'lsun_resize']
-    elif args.dataset == 'mnist23689':
-        out_dist_list = ['mnist17']
-    else:
+
+    # CIFAR10-SVHN Between-Dataset Experiment
+    elif args.dataset == 'cifar10':
         out_dist_list = ['svhn']
 
+    # MNIST Within-Dataset Experiment
+    elif args.dataset == 'mnist23689':
+        out_dist_list = ['mnist17']
+
+    # FashionMNIST Within-Dataset Experiment
+    elif args.dataset == 'fm07':
+        out_dist_list = ['fm89']
+
+    # MNIST-FashionMNIST Between-Dataset Experiment
+    elif args.dataset == 'mnist':
+        out_dist_list = ['fm']
+
+    # SVHN Within-Dataset Experiment
+    elif args.dataset == 'svhn07':
+        out_dist_list = ['svhn89']
+
     # load networks
+    # This part is customized
     if args.net_type == 'densenet':
+
+        # Useless
         if args.dataset == 'svhn':
             model = models.DenseNet3(100, int(args.num_classes))
             model.load_state_dict(torch.load(
                 pre_trained_net, map_location="cuda:" + str(args.gpu)))
+            
+        # SVHN Within-Dataset Experiment
+        elif args.dataset == 'svhn07':
+            model = models.DenseNet3(100, num_channels=3, num_classes=8)
+            model.load_state_dict(torch.load(
+                pre_trained_net, map_location="cuda:" + str(args.gpu)))
+
+        # FashionMNIST Within-Dataset Experiment
+        elif args.dataset == 'fm07':
+            model = models.DenseNet3(100, num_channels=1, num_classes=8)
+            model.load_state_dict(torch.load(
+                pre_trained_net, map_location="cuda:" + str(args.gpu)))
+            in_transform = transforms.Compose([transforms.ToTensor()])
+            
+        # MNIST Within-Dataset Experiment
+        elif args.dataset == 'mnist23689':
+            model = models.DenseNet3(100, num_channels=1, num_classes=5)
+            model.load_state_dict(torch.load(
+                pre_trained_net, map_location="cuda:" + str(args.gpu)))
+            in_transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize(
+                (0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)), ])
+
+        # MNIST-FashionMNIST Between-Dataset Experiment
+        elif args.dataset == 'mnist':
+            model = models.DenseNet3(100, num_channels=1, num_classes=10)
+            model.load_state_dict(torch.load(
+                pre_trained_net, map_location="cuda:" + str(args.gpu)))
+            in_transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize(
+                (0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)), ])
+            
+        # CIFAR10-SVHN Between-Dataset Experiment
+        elif args.dataset == 'cifar10':
+            model = models.DenseNet3(100, num_channels=3, num_classes=10)
+            model.load_state_dict(torch.load(
+                pre_trained_net, map_location="cuda:" + str(args.gpu)))
+            in_transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize(
+                (0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)), ])
+
         else:
             model = torch.load(
                 pre_trained_net, map_location="cuda:" + str(args.gpu))
         in_transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize(
             (125.3/255, 123.0/255, 113.9/255), (63.0/255, 62.1/255.0, 66.7/255.0)), ])
+
 
     elif args.net_type == 'resnet':
         model = models.ResNet34(num_c=args.num_classes)
@@ -107,7 +166,8 @@ def main():
         print('Noise: ' + str(magnitude))
         for i in range(num_output):
             M_in = lib_generation.get_Mahalanobis_score(model, test_loader, args.num_classes, args.outf,
-                                                        True, args.net_type, sample_mean, precision, i, magnitude)
+                                                        True, args.net_type, sample_mean, precision, i,
+                                                        magnitude, C=1)
             M_in = np.asarray(M_in, dtype=np.float32)
             if i == 0:
                 Mahalanobis_in = M_in.reshape((M_in.shape[0], -1))
