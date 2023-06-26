@@ -197,7 +197,8 @@ def main():
         print('out_distribution: ' + out_dist_list[count_out])
         for mtype in mtypes:
             print(' {mtype:6s}'.format(mtype=mtype), end='')
-        print('\n{val:6.2f}'.format(val=100.*results['PoT']['TNR']), end='')
+        print('\n{val:6.2f}'.format(val=100.*results['PoT']['TNR95']), end='')
+        print(' {val:6.2f}'.format(val=100.*results['PoT']['TNR99']), end='')
         print(' {val:6.2f}'.format(val=100.*results['PoT']['AUROC']), end='')
         print(' {val:6.2f}'.format(val=100.*results['PoT']['DTACC']), end='')
         print(' {val:6.2f}'.format(val=100.*results['PoT']['AUIN']), end='')
