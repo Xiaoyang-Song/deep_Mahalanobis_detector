@@ -111,7 +111,7 @@ def main():
             
         # CIFAR10-SVHN Between-Dataset Experiment
         elif args.dataset == 'cifar10':
-            model = densenet.DenseNet3(100, num_channels=3, num_classes=10)
+            model = densenet.DenseNet3(100, input_channel=3, num_classes=10)
             model.load_state_dict(torch.load(
                 pre_trained_net, map_location="cuda:" + str(args.gpu)))
             in_transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize(
