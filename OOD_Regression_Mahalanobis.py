@@ -49,7 +49,8 @@ def main():
         list_best_results_out, list_best_results_index_out = [], []
         for out in out_list:
             print('Out-of-distribution: ', out)
-            best_tnr, best_result, best_index = 0, 0, 0
+            best_tnr_95, best_result_95, best_index_95 = 0, 0, 0
+            best_tnr_99, best_result_99, best_index_99 = 0, 0, 0
             for score in score_list:
                 total_X, total_Y = lib_regression.load_characteristics(
                     score, dataset, out, outf)
@@ -68,20 +69,23 @@ def main():
                 #print('test mse: {:.4f}'.format(np.mean(y_pred - Y_val_for_test)))
                 results = lib_regression.detection_performance(
                     lr, X_val_for_test, Y_val_for_test, outf)
-                if best_tnr < results['TMP']['TNR']:
-                    best_tnr = results['TMP']['TNR']
-                    best_index = score
-                    best_result = lib_regression.detection_performance(
+                
+                if best_tnr_95 < results['TMP']['TNR95']:
+                    best_tnr_95 = results['TMP']['TNR95']
+                    best_index_95 = score
+                    best_result_95 = lib_regression.detection_performance(
                         lr, X_test, Y_test, outf)
-            list_best_results_out.append(best_result)
-            list_best_results_index_out.append(best_index)
+                    
+
+            list_best_results_out.append(best_result_95)
+            list_best_results_index_out.append(best_index_95)
         list_best_results.append(list_best_results_out)
         list_best_results_index.append(list_best_results_index_out)
 
     # print the results
     count_in = 0
-    mtypes = ['TNR', 'AUROC', 'DTACC', 'AUIN', 'AUOUT']
-
+    # mtypes = ['TNR', 'AUROC', 'DTACC', 'AUIN', 'AUOUT']
+    mtypes = ['TNR95', 'TNR99', 'AUROC', 'DTACC', 'AUIN', 'AUOUT']
     for in_list in list_best_results:
         print('in_distribution: ' + dataset_list[count_in] + '==========')
         out_list = ['svhn', 'imagenet_resize', 'lsun_resize']
@@ -105,8 +109,13 @@ def main():
             print('out_distribution: ' + out_list[count_out])
             for mtype in mtypes:
                 print(' {mtype:6s}'.format(mtype=mtype), end='')
+            # print('\n{val:6.2f}'.format(
+            #     val=100.*results['TMP']['TNR']), end='')
             print('\n{val:6.2f}'.format(
-                val=100.*results['TMP']['TNR']), end='')
+                val=100.*results['TMP']['TNR95']), end='')
+            print('\n{val:6.2f}'.format(
+                val=100.*results['TMP']['TNR99']), end='')
+            
             print(' {val:6.2f}'.format(
                 val=100.*results['TMP']['AUROC']), end='')
             print(' {val:6.2f}'.format(
