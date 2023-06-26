@@ -113,7 +113,7 @@ def main():
             #     val=100.*results['TMP']['TNR']), end='')
             print('\n{val:6.2f}'.format(
                 val=100.*results['TMP']['TNR95']), end='')
-            print('\n{val:6.2f}'.format(
+            print('{val:6.2f}'.format(
                 val=100.*results['TMP']['TNR99']), end='')
             
             print(' {val:6.2f}'.format(
