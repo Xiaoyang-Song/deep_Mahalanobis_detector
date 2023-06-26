@@ -166,8 +166,8 @@ def main():
                     base_line_list.append(test_results)
                 else:
                     val_results = callog.metric(args.outf, ['PoV'])
-                    if ODIN_best_tnr[out_count] < val_results['PoV']['TNR']:
-                        ODIN_best_tnr[out_count] = val_results['PoV']['TNR']
+                    if ODIN_best_tnr[out_count] < val_results['PoV']['TNR95']:
+                        ODIN_best_tnr[out_count] = val_results['PoV']['TNR95']
                         ODIN_best_results[out_count] = callog.metric(
                             args.outf, ['PoT'])
                         ODIN_best_temperature[out_count] = temperature
@@ -175,14 +175,15 @@ def main():
                 out_count += 1
 
     # print the results
-    mtypes = ['TNR', 'AUROC', 'DTACC', 'AUIN', 'AUOUT']
+    mtypes = ['TNR95', 'TNR99', 'AUROC', 'DTACC', 'AUIN', 'AUOUT']
     print('Baseline method: in_distribution: ' + args.dataset + '==========')
     count_out = 0
     for results in base_line_list:
         print('out_distribution: ' + out_dist_list[count_out])
         for mtype in mtypes:
             print(' {mtype:6s}'.format(mtype=mtype), end='')
-        print('\n{val:6.2f}'.format(val=100.*results['PoT']['TNR']), end='')
+        print('\n{val:6.2f}'.format(val=100.*results['PoT']['TNR95']), end='')
+        print(' {val:6.2f}'.format(val=100.*results['PoT']['TNR99']), end='')
         print(' {val:6.2f}'.format(val=100.*results['PoT']['AUROC']), end='')
         print(' {val:6.2f}'.format(val=100.*results['PoT']['DTACC']), end='')
         print(' {val:6.2f}'.format(val=100.*results['PoT']['AUIN']), end='')
