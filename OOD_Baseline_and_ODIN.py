@@ -8,6 +8,7 @@ import torch
 import data_loader
 import numpy as np
 import calculate_log as callog
+import densenet
 import models
 import os
 import lib_generation
@@ -110,7 +111,7 @@ def main():
             
         # CIFAR10-SVHN Between-Dataset Experiment
         elif args.dataset == 'cifar10':
-            model = models.DenseNet3(100, num_channels=3, num_classes=10)
+            model = densenet.DenseNet3(100, num_channels=3, num_classes=10)
             model.load_state_dict(torch.load(
                 pre_trained_net, map_location="cuda:" + str(args.gpu)))
             in_transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize(
