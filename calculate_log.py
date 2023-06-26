@@ -20,6 +20,8 @@ matplotlib.use('Agg')
 def get_curve(dir_name, stypes=['Baseline', 'Gaussian_LDA']):
     tp, fp = dict(), dict()
     tnr_at_tpr95 = dict()
+    # tpr 99
+    tnr_at_tpr99 = dict()
     for stype in stypes:
         known = np.loadtxt(
             '{}/confidence_{}_In.txt'.format(dir_name, stype), delimiter=' ')
@@ -55,11 +57,15 @@ def get_curve(dir_name, stypes=['Baseline', 'Gaussian_LDA']):
                     fp[stype][l+1] = fp[stype][l]
         tpr95_pos = np.abs(tp[stype] / num_k - .95).argmin()
         tnr_at_tpr95[stype] = 1. - fp[stype][tpr95_pos] / num_n
-    return tp, fp, tnr_at_tpr95
+
+        # TPR 99
+        tpr99_pos = np.abs(tp[stype] / num_k - .99).argmin()
+        tnr_at_tpr99[stype] = 1. - fp[stype][tpr99_pos] / num_n
+    return tp, fp, tnr_at_tpr95, tnr_at_tpr99
 
 
 def metric(dir_name, stypes=['Bas', 'Gau'], verbose=False):
-    tp, fp, tnr_at_tpr95 = get_curve(dir_name, stypes)
+    tp, fp, tnr_at_tpr95, tnr_at_tpr99 = get_curve(dir_name, stypes)
     results = dict()
     mtypes = ['TNR', 'AUROC', 'DTACC', 'AUIN', 'AUOUT']
     if verbose:
@@ -74,10 +80,19 @@ def metric(dir_name, stypes=['Bas', 'Gau'], verbose=False):
         results[stype] = dict()
 
         # TNR
-        mtype = 'TNR'
-        results[stype][mtype] = tnr_at_tpr95[stype]
+        # mtype = 'TNR'
+        # results[stype][mtype] = tnr_at_tpr95[stype]
+
+        mtype_95 = 'TNR95'
+        results[stype][mtype_95] = tnr_at_tpr95[stype]
+        mtype_99 = 'TNR99'
+        results[stype][mtype_99] = tnr_at_tpr99[stype]
+        # if verbose:
+        #     print(' {val:6.3f}'.format(val=100.*results[stype][mtype]), end='')
+
         if verbose:
-            print(' {val:6.3f}'.format(val=100.*results[stype][mtype]), end='')
+            print(' {val:6.3f}'.format(val=100.*results[stype][mtype_95]), end='')
+            print(' {val:6.3f}'.format(val=100.*results[stype][mtype_99]), end='')
 
         # AUROC
         mtype = 'AUROC'
