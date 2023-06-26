@@ -13,16 +13,15 @@ from sklearn.linear_model import LogisticRegressionCV
 parser = argparse.ArgumentParser(
     description='PyTorch code: Mahalanobis detector')
 parser.add_argument('--net_type', required=True, help='resnet | densenet')
+parser.add_argument('--ind_dset', required=True, help='resnet | densenet')
 args = parser.parse_args()
 print(args)
 
 
 def main():
     # initial setup
-    # dataset_list = ['cifar10']
-    # dataset_list = ['mnist23689']
-    # dataset_list = ['fm07']
-    dataset_list = ['svhn07']
+    ind_dset = args.ind_dset
+    dataset_list = [ind_dset]
     score_list = ['Mahalanobis_0.0', 'Mahalanobis_0.01', 'Mahalanobis_0.005',
                   'Mahalanobis_0.002', 'Mahalanobis_0.0014', 'Mahalanobis_0.001', 'Mahalanobis_0.0005']
 

@@ -273,9 +273,9 @@ def line(n=40):
 
 if __name__ == '__main__':
     # Test dataset functions
-    ind = [2, 3, 6, 8, 9]
-    ood = [1, 7]
-    dset = DSET('CIFAR10-SVHN', False, 50, 128, ind, ood)
+    ind = [0, 1, 2, 3, 4, 5, 6, 7]
+    ood = [8, 9]
+    dset = DSET('MNIST-FashionMNIST', True, 50, 128, ind, ood)
     # ood_img_batch, ood_img_label = dset.ood_sample(2, 'imbalanced', [0])
     # ic(ood_img_label)
     # ic(ood_img_batch.shape)
@@ -287,6 +287,3 @@ if __name__ == '__main__':
     # ic(len(dset.ind))
     ic(len(dset.ood_val))
     ic(len(dset.ind_val) + len(dset.ood_val))
-
-    for keys in dset.ood_train_by_class:
-        ic(len(dset.ood_train_by_class[keys][0]))
