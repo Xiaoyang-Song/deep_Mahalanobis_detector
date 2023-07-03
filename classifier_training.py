@@ -50,7 +50,7 @@ dset = DSET("CIFAR10-SVHN", False, 64, 128, None, None)
 
 ind_tri_loader = dset.ind_train_loader
 ind_val_loader = dset.ind_val_loader
-max_epoch = 100
+max_epoch = 300
 
 
 criterion = nn.CrossEntropyLoss()
@@ -58,7 +58,7 @@ criterion = nn.CrossEntropyLoss()
 iter_count_train = 0
 iter_count_val = 0
 for epoch in tqdm(range(max_epoch)):
-    if epoch % 30 == 0 and epoch != 1:
+    if epoch == 150 or epoch == 225:
         optimizer = torch.optim.Adam(model.parameters(), lr=lr * 0.1, betas=(0.9, 0.999))
     # Training
     model.train()
