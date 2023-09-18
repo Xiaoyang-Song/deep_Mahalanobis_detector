@@ -96,6 +96,8 @@ def main():
             model.load_state_dict(torch.load(
                 pre_trained_net, map_location="cuda:" + str(args.gpu)))
 
+            # model = torch.load(
+            #     pre_trained_net, map_location="cuda:" + str(args.gpu))
         # SVHN Within-Dataset Experiment
         elif args.dataset == 'svhn07':
             model = models.DenseNet3(100, num_channels=3, num_classes=8)
@@ -127,9 +129,9 @@ def main():
 
         # CIFAR10-SVHN Between-Dataset Experiment
         elif args.dataset == 'cifar10':
-            # model = models.DenseNet3(100, num_channels=3, num_classes=10)
-            model = torch.load(
-                pre_trained_net, map_location="cuda:" + str(args.gpu))
+            model = models.DenseNet3(100, num_channels=3, num_classes=10)
+            model.load_state_dict(torch.load(
+                pre_trained_net, map_location="cuda:" + str(args.gpu)))
             in_transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize(
                 (0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)), ])
 
