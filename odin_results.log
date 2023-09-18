@@ -49,6 +49,19 @@ out_distribution: mnist17
 temperature: 100
 magnitude: 0.001
 
+Out-distribution: svhn89
+Baseline method: in_distribution: svhn07==========
+out_distribution: svhn89
+ TNR95  TNR99  AUROC  DTACC  AUIN   AUOUT 
+ 64.04  20.71  93.56  87.53  99.24  58.14
+
+ODIN method: in_distribution: svhn07==========
+out_distribution: svhn89
+ TNR95  TNR99  AUROC  DTACC  AUIN   AUOUT 
+ 70.38  38.27  93.65  86.78  99.21  68.33
+temperature: 10
+magnitude: 0.0024
+
 
 
 

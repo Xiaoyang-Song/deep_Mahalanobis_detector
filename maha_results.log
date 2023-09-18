@@ -1,0 +1,35 @@
+In-distribution:  fm07
+Out-of-distribution:  fm89
+in_distribution: fm07==========
+out_distribution: fm89
+ TNR95  TNR99  AUROC  DTACC  AUIN   AUOUT 
+ 55.90 38.60  81.18  77.42  94.71  61.24
+Input noise: Mahalanobis_0.001
+
+In-distribution:  mnist
+Out-of-distribution:  fm
+in_distribution: mnist==========
+out_distribution: fm
+ TNR95  TNR99  AUROC  DTACC  AUIN   AUOUT 
+100.00100.00 100.00 100.00  99.99  99.99
+Input noise: Mahalanobis_0.0
+
+in_distribution: mnist23689==========
+out_distribution: mnist17
+ TNR95  TNR99  AUROC  DTACC  AUIN   AUOUT 
+ 86.16 60.43  96.19  91.13  98.84  87.74
+Input noise: Mahalanobis_0.0005
+
+In-distribution:  svhn07
+Out-of-distribution:  svhn89
+in_distribution: svhn07==========
+out_distribution: svhn89
+ TNR95  TNR99  AUROC  DTACC  AUIN   AUOUT 
+ 21.55  5.10  69.62  65.58  94.52  21.21
+Input noise: Mahalanobis_0.01
+
+in_distribution: cifar10==========
+out_distribution: svhn
+ TNR95  TNR99  AUROC  DTACC  AUIN   AUOUT 
+ 88.13 70.20  95.72  91.76  80.64  98.59
+Input noise: Mahalanobis_0.01
