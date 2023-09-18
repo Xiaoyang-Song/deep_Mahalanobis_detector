@@ -52,7 +52,6 @@ ind_tri_loader = dset.ind_train_loader
 ind_val_loader = dset.ind_val_loader
 max_epoch = 300
 
-
 criterion = nn.CrossEntropyLoss()
 # Simple training loop
 iter_count_train = 0
