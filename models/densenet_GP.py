@@ -1,9 +1,8 @@
-import math
 import torch
-import torch.nn as nn
+from torchvision import models
 import torch.nn.functional as F
-from icecream import ic
-
+from torch import nn
+import math
 
 class BasicBlock(nn.Module):
     def __init__(self, in_planes, out_planes, dropRate=0.0):
@@ -80,10 +79,10 @@ class DenseBlock(nn.Module):
         return self.layer(x)
 
 
-class DenseNet3(nn.Module):
+class DenseNet3GP(nn.Module):
     def __init__(self, depth, num_classes, num_channels=3,  growth_rate=12,
                  reduction=0.5, bottleneck=True, dropRate=0.0, feature_size=64):
-        super(DenseNet3, self).__init__()
+        super(DenseNet3GP, self).__init__()
         in_planes = 2 * growth_rate
         n = (depth - 4) / 3
         if bottleneck == True:
@@ -112,7 +111,7 @@ class DenseNet3(nn.Module):
         # global average pooling and classifier
         self.bn1 = nn.BatchNorm2d(in_planes)
         self.relu = nn.ReLU(inplace=True)
-        # penultimate feature layers (modified)
+        # penultimate feature layers
         self.fc0 = nn.Linear(in_planes, feature_size)
         self.fc = nn.Linear(feature_size, num_classes)
         # self.fc = nn.Linear(in_planes, num_classes)
@@ -141,6 +140,7 @@ class DenseNet3(nn.Module):
         feature = self.fc0(out)
         out = self.relu(feature)
         return feature, self.fc(out)
+
 
     # function to extact the multiple features
     def feature_list(self, x):
@@ -195,7 +195,7 @@ class DenseNet3(nn.Module):
     
 
 if __name__ == '__main__':
-    model = DenseNet3(100, 10, 1)
+    model = DenseNet3GP(100, 10, 1)
     input = torch.ones((1, 1, 28, 28))
     out = model(input)
     print(out.shape)
@@ -203,9 +203,11 @@ if __name__ == '__main__':
     print(feat.shape)
     for out in out_lst:
         print(out.shape)
+    out, penultimate = model.penultimate_forward(input)
+    print(out.shape, penultimate.shape)
 
     # 3-channel
-    model = DenseNet3(100, 10, 3)
+    model = DenseNet3GP(100, 10, 3)
     input = torch.ones((1, 3, 32, 32))
     out = model(input)
     print(out.shape)
@@ -213,3 +215,5 @@ if __name__ == '__main__':
     print(feat.shape)
     for out in out_lst:
         print(out.shape)
+    out, penultimate = model.penultimate_forward(input)
+    print(out.shape, penultimate.shape)

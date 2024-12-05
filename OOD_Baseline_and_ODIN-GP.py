@@ -37,22 +37,13 @@ def main():
     # set the path to pre-trained model and output
     # pre_trained_net = 'pre_trained/' + args.net_type + '_' + args.dataset + '.pth'
 
-    if args.dataset == 'cifar10':
-        experiment = 'CIFAR10-SVHN'
-    elif args.dataset == 'svhn07':
-        experiment = 'SVHN'
-    elif args.dataset == 'mnist23689':
-        experiment = 'MNIST'
-    elif args.dataset == 'fm07':
-        experiment = 'FashionMNIST'
-    elif args.dataset == 'mnist':
-        experiment = 'MNIST-FashionMNIST'
+    if args.dataset == 'mnist':
+        experiment = 'mnist'
+    elif args.dataset == 'cifar10':
+        experiment = 'CIFAR10'
     else:
         assert False
-
     # GP-OOD
-    
-
     pre_trained_net = f"/scratch/sunwbgt_root/sunwbgt98/xysong/GP-ImageNet/ckpt/{experiment}/densenet.pth"
 
     args.outf = args.outf + args.net_type + '_' + args.dataset + '/'
@@ -84,6 +75,8 @@ def main():
     # MNIST-FashionMNIST Between-Dataset Experiment
     elif args.dataset == 'mnist':
         out_dist_list = ['fm']
+        num_channels=3
+        n_features=64
 
     # SVHN Within-Dataset Experiment
     elif args.dataset == 'svhn07':
@@ -94,41 +87,14 @@ def main():
     if args.net_type == 'densenet':
 
         # Useless
-        if args.dataset == 'svhn':
-            model = models.DenseNet3(100, int(args.num_classes))
+        if args.dataset == 'mnist':
+            # model = models.DenseNet3(100, int(args.num_classes))
+            model = models.DenseNet3GP(100, int(args.num_classes), num_channels,feature_size=n_features)
             model.load_state_dict(torch.load(
                 pre_trained_net, map_location="cuda:" + str(args.gpu)))
-
-            # model = torch.load(
-            #     pre_trained_net, map_location="cuda:" + str(args.gpu))
-        # SVHN Within-Dataset Experiment
-        elif args.dataset == 'svhn07':
-            model = models.DenseNet3(100, num_channels=3, num_classes=8)
-            model.load_state_dict(torch.load(
-                pre_trained_net, map_location="cuda:" + str(args.gpu)))
-
-        # FashionMNIST Within-Dataset Experiment
-        elif args.dataset == 'fm07':
-            model = models.DenseNet3(100, num_channels=1, num_classes=8)
-            model.load_state_dict(torch.load(
-                pre_trained_net, map_location="cuda:" + str(args.gpu)))
-            in_transform = transforms.Compose([transforms.ToTensor()])
-
-        # MNIST Within-Dataset Experiment
-        elif args.dataset == 'mnist23689':
-            model = models.DenseNet3(100, num_channels=1, num_classes=5)
-            model.load_state_dict(torch.load(
-                pre_trained_net, map_location="cuda:" + str(args.gpu)))
-            in_transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize(
-                (0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)), ])
-
-        # MNIST-FashionMNIST Between-Dataset Experiment
-        elif args.dataset == 'mnist':
-            model = models.DenseNet3(100, num_channels=1, num_classes=10)
-            model.load_state_dict(torch.load(
-                pre_trained_net, map_location="cuda:" + str(args.gpu)))
-            in_transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize(
-                (0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)), ])
+            in_transform = transforms.Compose([ transforms.Resize((32, 32)), 
+                                    transforms.Grayscale(num_output_channels=3),
+                                    transforms.ToTensor()])
 
         # CIFAR10-SVHN Between-Dataset Experiment
         elif args.dataset == 'cifar10':
@@ -141,7 +107,7 @@ def main():
         else:
             model = torch.load(
                 pre_trained_net, map_location="cuda:" + str(args.gpu))
-        in_transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize(
+            in_transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize(
             (125.3/255, 123.0/255, 113.9/255), (63.0/255, 62.1/255.0, 66.7/255.0)), ])
 
     elif args.net_type == 'resnet':

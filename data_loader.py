@@ -176,7 +176,10 @@ def getNonTargetDataSet(data_type, batch_size, input_TF, dataroot):
 
     # MNIST-FashionMNIST Between-Dataset Experiment: OoD
     elif data_type == 'fm':
-        dset = DSET('MNIST-FashionMNIST', False, batch_size,
-                    batch_size, None, None)
-        test_loader = dset.ood_val_loader
+        transform = transforms.Compose([ transforms.Resize((32, 32)), 
+                                transforms.Grayscale(num_output_channels=3),
+                                transforms.ToTensor()])
+        tset = torchvision.datasets.FashionMNIST("./Datasets", download=True, train=True, transform=transform)
+        # Get data loader
+        test_loader = torch.utils.data.DataLoader(tset, shuffle=False, batch_size=512)
     return test_loader
