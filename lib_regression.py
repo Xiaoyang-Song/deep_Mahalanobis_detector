@@ -23,7 +23,7 @@ def block_split(X, Y, out):
     elif out == 'mnist17':
         partition = 1983
     elif out == 'fm':
-        partition = 10000
+        partition = 5000
 
         
 

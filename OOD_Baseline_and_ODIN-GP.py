@@ -12,6 +12,7 @@ import densenet
 import models
 import os
 import lib_generation
+from tqdm import tqdm
 
 from torchvision import transforms
 from torch.autograd import Variable
@@ -134,7 +135,7 @@ def main():
     ODIN_best_results = [0, 0, 0]
     ODIN_best_temperature = [-1, -1, -1]
     ODIN_best_magnitude = [-1, -1, -1]
-    for T in T_list:
+    for T in tqdm(T_list):
         for m in M_list:
             magnitude = m
             temperature = T

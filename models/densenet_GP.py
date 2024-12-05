@@ -139,7 +139,7 @@ class DenseNet3GP(nn.Module):
         # Modified
         feature = self.fc0(out)
         out = self.relu(feature)
-        return feature, self.fc(out)
+        return self.fc(out)
 
 
     # function to extact the multiple features

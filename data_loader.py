@@ -117,10 +117,15 @@ def getTargetDataSet(data_type, batch_size, input_TF, dataroot):
 
     # MNIST-FashionMNIST Between-Dataset Experiment: InD
     elif data_type == 'mnist':
-        dset = DSET('MNIST-FashionMNIST', False, batch_size,
-                    batch_size, None, None)
-        train_loader = dset.ind_train_loader
-        test_loader = dset.ind_val_loader
+        transform = transforms.Compose([ transforms.Resize((32, 32)), 
+                                        transforms.Grayscale(num_output_channels=3),
+                                        transforms.ToTensor()])
+        train_set = torchvision.datasets.MNIST("./Datasets", download=True, transform=transform)
+        n_test=5000
+        test_set = torchvision.datasets.MNIST("./Datasets", download=True, train=False, transform=transform)
+        test_set = torch.utils.data.Subset(test_set, range(n_test))
+        train_loader = DataLoader(train_set, batch_size=256, shuffle=True, num_workers=1)
+        test_loader = DataLoader(test_set, batch_size=256, shuffle=True, num_workers=1)
 
     # SVHN Within-Dataset Experiment: InD
     elif data_type == 'svhn07':
@@ -179,7 +184,9 @@ def getNonTargetDataSet(data_type, batch_size, input_TF, dataroot):
         transform = transforms.Compose([ transforms.Resize((32, 32)), 
                                 transforms.Grayscale(num_output_channels=3),
                                 transforms.ToTensor()])
+        n_test=5000
         tset = torchvision.datasets.FashionMNIST("./Datasets", download=True, train=True, transform=transform)
+        tset = torch.utils.data.Subset(tset, range(n_test))
         # Get data loader
-        test_loader = torch.utils.data.DataLoader(tset, shuffle=False, batch_size=512)
+        test_loader = torch.utils.data.DataLoader(tset, shuffle=False, batch_size=256)
     return test_loader

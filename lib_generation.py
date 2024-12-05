@@ -63,63 +63,63 @@ def sample_estimator(model, num_classes, feature_list, train_loader):
         for j in range(num_classes):
             temp_list.append(0)
         list_features.append(temp_list)
-    
-    for data, target in train_loader:
-        total += data.size(0)
-        data = data.cuda()
-        data = Variable(data, volatile=True)
-        output, out_features = model.feature_list(data)
-        
-        # get hidden features
-        for i in range(num_output):
-            out_features[i] = out_features[i].view(out_features[i].size(0), out_features[i].size(1), -1)
-            out_features[i] = torch.mean(out_features[i].data, 2)
+    with torch.no_grad():
+        for data, target in train_loader:
+            total += data.size(0)
+            data = data.cuda()
+            data = Variable(data, volatile=True)
+            output, out_features = model.feature_list(data)
             
-        # compute the accuracy
-        pred = output.data.max(1)[1]
-        equal_flag = pred.eq(target.cuda()).cpu()
-        correct += equal_flag.sum()
-        
-        # construct the sample matrix
-        for i in range(data.size(0)):
-            label = target[i]
-            if num_sample_per_class[label] == 0:
-                out_count = 0
-                for out in out_features:
-                    list_features[out_count][label] = out[i].view(1, -1)
-                    out_count += 1
-            else:
-                out_count = 0
-                for out in out_features:
-                    list_features[out_count][label] \
-                    = torch.cat((list_features[out_count][label], out[i].view(1, -1)), 0)
-                    out_count += 1                
-            num_sample_per_class[label] += 1
-            
-    sample_class_mean = []
-    out_count = 0
-    for num_feature in feature_list:
-        temp_list = torch.Tensor(num_classes, int(num_feature)).cuda()
-        for j in range(num_classes):
-            # ic(list_features[out_count][j])
-            temp_list[j] = torch.mean(list_features[out_count][j], 0)
-        sample_class_mean.append(temp_list)
-        out_count += 1
-        
-    precision = []
-    for k in range(num_output):
-        X = 0
-        for i in range(num_classes):
-            if i == 0:
-                X = list_features[k][i] - sample_class_mean[k][i]
-            else:
-                X = torch.cat((X, list_features[k][i] - sample_class_mean[k][i]), 0)
+            # get hidden features
+            for i in range(num_output):
+                out_features[i] = out_features[i].view(out_features[i].size(0), out_features[i].size(1), -1)
+                out_features[i] = torch.mean(out_features[i].data, 2)
                 
-        # find inverse            
-        group_lasso.fit(X.cpu().numpy())
-        temp_precision = group_lasso.precision_
-        temp_precision = torch.from_numpy(temp_precision).float().cuda()
-        precision.append(temp_precision)
+            # compute the accuracy
+            pred = output.data.max(1)[1]
+            equal_flag = pred.eq(target.cuda()).cpu()
+            correct += equal_flag.sum()
+            
+            # construct the sample matrix
+            for i in range(data.size(0)):
+                label = target[i]
+                if num_sample_per_class[label] == 0:
+                    out_count = 0
+                    for out in out_features:
+                        list_features[out_count][label] = out[i].view(1, -1)
+                        out_count += 1
+                else:
+                    out_count = 0
+                    for out in out_features:
+                        list_features[out_count][label] \
+                        = torch.cat((list_features[out_count][label], out[i].view(1, -1)), 0)
+                        out_count += 1                
+                num_sample_per_class[label] += 1
+                
+        sample_class_mean = []
+        out_count = 0
+        for num_feature in feature_list:
+            temp_list = torch.Tensor(num_classes, int(num_feature)).cuda()
+            for j in range(num_classes):
+                # ic(list_features[out_count][j])
+                temp_list[j] = torch.mean(list_features[out_count][j], 0)
+            sample_class_mean.append(temp_list)
+            out_count += 1
+            
+        precision = []
+        for k in range(num_output):
+            X = 0
+            for i in range(num_classes):
+                if i == 0:
+                    X = list_features[k][i] - sample_class_mean[k][i]
+                else:
+                    X = torch.cat((X, list_features[k][i] - sample_class_mean[k][i]), 0)
+                    
+            # find inverse            
+            group_lasso.fit(X.cpu().numpy())
+            temp_precision = group_lasso.precision_
+            temp_precision = torch.from_numpy(temp_precision).float().cuda()
+            precision.append(temp_precision)
         
     print('\n Training Accuracy:({:.2f}%)\n'.format(100. * correct / total))
 
@@ -181,22 +181,24 @@ def get_Mahalanobis_score(model, test_loader, num_classes, outf, out_flag, net_t
                 gradient.index_copy_(1, torch.LongTensor([1]).cuda(), gradient.index_select(1, torch.LongTensor([1]).cuda()) / (0.1994))
                 gradient.index_copy_(1, torch.LongTensor([2]).cuda(), gradient.index_select(1, torch.LongTensor([2]).cuda()) / (0.2010))
         tempInputs = torch.add(data.data, -magnitude, gradient)
- 
-        noise_out_features = model.intermediate_forward(Variable(tempInputs, volatile=True), layer_index)
-        noise_out_features = noise_out_features.view(noise_out_features.size(0), noise_out_features.size(1), -1)
-        noise_out_features = torch.mean(noise_out_features, 2)
-        noise_gaussian_score = 0
-        for i in range(num_classes):
-            batch_sample_mean = sample_mean[layer_index][i]
-            zero_f = noise_out_features.data - batch_sample_mean
-            term_gau = -0.5*torch.mm(torch.mm(zero_f, precision[layer_index]), zero_f.t()).diag()
-            if i == 0:
-                noise_gaussian_score = term_gau.view(-1,1)
-            else:
-                noise_gaussian_score = torch.cat((noise_gaussian_score, term_gau.view(-1,1)), 1)      
 
-        noise_gaussian_score, _ = torch.max(noise_gaussian_score, dim=1)
-        Mahalanobis.extend(noise_gaussian_score.cpu().numpy())
+        with torch.no_grad():
+ 
+            noise_out_features = model.intermediate_forward(Variable(tempInputs, volatile=True), layer_index)
+            noise_out_features = noise_out_features.view(noise_out_features.size(0), noise_out_features.size(1), -1)
+            noise_out_features = torch.mean(noise_out_features, 2)
+            noise_gaussian_score = 0
+            for i in range(num_classes):
+                batch_sample_mean = sample_mean[layer_index][i]
+                zero_f = noise_out_features.data - batch_sample_mean
+                term_gau = -0.5*torch.mm(torch.mm(zero_f, precision[layer_index]), zero_f.t()).diag()
+                if i == 0:
+                    noise_gaussian_score = term_gau.view(-1,1)
+                else:
+                    noise_gaussian_score = torch.cat((noise_gaussian_score, term_gau.view(-1,1)), 1)      
+
+            noise_gaussian_score, _ = torch.max(noise_gaussian_score, dim=1)
+            Mahalanobis.extend(noise_gaussian_score.cpu().numpy())
         
         for i in range(data.size(0)):
             g.write("{}\n".format(noise_gaussian_score[i]))
@@ -248,18 +250,19 @@ def get_posterior(model, net_type, C, test_loader, magnitude, temperature, outf,
             gradient.index_copy_(1, torch.LongTensor([1]).cuda(), gradient.index_select(1, torch.LongTensor([1]).cuda()) / (0.1994))
             gradient.index_copy_(1, torch.LongTensor([2]).cuda(), gradient.index_select(1, torch.LongTensor([2]).cuda()) / (0.2010))
 
-        tempInputs = torch.add(data.data,  -magnitude, gradient)
-        outputs = model(Variable(tempInputs, volatile=True))
-        outputs = outputs / temperature
-        soft_out = F.softmax(outputs, dim=1)
-        soft_out, _ = torch.max(soft_out.data, dim=1)
-        
+        with torch.no_grad():
+            tempInputs = torch.add(data.data,  -magnitude, gradient)
+            outputs = model(Variable(tempInputs, volatile=True))
+            outputs = outputs / temperature
+            soft_out = F.softmax(outputs, dim=1)
+            soft_out, _ = torch.max(soft_out.data, dim=1)
+            
         for i in range(data.size(0)):
             if total <= 1000:
                 g.write("{}\n".format(soft_out[i]))
             else:
                 f.write("{}\n".format(soft_out[i]))
-                
+                    
     f.close()
     g.close()
     
