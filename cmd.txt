@@ -1,0 +1,3 @@
+
+# CMD
+python OOD_Baseline_and_ODIN-GP.py --dataset mnist --net_type densenet --gpu 0
