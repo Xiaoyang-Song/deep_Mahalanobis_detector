@@ -62,14 +62,15 @@ def main():
                     (X_val[500:1000], X_val[1500:]))
                 Y_val_for_test = np.concatenate(
                     (Y_val[500:1000], Y_val[1500:]))
-                lr = LogisticRegressionCV(n_jobs=-1, max_iter=10000).fit(X_train, Y_train)
+                lr = LogisticRegressionCV(n_jobs=-1, max_iter=1000).fit(X_train, Y_train)
                 y_pred = lr.predict_proba(X_train)[:, 1]
                 #print('training mse: {:.4f}'.format(np.mean(y_pred - Y_train)))
                 y_pred = lr.predict_proba(X_val_for_test)[:, 1]
                 #print('test mse: {:.4f}'.format(np.mean(y_pred - Y_val_for_test)))
                 results = lib_regression.detection_performance(
                     lr, X_val_for_test, Y_val_for_test, outf)
-                
+                print(score)
+                print(results)
                 if best_tnr_95 < results['TMP']['TNR95']:
                     best_tnr_95 = results['TMP']['TNR95']
                     best_index_95 = score
