@@ -23,6 +23,10 @@ parser.add_argument('--batch_size', type=int, default=200,
                     metavar='N', help='batch size for data loader')
 parser.add_argument('--dataset', required=True,
                     help='cifar10 | cifar100 | svhn')
+# Only for imagenet 10
+parser.add_argument('--ckpt', type=str, default=None, help='checkpoint')
+parser.add_argument('--nf', type=int, default=None, help='n_features')
+# For saving files
 parser.add_argument('--dataroot', default='./data', help='path to dataset')
 parser.add_argument('--outf', default='output/',
                     help='folder to output results')
@@ -40,12 +44,16 @@ def main():
 
     if args.dataset == 'mnist':
         experiment = 'mnist'
+        pre_trained_net = f"/scratch/sunwbgt_root/sunwbgt98/xysong/GP-ImageNet/ckpt/{experiment}/densenet.pth"
     elif args.dataset == 'cifar10':
         experiment = 'CIFAR10'
+        pre_trained_net = f"/scratch/sunwbgt_root/sunwbgt98/xysong/GP-ImageNet/ckpt/{experiment}/densenet.pth"
+    elif args.dataset == 'imagenet10':
+        assert args.ckpt is not None
+        experiment = args.ckpt
+        pre_trained_net = f"/scratch/sunwbgt_root/sunwbgt98/xysong/GP-ImageNet/ckpt/{experiment}/densenet_{args.dataset}.pth"
     else:
         assert False
-    # GP-OOD
-    pre_trained_net = f"/scratch/sunwbgt_root/sunwbgt98/xysong/GP-ImageNet/ckpt/{experiment}/densenet.pth"
 
     args.outf = args.outf + args.net_type + '_' + args.dataset + '/'
     os.makedirs(args.outf, exist_ok=True)
@@ -58,30 +66,20 @@ def main():
     if args.dataset == 'cifar100':
         args.num_classes = 100
 
-    if args.dataset == 'svhn':
-        out_dist_list = ['cifar10', 'imagenet_resize', 'lsun_resize']
-
     # CIFAR10-SVHN Between-Dataset Experiment
     elif args.dataset == 'cifar10':
         out_dist_list = ['svhn']
-
-    # MNIST Within-Dataset Experiment
-    elif args.dataset == 'mnist23689':
-        out_dist_list = ['mnist17']
-
-    # FashionMNIST Within-Dataset Experiment
-    elif args.dataset == 'fm07':
-        out_dist_list = ['fm89']
 
     # MNIST-FashionMNIST Between-Dataset Experiment
     elif args.dataset == 'mnist':
         out_dist_list = ['fm']
         num_channels=3
         n_features=64
-
-    # SVHN Within-Dataset Experiment
-    elif args.dataset == 'svhn07':
-        out_dist_list = ['svhn89']
+    elif args.dataset == 'imagenet10':
+        out_dist_list = ['DTD', 'LSUN-C', 'LSUN-R', 'Places365-small', 'iSUN', 'svhn']
+        num_channels = 3
+        assert args.nf is not None
+        n_features = args.nf
 
     # load networks
     # This part is customized
@@ -102,6 +100,12 @@ def main():
             model = models.DenseNet3(100, num_channels=3, num_classes=10)
             model.load_state_dict(torch.load(
                 pre_trained_net, map_location="cuda:" + str(args.gpu)))
+            in_transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize(
+                (0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)), ])
+        elif args.dataset == 'imagenet10':
+            model = models.DenseNet3GP(100, num_channels=3, num_classes=10, feature_size=args.nf)
+            model_state = torch.load(pre_trained_net, map_location="cuda:" + str(args.gpu))
+            model.load_state_dict(model_state)
             in_transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize(
                 (0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)), ])
 
