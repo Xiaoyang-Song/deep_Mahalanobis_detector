@@ -8,4 +8,4 @@ python OOD_Regression_Mahalanobis-GP.py --net_type densenet --ind_dset mnist
 
 # GP Imagenet10
 
-python OOD_Baseline_and_ODIN-GP.py --dataset imagenet10 --net_type densenet --ckpt imagenet10-32-0-o1 --nf 32 --gpu 0 --batch_size 128 > out.log
+python OOD_Baseline_and_ODIN-GP.py --dataset imagenet10 --net_type densenet --ckpt imagenet10-32-0-o1 --nf 32 --gpu 0 --batch_size 100 > out1.log

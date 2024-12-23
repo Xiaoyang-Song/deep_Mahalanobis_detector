@@ -64,6 +64,7 @@ def get_curve(dir_name, stypes=['Baseline', 'Gaussian_LDA']):
     return tp, fp, tnr_at_tpr95, tnr_at_tpr99
 
 
+
 def metric(dir_name, stypes=['Bas', 'Gau'], verbose=False):
     tp, fp, tnr_at_tpr95, tnr_at_tpr99 = get_curve(dir_name, stypes)
     results = dict()

@@ -135,34 +135,34 @@ def main():
               0.0024, 0.005, 0.01, 0.05, 0.1, 0.2]
     T_list = [1, 10, 100, 1000]
     base_line_list = []
-    ODIN_best_tnr = [0, 0, 0]
-    ODIN_best_results = [0, 0, 0]
-    ODIN_best_temperature = [-1, -1, -1]
-    ODIN_best_magnitude = [-1, -1, -1]
+    ODIN_best_tnr = [0, 0, 0, 0, 0, 0]
+    ODIN_best_results = [0, 0, 0, 0, 0, 0]
+    ODIN_best_temperature = [-1, -1, -1, -1, -1, -1]
+    ODIN_best_magnitude = [-1, -1, -1, -1, -1, -1]
+    ODIN_tnr_lst = [[], [], [], [], [], []]
     for T in tqdm(T_list):
         for m in M_list:
             magnitude = m
             temperature = T
             lib_generation.get_posterior(
-                model, args.net_type, 1, test_loader, magnitude, temperature, args.outf, True)
+                model, args.net_type, num_channels, test_loader, magnitude, temperature, args.outf, True)
             out_count = 0
-            print('Temperature: ' + str(temperature) +
-                  ' / noise: ' + str(magnitude))
+            print('Temperature: ' + str(temperature) + ' / noise: ' + str(magnitude))
             for out_dist in out_dist_list:
                 out_test_loader = data_loader.getNonTargetDataSet(
                     out_dist, args.batch_size, in_transform, args.dataroot)
                 print('Out-distribution: ' + out_dist)
                 lib_generation.get_posterior(
-                    model, args.net_type, 1, out_test_loader, magnitude, temperature, args.outf, False)
+                    model, args.net_type, num_channels, out_test_loader, magnitude, temperature, args.outf, False)
                 if temperature == 1 and magnitude == 0:
                     test_results = callog.metric(args.outf, ['PoT'])
                     base_line_list.append(test_results)
                 else:
                     val_results = callog.metric(args.outf, ['PoV'])
+                    ODIN_tnr_lst[out_count].append(callog.metric(args.outf, ['PoT']))
                     if ODIN_best_tnr[out_count] < val_results['PoV']['TNR95']:
                         ODIN_best_tnr[out_count] = val_results['PoV']['TNR95']
-                        ODIN_best_results[out_count] = callog.metric(
-                            args.outf, ['PoT'])
+                        ODIN_best_results[out_count] = callog.metric(args.outf, ['PoT'])
                         ODIN_best_temperature[out_count] = temperature
                         ODIN_best_magnitude[out_count] = magnitude
                 out_count += 1
@@ -199,6 +199,8 @@ def main():
         print('temperature: ' + str(ODIN_best_temperature[count_out]))
         print('magnitude: ' + str(ODIN_best_magnitude[count_out]))
         print('')
+        print('List: ', ODIN_tnr_lst[out_count])
+        print('Mean TPR95: ', np.mean(ODIN_tnr_lst))
         count_out += 1
 
 
