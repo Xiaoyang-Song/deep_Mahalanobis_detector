@@ -52,7 +52,7 @@ def main():
     else:
         assert False
 
-    args.outf = args.outf + args.net_type + '_' + args.dataset + '_' + args.nf + '/'
+    args.outf = args.outf + args.net_type + '_' + args.dataset + '_' + str(args.nf) + '/'
     os.makedirs(args.outf, exist_ok=True)
     torch.cuda.manual_seed(0)
     torch.cuda.set_device(args.gpu)
@@ -171,8 +171,7 @@ def main():
             Mahalanobis_out = np.asarray(Mahalanobis_out, dtype=np.float32)[0:n_test]
             print(Mahalanobis_in.shape)
             print(Mahalanobis_out.shape)
-            Mahalanobis_data, Mahalanobis_labels = lib_generation.merge_and_generate_labels(
-                Mahalanobis_out, Mahalanobis_in)
+            Mahalanobis_data, Mahalanobis_labels = lib_generation.merge_and_generate_labels(Mahalanobis_out, Mahalanobis_in)
             file_name = os.path.join(args.outf, 'Mahalanobis_%s_%s_%s.npy' % (str(magnitude), args.dataset, out_dist))
             Mahalanobis_data = np.concatenate((Mahalanobis_data, Mahalanobis_labels), axis=1)
             np.save(file_name, Mahalanobis_data)

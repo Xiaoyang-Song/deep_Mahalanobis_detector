@@ -745,3 +745,53 @@ Testing set size: 2100, 9000
 ######################################
 Testing on Places365
 Out-distribution: Places365-small
+Testing set size: 2100, 35500
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Testing set size: 2100, 7925
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+Testing set size: 2100, 25032
+Temperature: 100 / noise: 0.05
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+Testing set size: 2100, 4640
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+Testing set size: 2100, 9000
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+Testing set size: 2100, 9000
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+Testing set size: 2100, 35500
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Testing set size: 2100, 7925
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+Testing set size: 2100, 25032
+Temperature: 100 / noise: 0.1
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+Testing set size: 2100, 4640
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+Testing set size: 2100, 9000
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+Testing set size: 2100, 9000
+######################################
+Testing on Places365
+Out-distribution: Places365-small

@@ -56,7 +56,7 @@ def main():
     else:
         assert False
 
-    args.outf = args.outf + args.net_type + '_' + args.dataset + '/'
+    args.outf = args.outf + args.net_type + '_' + args.dataset + '_' + str(args.nf) + '/'
     os.makedirs(args.outf, exist_ok=True)
     # if os.path.isdir(args.outf) == False:
     #     os.mkdir(args.outf)

@@ -235,11 +235,11 @@ def getTargetDataSet(data_type, batch_size, input_TF, dataroot):
         train_dataset, validation_dataset = torch.utils.data.random_split(train_set, [train_size, val_size])
         print("Dataset size: ", len(train_dataset), len(validation_dataset), len(test_set))
 
-        train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True, num_workers=32)
-        validation_loader = DataLoader(validation_dataset, batch_size=batch_size, shuffle=False, num_workers=32)
+        train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True, num_workers=4)
+        validation_loader = DataLoader(validation_dataset, batch_size=batch_size, shuffle=False, num_workers=4)
         test_set = validation_dataset + test_set
         print(len(test_set))
-        test_loader = DataLoader(test_set, batch_size=batch_size, shuffle=False, num_workers=16)
+        test_loader = DataLoader(test_set, batch_size=batch_size, shuffle=False, num_workers=4)
 
     return train_loader, test_loader
 
@@ -344,7 +344,7 @@ def getNonTargetDataSet(data_type, batch_size, input_TF, dataroot):
                                                                 transforms.CenterCrop(32), 
                                                                 transforms.ToTensor(),
                                                                 transforms.Normalize(mean, std)]))
-        test_loader = torch.utils.data.DataLoader(data, shuffle=False, batch_size=batch_size, num_workers=16)
+        test_loader = torch.utils.data.DataLoader(data, shuffle=False, batch_size=batch_size, num_workers=1)
 
     elif data_type == 'DTD':
         print('######################################')
@@ -353,6 +353,6 @@ def getNonTargetDataSet(data_type, batch_size, input_TF, dataroot):
                                     transform=transforms.Compose([transforms.Resize((32, 32)), transforms.CenterCrop(32), 
                                                                   transforms.ToTensor(), 
                                                                   transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),]))
-        test_loader = torch.utils.data.DataLoader(data, shuffle=False, batch_size=batch_size, num_workers=4)
+        test_loader = torch.utils.data.DataLoader(data, shuffle=False, batch_size=batch_size, num_workers=1)
 
     return test_loader

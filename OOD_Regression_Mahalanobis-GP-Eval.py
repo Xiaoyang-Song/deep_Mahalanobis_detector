@@ -13,8 +13,7 @@ from sklearn.metrics import roc_auc_score
 from tqdm import tqdm
 
 
-parser = argparse.ArgumentParser(
-    description='PyTorch code: Mahalanobis detector')
+parser = argparse.ArgumentParser(description='PyTorch code: Mahalanobis detector')
 parser.add_argument('--net_type', required=True, help='resnet | densenet')
 parser.add_argument('--ind_dset', required=True, help='resnet | densenet')
 args = parser.parse_args()
@@ -37,9 +36,8 @@ def main():
     maha_auroc = [[], [], [], [], [], []]
     for dataset in dataset_list:
         print('In-distribution: ', dataset)
-        outf = './output/' + args.net_type + '_' + dataset + '/'
+        outf = './output/' + args.net_type + '_' + args.dataset + '_' + str(args.nf) + '/'
 
-        # MNIST-FashionMNIST Between-Dataset Experiment
         if dataset == 'mnist':
             out_list = ['fm']
         elif dataset == 'imagenet10':
@@ -48,7 +46,7 @@ def main():
 
         for idx, out in tqdm(enumerate(out_list)):
             print('Out-of-distribution: ', out)
-            for score in score_list:
+            for score in tqdm(score_list):
                 total_X, total_Y = lib_regression.load_characteristics(score, dataset, out, outf)
                 X_val, Y_val, X_test, Y_test = lib_regression.block_split(total_X, total_Y, out, n_test)
                 # Train logistic regression classifier on validation set

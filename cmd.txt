@@ -7,7 +7,7 @@ python OOD_Regression_Mahalanobis-GP.py --net_type densenet --ind_dset mnist
 
 # EVAL TRUE
 python OOD_Generate_Mahalanobis-GP.py --dataset imagenet10 --ckpt imagenet10-32-0-o1 --nf 32 --net_type densenet --gpu 0
-python OOD_Regression_Mahalanobis-GP.py --net_type densenet --ind_dset mnist
+python OOD_Regression_Mahalanobis-GP.py --net_type densenet --ind_dset imagenet10
 
 
 # GP Imagenet10
