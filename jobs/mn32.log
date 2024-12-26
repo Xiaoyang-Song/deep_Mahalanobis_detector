@@ -1,27 +1,18 @@
 Namespace(batch_size=200, dataset='mnist', dataroot='./data', ckpt='mnist-32', nf=32, n_test=5000, outf='./output/', num_classes=10, net_type='densenet', gpu=0)
-Traceback (most recent call last):
-  File "/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/OOD_Generate_Mahalanobis-GP.py", line 180, in <module>
-    main()
-  File "/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/OOD_Generate_Mahalanobis-GP.py", line 90, in main
-    model.load_state_dict(torch.load(
-  File "/home/xysong/.local/lib/python3.9/site-packages/torch/serialization.py", line 791, in load
-    with _open_file_like(f, 'rb') as opened_file:
-  File "/home/xysong/.local/lib/python3.9/site-packages/torch/serialization.py", line 271, in _open_file_like
-    return _open_file(name_or_buffer, mode)
-  File "/home/xysong/.local/lib/python3.9/site-packages/torch/serialization.py", line 252, in __init__
-    super().__init__(open(name, mode))
-FileNotFoundError: [Errno 2] No such file or directory: '/scratch/sunwbgt_root/sunwbgt98/xysong/GP-ImageNet/ckpt/mnist-32/densenet_mnist.pth'
-Namespace(net_type='densenet', ind_dset='mnist', nf=32, n_test=5000)
-In-distribution:  mnist
-0it [00:00, ?it/s]0it [00:00, ?it/s]
-Out-of-distribution:  fm
-Traceback (most recent call last):
-  File "/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/OOD_Regression_Mahalanobis-GP-Eval.py", line 102, in <module>
-    main()
-  File "/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/OOD_Regression_Mahalanobis-GP-Eval.py", line 53, in main
-    total_X, total_Y = lib_regression.load_characteristics(score, dataset, out, outf)
-  File "/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_regression.py", line 110, in load_characteristics
-    data = np.load(file_name)
-  File "/home/xysong/.conda/envs/OoD/lib/python3.9/site-packages/numpy/lib/npyio.py", line 405, in load
-    fid = stack.enter_context(open(os_fspath(file), "rb"))
-FileNotFoundError: [Errno 2] No such file or directory: './output/densenet_mnist_32/Mahalanobis_0.0_mnist_fm.npy'
+load model: densenet
+load target data:  mnist
+get sample mean and covariance
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:70: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  data = Variable(data, volatile=True)
+
+ Training Accuracy:(98.55%)
+
+get Mahalanobis scores
+  0%|          | 0/7 [00:00<?, ?it/s]Noise: 0.0
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:183: UserWarning: This overload of add is deprecated:
+	add(Tensor input, Number alpha, Tensor other, *, Tensor out)
+Consider using one of the following signatures instead:
+	add(Tensor input, Tensor other, *, Number alpha, Tensor out) (Triggered internally at ../torch/csrc/utils/python_arg_parser.cpp:1485.)
+  tempInputs = torch.add(data.data, -magnitude, gradient)
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:186: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  noise_out_features = model.intermediate_forward(Variable(tempInputs, volatile=True), layer_index)

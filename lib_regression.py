@@ -34,6 +34,10 @@ def block_split(X, Y, out, n_test=100000):
         partition = 1983
     elif out == 'fm':
         partition = 5000
+    elif out == 'cifar10':
+        partition = 5000
+    elif out == 'imagenet-c':
+        partition = 5000
 
     partition = min(partition, n_test)
 

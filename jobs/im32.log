@@ -115,3 +115,31 @@ Noise: 0.002
 ######################################
 Testing on DTD Texture
 Out-distribution: DTD
+(3100, 4)
+(5000, 4)
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+(3100, 4)
+(5000, 4)
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+(3100, 4)
+(5000, 4)
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+(3100, 4)
+(5000, 4)
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+(3100, 4)
+(5000, 4)
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+ 57%|█████▋    | 4/7 [30:12<22:51, 457.23s/it](3100, 4)
+(5000, 4)
+Noise: 0.0014

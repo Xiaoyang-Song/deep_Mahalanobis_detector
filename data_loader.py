@@ -212,11 +212,11 @@ def getTargetDataSet(data_type, batch_size, input_TF, dataroot):
                                         transforms.Grayscale(num_output_channels=3),
                                         transforms.ToTensor()])
         train_set = torchvision.datasets.MNIST("./Datasets", download=True, transform=transform)
-        n_test=5000
+        n_test=10000
         test_set = torchvision.datasets.MNIST("./Datasets", download=True, train=False, transform=transform)
         test_set = torch.utils.data.Subset(test_set, range(n_test))
-        train_loader = DataLoader(train_set, batch_size=256, shuffle=True, num_workers=1)
-        test_loader = DataLoader(test_set, batch_size=256, shuffle=True, num_workers=1)
+        train_loader = DataLoader(train_set, batch_size=batch_size, shuffle=True, num_workers=1)
+        test_loader = DataLoader(test_set, batch_size=batch_size, shuffle=True, num_workers=1)
     
     elif data_type == 'imagenet10':
         train_set, test_set = imagenet10_set_loader(256, 0)

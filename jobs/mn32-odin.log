@@ -1,13 +1,18 @@
 Namespace(batch_size=100, dataset='mnist', ckpt='mnist-32', nf=32, n_test=5000, dataroot='./data', outf='output/', num_classes=10, net_type='densenet', gpu=0)
-Traceback (most recent call last):
-  File "/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/OOD_Baseline_and_ODIN-GP-Eval.py", line 215, in <module>
-    main()
-  File "/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/OOD_Baseline_and_ODIN-GP-Eval.py", line 94, in main
-    model.load_state_dict(torch.load(pre_trained_net, map_location="cuda:" + str(args.gpu)))
-  File "/home/xysong/.local/lib/python3.9/site-packages/torch/serialization.py", line 791, in load
-    with _open_file_like(f, 'rb') as opened_file:
-  File "/home/xysong/.local/lib/python3.9/site-packages/torch/serialization.py", line 271, in _open_file_like
-    return _open_file(name_or_buffer, mode)
-  File "/home/xysong/.local/lib/python3.9/site-packages/torch/serialization.py", line 252, in __init__
-    super().__init__(open(name, mode))
-FileNotFoundError: [Errno 2] No such file or directory: '/scratch/sunwbgt_root/sunwbgt98/xysong/GP-ImageNet/ckpt/mnist-32/densenet_mnist.pth'
+load model: densenet
+load target data:  mnist
+  0%|          | 0/4 [00:00<?, ?it/s]/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:254: UserWarning: This overload of add is deprecated:
+	add(Tensor input, Number alpha, Tensor other, *, Tensor out)
+Consider using one of the following signatures instead:
+	add(Tensor input, Tensor other, *, Number alpha, Tensor out) (Triggered internally at ../torch/csrc/utils/python_arg_parser.cpp:1485.)
+  tempInputs = torch.add(data.data,  -magnitude, gradient)
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 1 / noise: 0
+Out-distribution: fm
+Testing set size: 5000, 4000
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
