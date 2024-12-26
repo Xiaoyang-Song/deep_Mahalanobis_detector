@@ -26,6 +26,7 @@ parser.add_argument('--dataroot', default='./data', help='path to dataset')
 # Only for imagenet 10
 parser.add_argument('--ckpt', type=str, default=None, help='checkpoint')
 parser.add_argument('--nf', type=int, default=None, help='n_features')
+parser.add_argument('--n_test', type=int, default=None, help='n_test')
 # For saving files
 parser.add_argument('--outf', default='./output/',
                     help='folder to output results')
@@ -154,8 +155,7 @@ def main():
                     (Mahalanobis_in, M_in.reshape((M_in.shape[0], -1))), axis=1)
 
         for out_dist in out_dist_list:
-            out_test_loader = data_loader.getNonTargetDataSet(
-                out_dist, args.batch_size, in_transform, args.dataroot)
+            out_test_loader = data_loader.getNonTargetDataSet(out_dist, args.batch_size, in_transform, args.dataroot, n_test=args.n_test)
             print('Out-distribution: ' + out_dist)
             for i in range(num_output):
                 M_out = lib_generation.get_Mahalanobis_score(model, out_test_loader, args.num_classes, args.outf,
@@ -166,7 +166,7 @@ def main():
                 else:
                     Mahalanobis_out = np.concatenate((Mahalanobis_out, M_out.reshape((M_out.shape[0], -1))), axis=1)
 
-            n_test = 5000
+            n_test = args.n_test
             Mahalanobis_in = np.asarray(Mahalanobis_in, dtype=np.float32)
             Mahalanobis_out = np.asarray(Mahalanobis_out, dtype=np.float32)[0:n_test]
             print(Mahalanobis_in.shape)

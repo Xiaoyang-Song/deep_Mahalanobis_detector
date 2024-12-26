@@ -17,6 +17,7 @@ parser = argparse.ArgumentParser(description='PyTorch code: Mahalanobis detector
 parser.add_argument('--net_type', required=True, help='resnet | densenet')
 parser.add_argument('--ind_dset', required=True, help='resnet | densenet')
 parser.add_argument('--nf', type=int, default=None, help='n_features')
+parser.add_argument('--n_test', type=int, default=None, help='n_test')
 args = parser.parse_args()
 print(args)
 
@@ -32,7 +33,7 @@ def main():
     # train and measure the performance of Mahalanobis detector
     # Evaluation
     TPR=0.95
-    n_test = 5000
+    n_test = args.n_test
     maha_ind_acc = [[], [], [], [], [], []]
     maha_ood_acc = [[], [], [], [], [], []]
     maha_auroc = [[], [], [], [], [], []]

@@ -27,6 +27,7 @@ parser.add_argument('--dataset', required=True,
 # Only for imagenet 10
 parser.add_argument('--ckpt', type=str, default=None, help='checkpoint')
 parser.add_argument('--nf', type=int, default=None, help='n_features')
+parser.add_argument('--n_test', type=int, default=10000, help='n_test')
 # For saving files
 parser.add_argument('--dataroot', default='./data', help='path to dataset')
 parser.add_argument('--outf', default='output/',
@@ -164,8 +165,8 @@ def main():
                 dir_name = args.outf
                 ind_val = np.loadtxt('{}/confidence_{}_In.txt'.format(dir_name, 'PoV'), delimiter=' ')
                 ood_val = np.loadtxt('{}/confidence_{}_Out.txt'.format(dir_name, 'PoV'), delimiter=' ')
-                ind_test = np.loadtxt('{}/confidence_{}_In.txt'.format(dir_name, 'PoT'), delimiter=' ')
-                ood_test = np.loadtxt('{}/confidence_{}_Out.txt'.format(dir_name, 'PoT'), delimiter=' ')
+                ind_test = np.loadtxt('{}/confidence_{}_In.txt'.format(dir_name, 'PoT'), delimiter=' ')[0:args.n_test]
+                ood_test = np.loadtxt('{}/confidence_{}_Out.txt'.format(dir_name, 'PoT'), delimiter=' ')[0:args.n_test]
                 # Lower -> OOD; Higher -> InD
                 threshold = np.quantile(ind_val, 1 - TPR)
                 # Print out test statistics

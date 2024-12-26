@@ -7,3 +7,33 @@ Dataset size:  10400 2600 500
 get sample mean and covariance
 /gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:70: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
   data = Variable(data, volatile=True)
+
+ Training Accuracy:(98.09%)
+
+get Mahalanobis scores
+  0%|          | 0/7 [00:00<?, ?it/s]Noise: 0.0
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:183: UserWarning: This overload of add is deprecated:
+	add(Tensor input, Number alpha, Tensor other, *, Tensor out)
+Consider using one of the following signatures instead:
+	add(Tensor input, Tensor other, *, Number alpha, Tensor out) (Triggered internally at ../torch/csrc/utils/python_arg_parser.cpp:1485.)
+  tempInputs = torch.add(data.data, -magnitude, gradient)
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:186: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  noise_out_features = model.intermediate_forward(Variable(tempInputs, volatile=True), layer_index)
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+(3100, 4)
+(5000, 4)
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+(3100, 4)
+(5000, 4)
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+(3100, 4)
+(5000, 4)
+######################################
+Testing on Places365
+Out-distribution: Places365-small
