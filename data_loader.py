@@ -287,15 +287,26 @@ def getNonTargetDataSet(data_type, batch_size, input_TF, dataroot, n_test=5000):
         test_loader = dset.ood_val_loader
 
     # MNIST-FashionMNIST Between-Dataset Experiment: OoD
+    elif data_type == 'imagenet-c':
+        print('######################################')
+        print('Testing on ImageNet-c') 
+        transform = transforms.Compose([transforms.RandomCrop(32),
+                                        transforms.ToTensor(),
+                                        transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
+        
+        tset = datasets.ImageFolder(os.path.join('../GP-ImageNet/data/Imagenet'), transform=transform) 
+        tset = torch.utils.data.Subset(tset, range(n_test))
+        test_loader = torch.utils.data.DataLoader(tset, batch_size=batch_size, shuffle=True)
+
     elif data_type == 'fm':
         transform = transforms.Compose([ transforms.Resize((32, 32)), 
                                 transforms.Grayscale(num_output_channels=3),
                                 transforms.ToTensor()])
-        n_test=5000
+        # n_test=5000
         tset = torchvision.datasets.FashionMNIST("./Datasets", download=True, train=True, transform=transform)
         tset = torch.utils.data.Subset(tset, range(n_test))
         # Get data loader
-        test_loader = torch.utils.data.DataLoader(tset, shuffle=False, batch_size=256)
+        test_loader = torch.utils.data.DataLoader(tset, shuffle=False, batch_size=batch_size)
 
     
     elif data_type == 'LSUN-C':

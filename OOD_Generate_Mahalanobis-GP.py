@@ -41,8 +41,9 @@ print(args)
 def main():
     C = 3
     if args.dataset == 'mnist':
-        experiment = 'mnist'
-        pre_trained_net = f"/scratch/sunwbgt_root/sunwbgt98/xysong/GP-ImageNet/ckpt/{experiment}/densenet.pth"
+        assert args.ckpt is not None
+        experiment = args.ckpt
+        pre_trained_net = f"/scratch/sunwbgt_root/sunwbgt98/xysong/GP-ImageNet/ckpt/{experiment}/densenet_{args.dataset}.pth"
     elif args.dataset == 'cifar10':
         experiment = 'CIFAR10'
         pre_trained_net = f"/scratch/sunwbgt_root/sunwbgt98/xysong/GP-ImageNet/ckpt/{experiment}/densenet.pth"
@@ -62,9 +63,10 @@ def main():
         args.num_classes = 100
         
     elif args.dataset == 'mnist':
-        out_dist_list = ['fm']
-        C = 3
-        n_features=64
+        out_dist_list = ['fm', 'svhn', 'imagenet-c', 'cifar10']
+        num_channels = 3
+        assert args.nf is not None
+        n_features = args.nf
 
     elif args.dataset == 'imagenet10':
         out_dist_list = ['DTD', 'LSUN-C', 'LSUN-R', 'Places365-small', 'iSUN', 'svhn']
@@ -83,7 +85,6 @@ def main():
             model = models.DenseNet3GP(100, num_channels=num_channels, num_classes=10, feature_size=args.nf)
             model.load_state_dict(torch.load(pre_trained_net, map_location="cuda:" + str(args.gpu)))
 
-        # MNIST-FashionMNIST Between-Dataset Experiment
         elif args.dataset == 'mnist':
             model = models.DenseNet3GP(100, num_channels=3, num_classes=10, feature_size=n_features)
             model.load_state_dict(torch.load(
@@ -92,8 +93,6 @@ def main():
                                     transforms.Grayscale(num_output_channels=3),
                                     transforms.ToTensor()])
 
-
-        # CIFAR10-SVHN Between-Dataset Experiment
         elif args.dataset == 'cifar10':
             model = models.DenseNet3(100, num_channels=3, num_classes=10)
             model.load_state_dict(torch.load(

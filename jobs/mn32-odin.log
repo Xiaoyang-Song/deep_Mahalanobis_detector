@@ -1,0 +1,13 @@
+Namespace(batch_size=100, dataset='mnist', ckpt='mnist-32', nf=32, n_test=5000, dataroot='./data', outf='output/', num_classes=10, net_type='densenet', gpu=0)
+Traceback (most recent call last):
+  File "/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/OOD_Baseline_and_ODIN-GP-Eval.py", line 215, in <module>
+    main()
+  File "/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/OOD_Baseline_and_ODIN-GP-Eval.py", line 94, in main
+    model.load_state_dict(torch.load(pre_trained_net, map_location="cuda:" + str(args.gpu)))
+  File "/home/xysong/.local/lib/python3.9/site-packages/torch/serialization.py", line 791, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/home/xysong/.local/lib/python3.9/site-packages/torch/serialization.py", line 271, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/home/xysong/.local/lib/python3.9/site-packages/torch/serialization.py", line 252, in __init__
+    super().__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/scratch/sunwbgt_root/sunwbgt98/xysong/GP-ImageNet/ckpt/mnist-32/densenet_mnist.pth'

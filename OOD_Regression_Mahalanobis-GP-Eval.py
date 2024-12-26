@@ -42,7 +42,7 @@ def main():
         outf = './output/' + args.net_type + '_' + dataset + '_' + str(args.nf) + '/'
 
         if dataset == 'mnist':
-            out_list = ['fm']
+            out_list = ['fm', 'svhn', 'imagenet-c', 'cifar10']
         elif dataset == 'imagenet10':
             out_list = ['DTD', 'LSUN-C', 'LSUN-R', 'Places365-small', 'iSUN', 'svhn']
             # out_list = ['DTD']
