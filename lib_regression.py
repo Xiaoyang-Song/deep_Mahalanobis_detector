@@ -47,7 +47,8 @@ def block_split(X, Y, out, n_test=100000):
     print(Counter(Y_adv))
     X_norm, Y_norm = X[partition: :], Y[partition: :]
     print(Counter(Y_norm))
-    num_train = 1000
+    # num_train = 1000
+    num_train = 1500
 
     X_train = np.concatenate((X_norm[:num_train], X_adv[:num_train]))
     Y_train = np.concatenate((Y_norm[:num_train], Y_adv[:num_train]))

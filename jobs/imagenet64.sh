@@ -10,7 +10,7 @@
 #SBATCH --cpus-per-task=32
 #SBATCH --mem=64G
 #SBATCH --time=10:00:00
-#SBATCH --output=/scratch/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/jobs/im64.log
+#SBATCH --output=/scratch/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/jobs/im64-1500.log
 
 
 # python OOD_Generate_Mahalanobis-GP.py --dataset imagenet10 --ckpt imagenet10-64-0-o1 --nf 64 --net_type densenet --gpu 0 --n_test 5000
