@@ -5,4 +5,4 @@
 # sbatch jobs/imagenet64-odin.sh
 
 sbatch jobs/mnist32.sh
-sbatch jobs/mnist32-odin.sh
+# sbatch jobs/mnist32-odin.sh

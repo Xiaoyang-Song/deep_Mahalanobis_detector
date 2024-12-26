@@ -53,7 +53,7 @@ def main():
                 total_X, total_Y = lib_regression.load_characteristics(score, dataset, out, outf)
                 X_val, Y_val, X_test, Y_test = lib_regression.block_split(total_X, total_Y, out, n_test)
                 # Train logistic regression classifier on validation set
-                lr = LogisticRegressionCV(n_jobs=-1, max_iter=1000).fit(X_val, Y_val)
+                lr = LogisticRegressionCV(n_jobs=-1, max_iter=100000).fit(X_val, Y_val)
                 # Find threshold on validation set
                 num_samples = X_val.shape[0]
                 ind_val = []

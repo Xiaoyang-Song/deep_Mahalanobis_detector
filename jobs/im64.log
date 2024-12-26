@@ -1,163 +1,321 @@
-Namespace(batch_size=200, dataset='imagenet10', dataroot='./data', ckpt='imagenet10-64-0-o1', nf=64, outf='./output/', num_classes=10, net_type='densenet', gpu=0)
-load model: densenet
-load target data:  imagenet10
-Training dataset size:  13000
-Dataset size:  10400 2600 500
-3100
-get sample mean and covariance
-/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:70: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
-  data = Variable(data, volatile=True)
-
- Training Accuracy:(97.97%)
-
-get Mahalanobis scores
-  0%|          | 0/7 [00:00<?, ?it/s]Noise: 0.0
-/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:183: UserWarning: This overload of add is deprecated:
-	add(Tensor input, Number alpha, Tensor other, *, Tensor out)
-Consider using one of the following signatures instead:
-	add(Tensor input, Tensor other, *, Number alpha, Tensor out) (Triggered internally at ../torch/csrc/utils/python_arg_parser.cpp:1485.)
-  tempInputs = torch.add(data.data, -magnitude, gradient)
-/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:186: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
-  noise_out_features = model.intermediate_forward(Variable(tempInputs, volatile=True), layer_index)
-######################################
-Testing on DTD Texture
-Out-distribution: DTD
-(3100, 4)
-(5000, 4)
-######################################
-Testing on LSUN-C
-Out-distribution: LSUN-C
-(3100, 4)
-(5000, 4)
-######################################
-Testing on LSUN-R
-Out-distribution: LSUN-R
-(3100, 4)
-(5000, 4)
-######################################
-Testing on Places365
-Out-distribution: Places365-small
-(3100, 4)
-(5000, 4)
-######################################
-Testing on iSUN
-Out-distribution: iSUN
-(3100, 4)
-(5000, 4)
-Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
-Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
-Out-distribution: svhn
- 14%|█▍        | 1/7 [06:46<40:36, 406.16s/it](3100, 4)
-(5000, 4)
-Noise: 0.01
-######################################
-Testing on DTD Texture
-Out-distribution: DTD
-(3100, 4)
-(5000, 4)
-######################################
-Testing on LSUN-C
-Out-distribution: LSUN-C
-(3100, 4)
-(5000, 4)
-######################################
-Testing on LSUN-R
-Out-distribution: LSUN-R
-(3100, 4)
-(5000, 4)
-######################################
-Testing on Places365
-Out-distribution: Places365-small
-(3100, 4)
-(5000, 4)
-######################################
-Testing on iSUN
-Out-distribution: iSUN
-(3100, 4)
-(5000, 4)
-Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
-Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
-Out-distribution: svhn
- 29%|██▊       | 2/7 [13:33<33:53, 406.71s/it](3100, 4)
-(5000, 4)
-Noise: 0.005
-######################################
-Testing on DTD Texture
-Out-distribution: DTD
-(3100, 4)
-(5000, 4)
-######################################
-Testing on LSUN-C
-Out-distribution: LSUN-C
-(3100, 4)
-(5000, 4)
-######################################
-Testing on LSUN-R
-Out-distribution: LSUN-R
-(3100, 4)
-(5000, 4)
-######################################
-Testing on Places365
-Out-distribution: Places365-small
-(3100, 4)
-(5000, 4)
-######################################
-Testing on iSUN
-Out-distribution: iSUN
-(3100, 4)
-(5000, 4)
-Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
-Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
-Out-distribution: svhn
- 43%|████▎     | 3/7 [20:18<27:04, 406.06s/it](3100, 4)
-(5000, 4)
-Noise: 0.002
-######################################
-Testing on DTD Texture
-Out-distribution: DTD
-(3100, 4)
-(5000, 4)
-######################################
-Testing on LSUN-C
-Out-distribution: LSUN-C
-(3100, 4)
-(5000, 4)
-######################################
-Testing on LSUN-R
-Out-distribution: LSUN-R
-(3100, 4)
-(5000, 4)
-######################################
-Testing on Places365
-Out-distribution: Places365-small
-(3100, 4)
-(5000, 4)
-######################################
-Testing on iSUN
-Out-distribution: iSUN
-(3100, 4)
-(5000, 4)
-Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
-Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
-Out-distribution: svhn
- 57%|█████▋    | 4/7 [27:31<20:50, 416.73s/it](3100, 4)
-(5000, 4)
-Noise: 0.0014
-######################################
-Testing on DTD Texture
-Out-distribution: DTD
-(3100, 4)
-(5000, 4)
-######################################
-Testing on LSUN-C
-Out-distribution: LSUN-C
-(3100, 4)
-(5000, 4)
-######################################
-Testing on LSUN-R
-Out-distribution: LSUN-R
-(3100, 4)
-(5000, 4)
-######################################
-Testing on Places365
-Out-distribution: Places365-small
+Namespace(net_type='densenet', ind_dset='imagenet10', nf=64, n_test=5000)
+In-distribution:  imagenet10
+0it [00:00, ?it/s]Out-of-distribution:  DTD
+Counter({1.0: 5000})
+Counter({0.0: 3100})
+Counter({0.0: 1000, 1.0: 1000})
+Counter({1.0: 4000, 0.0: 2100})
+1it [00:05,  5.30s/it]2it [00:06,  2.81s/it]3it [00:07,  1.92s/it]4it [00:08,  1.54s/it]5it [00:09,  1.37s/it]6it [00:10,  1.27s/it]6it [00:10,  1.72s/it]
+1000
+Testing set size: 2100, 4000
+Counter({1.0: 5000})
+Counter({0.0: 3100})
+Counter({0.0: 1000, 1.0: 1000})
+Counter({1.0: 4000, 0.0: 2100})
+1000
+Testing set size: 2100, 4000
+Counter({1.0: 5000})
+Counter({0.0: 3100})
+Counter({0.0: 1000, 1.0: 1000})
+Counter({1.0: 4000, 0.0: 2100})
+1000
+Testing set size: 2100, 4000
+Counter({1.0: 5000})
+Counter({0.0: 3100})
+Counter({0.0: 1000, 1.0: 1000})
+Counter({1.0: 4000, 0.0: 2100})
+1000
+Testing set size: 2100, 4000
+Counter({1.0: 5000})
+Counter({0.0: 3100})
+Counter({0.0: 1000, 1.0: 1000})
+Counter({1.0: 4000, 0.0: 2100})
+1000
+Testing set size: 2100, 4000
+Counter({1.0: 5000})
+Counter({0.0: 3100})
+Counter({0.0: 1000, 1.0: 1000})
+Counter({1.0: 4000, 0.0: 2100})
+1000
+Testing set size: 2100, 4000
+Counter({1.0: 5000})
+Counter({0.0: 3100})
+Counter({0.0: 1000, 1.0: 1000})
+Counter({1.0: 4000, 0.0: 2100})
+1000
+Testing set size: 2100, 4000
+Out-of-distribution:  LSUN-C
+Counter({1.0: 5000})
+Counter({0.0: 3100})
+Counter({0.0: 1000, 1.0: 1000})
+Counter({1.0: 4000, 0.0: 2100})
+1000
+Testing set size: 2100, 4000
+Counter({1.0: 5000})
+Counter({0.0: 3100})
+Counter({0.0: 1000, 1.0: 1000})
+Counter({1.0: 4000, 0.0: 2100})
+1000
+Testing set size: 2100, 4000
+Counter({1.0: 5000})
+Counter({0.0: 3100})
+Counter({0.0: 1000, 1.0: 1000})
+Counter({1.0: 4000, 0.0: 2100})
+1000
+Testing set size: 2100, 4000
+Counter({1.0: 5000})
+Counter({0.0: 3100})
+Counter({0.0: 1000, 1.0: 1000})
+Counter({1.0: 4000, 0.0: 2100})
+1000
+Testing set size: 2100, 4000
+Counter({1.0: 5000})
+Counter({0.0: 3100})
+Counter({0.0: 1000, 1.0: 1000})
+Counter({1.0: 4000, 0.0: 2100})
+1000
+Testing set size: 2100, 4000
+Counter({1.0: 5000})
+Counter({0.0: 3100})
+Counter({0.0: 1000, 1.0: 1000})
+Counter({1.0: 4000, 0.0: 2100})
+1000
+Testing set size: 2100, 4000
+Counter({1.0: 5000})
+Counter({0.0: 3100})
+Counter({0.0: 1000, 1.0: 1000})
+Counter({1.0: 4000, 0.0: 2100})
+1000
+Testing set size: 2100, 4000
+Out-of-distribution:  LSUN-R
+Counter({1.0: 5000})
+Counter({0.0: 3100})
+Counter({0.0: 1000, 1.0: 1000})
+Counter({1.0: 4000, 0.0: 2100})
+1000
+Testing set size: 2100, 4000
+Counter({1.0: 5000})
+Counter({0.0: 3100})
+Counter({0.0: 1000, 1.0: 1000})
+Counter({1.0: 4000, 0.0: 2100})
+1000
+Testing set size: 2100, 4000
+Counter({1.0: 5000})
+Counter({0.0: 3100})
+Counter({0.0: 1000, 1.0: 1000})
+Counter({1.0: 4000, 0.0: 2100})
+1000
+Testing set size: 2100, 4000
+Counter({1.0: 5000})
+Counter({0.0: 3100})
+Counter({0.0: 1000, 1.0: 1000})
+Counter({1.0: 4000, 0.0: 2100})
+1000
+Testing set size: 2100, 4000
+Counter({1.0: 5000})
+Counter({0.0: 3100})
+Counter({0.0: 1000, 1.0: 1000})
+Counter({1.0: 4000, 0.0: 2100})
+1000
+Testing set size: 2100, 4000
+Counter({1.0: 5000})
+Counter({0.0: 3100})
+Counter({0.0: 1000, 1.0: 1000})
+Counter({1.0: 4000, 0.0: 2100})
+1000
+Testing set size: 2100, 4000
+Counter({1.0: 5000})
+Counter({0.0: 3100})
+Counter({0.0: 1000, 1.0: 1000})
+Counter({1.0: 4000, 0.0: 2100})
+1000
+Testing set size: 2100, 4000
+Out-of-distribution:  Places365-small
+Counter({1.0: 5000})
+Counter({0.0: 3100})
+Counter({0.0: 1000, 1.0: 1000})
+Counter({1.0: 4000, 0.0: 2100})
+1000
+Testing set size: 2100, 4000
+Counter({1.0: 5000})
+Counter({0.0: 3100})
+Counter({0.0: 1000, 1.0: 1000})
+Counter({1.0: 4000, 0.0: 2100})
+1000
+Testing set size: 2100, 4000
+Counter({1.0: 5000})
+Counter({0.0: 3100})
+Counter({0.0: 1000, 1.0: 1000})
+Counter({1.0: 4000, 0.0: 2100})
+1000
+Testing set size: 2100, 4000
+Counter({1.0: 5000})
+Counter({0.0: 3100})
+Counter({0.0: 1000, 1.0: 1000})
+Counter({1.0: 4000, 0.0: 2100})
+1000
+Testing set size: 2100, 4000
+Counter({1.0: 5000})
+Counter({0.0: 3100})
+Counter({0.0: 1000, 1.0: 1000})
+Counter({1.0: 4000, 0.0: 2100})
+1000
+Testing set size: 2100, 4000
+Counter({1.0: 5000})
+Counter({0.0: 3100})
+Counter({0.0: 1000, 1.0: 1000})
+Counter({1.0: 4000, 0.0: 2100})
+1000
+Testing set size: 2100, 4000
+Counter({1.0: 5000})
+Counter({0.0: 3100})
+Counter({0.0: 1000, 1.0: 1000})
+Counter({1.0: 4000, 0.0: 2100})
+1000
+Testing set size: 2100, 4000
+Out-of-distribution:  iSUN
+Counter({1.0: 5000})
+Counter({0.0: 3100})
+Counter({0.0: 1000, 1.0: 1000})
+Counter({1.0: 4000, 0.0: 2100})
+1000
+Testing set size: 2100, 4000
+Counter({1.0: 5000})
+Counter({0.0: 3100})
+Counter({0.0: 1000, 1.0: 1000})
+Counter({1.0: 4000, 0.0: 2100})
+1000
+Testing set size: 2100, 4000
+Counter({1.0: 5000})
+Counter({0.0: 3100})
+Counter({0.0: 1000, 1.0: 1000})
+Counter({1.0: 4000, 0.0: 2100})
+1000
+Testing set size: 2100, 4000
+Counter({1.0: 5000})
+Counter({0.0: 3100})
+Counter({0.0: 1000, 1.0: 1000})
+Counter({1.0: 4000, 0.0: 2100})
+1000
+Testing set size: 2100, 4000
+Counter({1.0: 5000})
+Counter({0.0: 3100})
+Counter({0.0: 1000, 1.0: 1000})
+Counter({1.0: 4000, 0.0: 2100})
+1000
+Testing set size: 2100, 4000
+Counter({1.0: 5000})
+Counter({0.0: 3100})
+Counter({0.0: 1000, 1.0: 1000})
+Counter({1.0: 4000, 0.0: 2100})
+1000
+Testing set size: 2100, 4000
+Counter({1.0: 5000})
+Counter({0.0: 3100})
+Counter({0.0: 1000, 1.0: 1000})
+Counter({1.0: 4000, 0.0: 2100})
+1000
+Testing set size: 2100, 4000
+Out-of-distribution:  svhn
+Counter({1.0: 5000})
+Counter({0.0: 3100})
+Counter({0.0: 1000, 1.0: 1000})
+Counter({1.0: 4000, 0.0: 2100})
+1000
+Testing set size: 2100, 4000
+Counter({1.0: 5000})
+Counter({0.0: 3100})
+Counter({0.0: 1000, 1.0: 1000})
+Counter({1.0: 4000, 0.0: 2100})
+1000
+Testing set size: 2100, 4000
+Counter({1.0: 5000})
+Counter({0.0: 3100})
+Counter({0.0: 1000, 1.0: 1000})
+Counter({1.0: 4000, 0.0: 2100})
+1000
+Testing set size: 2100, 4000
+Counter({1.0: 5000})
+Counter({0.0: 3100})
+Counter({0.0: 1000, 1.0: 1000})
+Counter({1.0: 4000, 0.0: 2100})
+1000
+Testing set size: 2100, 4000
+Counter({1.0: 5000})
+Counter({0.0: 3100})
+Counter({0.0: 1000, 1.0: 1000})
+Counter({1.0: 4000, 0.0: 2100})
+1000
+Testing set size: 2100, 4000
+Counter({1.0: 5000})
+Counter({0.0: 3100})
+Counter({0.0: 1000, 1.0: 1000})
+Counter({1.0: 4000, 0.0: 2100})
+1000
+Testing set size: 2100, 4000
+Counter({1.0: 5000})
+Counter({0.0: 3100})
+Counter({0.0: 1000, 1.0: 1000})
+Counter({1.0: 4000, 0.0: 2100})
+1000
+Testing set size: 2100, 4000
+OOD dataset: DTD
+IND ACC
+[94. 94. 94. 94. 95. 94. 95.]
+94.0
+OOD ACC
+[67. 49. 54. 64. 64. 66. 66.]
+62.0
+AUROC
+[90. 86. 87. 89. 90. 90. 90.]
+89.0
+OOD dataset: LSUN-C
+IND ACC
+[94. 94. 95. 94. 94. 94. 94.]
+94.0
+OOD ACC
+[96. 66. 87. 96. 96. 96. 96.]
+91.0
+AUROC
+[99. 95. 98. 99. 99. 99. 98.]
+98.0
+OOD dataset: LSUN-R
+IND ACC
+[94. 94. 95. 95. 95. 95. 94.]
+95.0
+OOD ACC
+[87. 48. 71. 84. 85. 85. 88.]
+78.0
+AUROC
+[97. 87. 94. 97. 97. 97. 97.]
+95.0
+OOD dataset: Places365-small
+IND ACC
+[93. 94. 94. 94. 94. 94. 93.]
+94.0
+OOD ACC
+[16.  7.  8. 14. 14. 15. 16.]
+13.0
+AUROC
+[65. 56. 60. 64. 64. 65. 65.]
+63.0
+OOD dataset: iSUN
+IND ACC
+[94. 94. 95. 95. 95. 94. 93.]
+94.0
+OOD ACC
+[82. 48. 68. 79. 80. 82. 84.]
+75.0
+AUROC
+[96. 86. 93. 96. 96. 96. 96.]
+94.0
+OOD dataset: svhn
+IND ACC
+[94. 94. 94. 94. 95. 94. 94.]
+94.0
+OOD ACC
+[77. 66. 66. 70. 65. 68. 72.]
+69.0
+AUROC
+[95. 94. 94. 94. 94. 94. 95.]
+94.0
