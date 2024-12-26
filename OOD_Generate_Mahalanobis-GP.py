@@ -52,7 +52,7 @@ def main():
     else:
         assert False
 
-    args.outf = args.outf + args.net_type + '_' + args.dataset + '/'
+    args.outf = args.outf + args.net_type + '_' + args.dataset + '_' + args.nf + '/'
     os.makedirs(args.outf, exist_ok=True)
     torch.cuda.manual_seed(0)
     torch.cuda.set_device(args.gpu)
@@ -66,7 +66,8 @@ def main():
         n_features=64
 
     elif args.dataset == 'imagenet10':
-        out_dist_list = ['DTD', 'LSUN-C', 'LSUN-R', 'Places365-small', 'iSUN', 'svhn']
+        # out_dist_list = ['DTD', 'LSUN-C', 'LSUN-R', 'Places365-small', 'iSUN', 'svhn']
+        out_dist_list = ['DTD']
         # out_dist_list = ['iSUN']
         num_channels = 3
         assert args.nf is not None
@@ -78,7 +79,7 @@ def main():
     if args.net_type == 'densenet':
         # Useless
         if args.dataset == 'imagenet10':
-            model = models.DenseNet3GP(100, num_channels=3, num_classes=10, feature_size=args.nf)
+            model = models.DenseNet3GP(100, num_channels=num_channels, num_classes=10, feature_size=args.nf)
             model.load_state_dict(torch.load(pre_trained_net, map_location="cuda:" + str(args.gpu)))
 
         # MNIST-FashionMNIST Between-Dataset Experiment
@@ -163,11 +164,11 @@ def main():
                 if i == 0:
                     Mahalanobis_out = M_out.reshape((M_out.shape[0], -1))
                 else:
-                    Mahalanobis_out = np.concatenate(
-                        (Mahalanobis_out, M_out.reshape((M_out.shape[0], -1))), axis=1)
+                    Mahalanobis_out = np.concatenate((Mahalanobis_out, M_out.reshape((M_out.shape[0], -1))), axis=1)
 
+            n_test = 5000
             Mahalanobis_in = np.asarray(Mahalanobis_in, dtype=np.float32)
-            Mahalanobis_out = np.asarray(Mahalanobis_out, dtype=np.float32)
+            Mahalanobis_out = np.asarray(Mahalanobis_out, dtype=np.float32)[0:n_test]
             print(Mahalanobis_in.shape)
             print(Mahalanobis_out.shape)
             Mahalanobis_data, Mahalanobis_labels = lib_generation.merge_and_generate_labels(

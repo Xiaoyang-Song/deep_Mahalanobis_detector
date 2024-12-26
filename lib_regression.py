@@ -8,7 +8,7 @@ from collections import Counter
 from scipy.spatial.distance import pdist, cdist, squareform
 
 
-def block_split(X, Y, out):
+def block_split(X, Y, out, n_test=100000):
     """
     Split the data training and testing
     :return: X (data) and Y (label) for training / testing
@@ -16,6 +16,16 @@ def block_split(X, Y, out):
     num_samples = X.shape[0]
     if out == 'svhn':
         partition = 26032
+    elif out == 'DTD':
+        partition = 5640
+    elif out == 'LSUN-C':
+        partition = 10000
+    elif out == 'LSUN-R':
+        partition = 10000
+    elif out == 'Places365-small':
+        partition = 36500
+    elif out == 'iSUN':
+        partition = 8925
     elif out == 'fm89':
         partition = 2000
     elif out == 'svhn89':
@@ -24,6 +34,8 @@ def block_split(X, Y, out):
         partition = 1983
     elif out == 'fm':
         partition = 5000
+
+    partition = min(partition, n_test)
 
     # Structure: OOD + IND
     # print(Counter(Y))
