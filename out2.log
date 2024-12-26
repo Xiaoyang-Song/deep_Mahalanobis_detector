@@ -1,0 +1,874 @@
+Namespace(batch_size=100, dataset='imagenet10', ckpt='imagenet10-32-0-o1', nf=32, dataroot='./data', outf='output/', num_classes=10, net_type='densenet', gpu=0)
+load model: densenet
+load target data:  imagenet10
+Training dataset size:  13000
+Dataset size:  10400 2600 500
+3100
+Temperature: 1 / noise: 0
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+Temperature: 1 / noise: 0.0005
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+Temperature: 1 / noise: 0.001
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+Temperature: 1 / noise: 0.0014
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+Temperature: 1 / noise: 0.002
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+Temperature: 1 / noise: 0.0024
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+Temperature: 1 / noise: 0.005
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+Temperature: 1 / noise: 0.01
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+Temperature: 1 / noise: 0.05
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+Temperature: 1 / noise: 0.1
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+Temperature: 1 / noise: 0.2
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+Temperature: 10 / noise: 0
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+Temperature: 10 / noise: 0.0005
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+Temperature: 10 / noise: 0.001
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+Temperature: 10 / noise: 0.0014
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+Temperature: 10 / noise: 0.002
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+Temperature: 10 / noise: 0.0024
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+Temperature: 10 / noise: 0.005
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+Temperature: 10 / noise: 0.01
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+Temperature: 10 / noise: 0.05
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+Temperature: 10 / noise: 0.1
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+Temperature: 10 / noise: 0.2
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+Temperature: 100 / noise: 0
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+Temperature: 100 / noise: 0.0005
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+Temperature: 100 / noise: 0.001
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+Temperature: 100 / noise: 0.0014
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+Temperature: 100 / noise: 0.002
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+Temperature: 100 / noise: 0.0024
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+Temperature: 100 / noise: 0.005
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+Temperature: 100 / noise: 0.01
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+Temperature: 100 / noise: 0.05
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+Temperature: 100 / noise: 0.1
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+Temperature: 100 / noise: 0.2
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+Temperature: 1000 / noise: 0
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+Temperature: 1000 / noise: 0.0005
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+Temperature: 1000 / noise: 0.001
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+Temperature: 1000 / noise: 0.0014
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+Temperature: 1000 / noise: 0.002
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+Temperature: 1000 / noise: 0.0024
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+Temperature: 1000 / noise: 0.005
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+Temperature: 1000 / noise: 0.01
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+Temperature: 1000 / noise: 0.05
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+Temperature: 1000 / noise: 0.1
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+Temperature: 1000 / noise: 0.2
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+Baseline method: in_distribution: imagenet10==========
+out_distribution: DTD
+ TNR95  TNR99  AUROC  DTACC  AUIN   AUOUT 
+ 51.72  13.28  90.00  83.57  79.62  94.21
+
+out_distribution: LSUN-C
+ TNR95  TNR99  AUROC  DTACC  AUIN   AUOUT 
+ 58.30  14.57  92.28  85.75  81.18  97.46
+
+out_distribution: LSUN-R
+ TNR95  TNR99  AUROC  DTACC  AUIN   AUOUT 
+ 59.63  12.94  93.25  87.50  83.38  97.64
+
+out_distribution: Places365-small
+ TNR95  TNR99  AUROC  DTACC  AUIN   AUOUT 
+ 50.90  10.35  90.43  84.21  47.55  99.16
+
+out_distribution: iSUN
+ TNR95  TNR99  AUROC  DTACC  AUIN   AUOUT 
+ 56.98  12.24  92.70  87.14  82.43  97.14
+
+out_distribution: svhn
+ TNR95  TNR99  AUROC  DTACC  AUIN   AUOUT 
+ 23.67   3.41  76.24  68.71  31.42  96.95
+
+ODIN method: in_distribution: imagenet10==========
+out_distribution: DTD
+ TNR95  TNR99  AUROC  DTACC  AUIN   AUOUT 
+ 59.68  30.60  91.56  84.56  83.79  95.61
+temperature: 10
+magnitude: 0.0014
+

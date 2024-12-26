@@ -16,6 +16,7 @@ from tqdm import tqdm
 
 from torchvision import transforms
 from torch.autograd import Variable
+from sklearn.metrics import roc_auc_score
 
 parser = argparse.ArgumentParser(
     description='PyTorch code: Mahalanobis detector')
@@ -88,11 +89,9 @@ def main():
 
         # Useless
         if args.dataset == 'mnist':
-            # model = models.DenseNet3(100, int(args.num_classes))
             model = models.DenseNet3GP(100, int(args.num_classes), num_channels,feature_size=n_features)
-            model.load_state_dict(torch.load(
-                pre_trained_net, map_location="cuda:" + str(args.gpu)))
-            in_transform = transforms.Compose([ transforms.Resize((32, 32)), 
+            model.load_state_dict(torch.load(pre_trained_net, map_location="cuda:" + str(args.gpu)))
+            in_transform = transforms.Compose([transforms.Resize((32, 32)), 
                                     transforms.Grayscale(num_output_channels=3),
                                     transforms.ToTensor()])
 
@@ -129,29 +128,30 @@ def main():
 
     # load dataset
     print('load target data: ', args.dataset)
-    train_loader, test_loader = data_loader.getTargetDataSet(
-        args.dataset, args.batch_size, in_transform, args.dataroot)
+    train_loader, test_loader = data_loader.getTargetDataSet(args.dataset, args.batch_size, in_transform, args.dataroot)
 
     # measure the performance
-    M_list = [0, 0.0005, 0.001, 0.0014, 0.002,
-              0.0024, 0.005, 0.01, 0.05, 0.1, 0.2]
-    T_list = [1, 10, 100, 1000]
-    # M_list = [0, 0.0005]
-    # T_list = [1, 10]
-    base_line_list = []
-    ODIN_best_tnr = [0, 0, 0, 0, 0, 0]
-    ODIN_best_results = [0, 0, 0, 0, 0, 0]
-    ODIN_best_temperature = [-1, -1, -1, -1, -1, -1]
-    ODIN_best_magnitude = [-1, -1, -1, -1, -1, -1]
-    ODIN_tnr_lst = [[], [], [], [], [], []]
-    ODIN_auroc_lst = [[], [], [], [], [], []]
+    TPR=0.95
+    # M_list = [0, 0.0005, 0.001, 0.0014, 0.002,
+    #           0.0024, 0.005, 0.01, 0.05, 0.1, 0.2]
+    # T_list = [1, 10, 100, 1000]
+    M_list = [0, 0.0005]
+    T_list = [1, 10]
+
+    # BASELINE
+    base_line_list_ind = []
+    base_line_list_ood = []
+    base_line_list_auroc = []
+    # ODIN
+    odin_ind_acc = [[], [], [], [], [], []]
+    odin_ood_acc = [[], [], [], [], [], []]
+    odin_auroc = [[], [], [], [], [], []]
 
     for T in tqdm(T_list):
         for m in M_list:
             magnitude = m
             temperature = T
-            lib_generation.get_posterior(
-                model, args.net_type, num_channels, test_loader, magnitude, temperature, args.outf, True)
+            lib_generation.get_posterior(model, args.net_type, num_channels, test_loader, magnitude, temperature, args.outf, True)
             out_count = 0
             print('Temperature: ' + str(temperature) + ' / noise: ' + str(magnitude))
             for out_dist in out_dist_list:
@@ -159,60 +159,56 @@ def main():
                     out_dist, args.batch_size, in_transform, args.dataroot)
                 print('Out-distribution: ' + out_dist)
                 lib_generation.get_posterior(model, args.net_type, num_channels, out_test_loader, magnitude, temperature, args.outf, False)
+
+                # InD and OoD validation set
+                dir_name = args.outf
+                ind_val = np.loadtxt('{}/confidence_{}_In.txt'.format(dir_name, ['PoV']), delimiter=' ')
+                ood_val = np.loadtxt('{}/confidence_{}_Out.txt'.format(dir_name, ['PoV']), delimiter=' ')
+                ind_test = np.loadtxt('{}/confidence_{}_In.txt'.format(dir_name, ['PoT']), delimiter=' ')
+                ood_test = np.loadtxt('{}/confidence_{}_Out.txt'.format(dir_name, ['PoT']), delimiter=' ')
+                # Lower -> OOD; Higher -> InD
+                threshold = np.quantile(ind_val, 1 - TPR)
+                # Print out test statistics
+                print(f"Testing set size: {len(ind_test)}, {len(ood_test)}")
+                ind_acc = sum(ind_test >= threshold) / len(ind_test)
+                ood_acc = sum(ood_test < threshold) / len(ood_test)
+                # AUROC calculation
+                scores = np.concatenate((ind_test, ood_test))  # Combine the arrays
+                labels = np.concatenate((np.zeros(ind_test.shape[0]), np.ones(ood_test.shape[0])))  # Labels: 0 for InD, 1 for OoD
+                # Calculate AUROC
+                auroc = roc_auc_score(labels, scores)
+                # Find threshold using validation set
                 if temperature == 1 and magnitude == 0:
-                    test_results = callog.metric(args.outf, ['PoT'])
-                    base_line_list.append(test_results)
+                    base_line_list_ind.append(ind_acc)
+                    base_line_list_ood.append(ood_acc)
+                    base_line_list_auroc.append(auroc)
                 else:
-                    val_results = callog.metric(args.outf, ['PoV'])
-
-                    test_results = callog.metric(args.outf, ['PoT'])
-                    ODIN_tnr_lst[out_count].append(test_results['PoT']['TNR95'])
-                    ODIN_auroc_lst[out_count].append(test_results['PoT']['AUROC'])
-
-                    if ODIN_best_tnr[out_count] < val_results['PoV']['TNR95']:
-                        ODIN_best_tnr[out_count] = val_results['PoV']['TNR95']
-                        ODIN_best_results[out_count] = callog.metric(args.outf, ['PoT'])
-                        ODIN_best_temperature[out_count] = temperature
-                        ODIN_best_magnitude[out_count] = magnitude
+                    odin_ind_acc[out_count].append(ind_acc)
+                    odin_ood_acc[out_count].append(ood_acc)
+                    odin_auroc[out_count].append(auroc)
                 out_count += 1
 
     # print the results
-    mtypes = ['TNR95', 'TNR99', 'AUROC', 'DTACC', 'AUIN', 'AUOUT']
     print('Baseline method: in_distribution: ' + args.dataset + '==========')
-    count_out = 0
-    for results in base_line_list:
-        print('out_distribution: ' + out_dist_list[count_out])
-        for mtype in mtypes:
-            print(' {mtype:6s}'.format(mtype=mtype), end='')
-        print('\n{val:6.2f}'.format(val=100.*results['PoT']['TNR95']), end='')
-        print(' {val:6.2f}'.format(val=100.*results['PoT']['TNR99']), end='')
-        print(' {val:6.2f}'.format(val=100.*results['PoT']['AUROC']), end='')
-        print(' {val:6.2f}'.format(val=100.*results['PoT']['DTACC']), end='')
-        print(' {val:6.2f}'.format(val=100.*results['PoT']['AUIN']), end='')
-        print(' {val:6.2f}\n'.format(val=100.*results['PoT']['AUOUT']), end='')
-        print('')
-        count_out += 1
+
+    for out_idx, name in enumerate(out_dist_list):
+        print('out_distribution: ' + name)
+        print(100*np.round(base_line_list_ind[out_idx], 2))
+        print(100*np.round(base_line_list_ood[out_idx], 2))
+        print(100*np.round(base_line_list_auroc[out_idx], 2))
 
     print('ODIN method: in_distribution: ' + args.dataset + '==========')
-    count_out = 0
-    for results in ODIN_best_results:
-        print('out_distribution: ' + out_dist_list[count_out])
-        for mtype in mtypes:
-            print(' {mtype:6s}'.format(mtype=mtype), end='')
-        print('\n{val:6.2f}'.format(val=100.*results['PoT']['TNR95']), end='')
-        print(' {val:6.2f}'.format(val=100.*results['PoT']['TNR99']), end='')
-        print(' {val:6.2f}'.format(val=100.*results['PoT']['AUROC']), end='')
-        print(' {val:6.2f}'.format(val=100.*results['PoT']['DTACC']), end='')
-        print(' {val:6.2f}'.format(val=100.*results['PoT']['AUIN']), end='')
-        print(' {val:6.2f}\n'.format(val=100.*results['PoT']['AUOUT']), end='')
-        print('temperature: ' + str(ODIN_best_temperature[count_out]))
-        print('magnitude: ' + str(ODIN_best_magnitude[count_out]))
-        print('')
-        print(100*np.round(ODIN_tnr_lst[count_out],2))
-        print(100*np.round(np.mean(ODIN_tnr_lst[count_out]), 2))
-        print(100*np.round(ODIN_auroc_lst[count_out],2))
-        print(100*np.round(np.mean(ODIN_auroc_lst[count_out]), 2))
-        count_out += 1
+    for count_out, name in enumerate(out_dist_list):
+        print('out_distribution: ' + name)
+        print('IND ACC')
+        print(100*np.round(odin_ind_acc[count_out],2))
+        print(100*np.round(np.mean(odin_ind_acc[count_out]), 2))
+        print("OOD ACC")
+        print(100*np.round(odin_ood_acc[count_out],2))
+        print(100*np.round(np.mean(odin_ood_acc[count_out]), 2))
+        print("AUROC")
+        print(100*np.round(odin_auroc[count_out],2))
+        print(100*np.round(np.mean(odin_auroc[count_out]), 2))
 
 
 if __name__ == '__main__':

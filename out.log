@@ -1,0 +1,194 @@
+Namespace(batch_size=100, dataset='imagenet10', ckpt='imagenet10-32-0-o1', nf=32, dataroot='./data', outf='output/', num_classes=10, net_type='densenet', gpu=0)
+load model: densenet
+load target data:  imagenet10
+Training dataset size:  13000
+Dataset size:  10400 2600 500
+3100
+Temperature: 1 / noise: 0
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Temperature: 1 / noise: 0.0005
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Temperature: 1 / noise: 0.001
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Temperature: 1 / noise: 0.0014
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Temperature: 1 / noise: 0.002
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Temperature: 1 / noise: 0.0024
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Temperature: 1 / noise: 0.005
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Temperature: 1 / noise: 0.01
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Temperature: 1 / noise: 0.05
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Temperature: 1 / noise: 0.1
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Temperature: 1 / noise: 0.2
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Temperature: 10 / noise: 0
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Temperature: 10 / noise: 0.0005
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Temperature: 10 / noise: 0.001
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Temperature: 10 / noise: 0.0014
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Temperature: 10 / noise: 0.002
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Temperature: 10 / noise: 0.0024
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Temperature: 10 / noise: 0.005
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Temperature: 10 / noise: 0.01
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Temperature: 10 / noise: 0.05
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Temperature: 10 / noise: 0.1
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Temperature: 10 / noise: 0.2
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Temperature: 100 / noise: 0
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Temperature: 100 / noise: 0.0005
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Temperature: 100 / noise: 0.001
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Temperature: 100 / noise: 0.0014
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Temperature: 100 / noise: 0.002
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Temperature: 100 / noise: 0.0024
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Temperature: 100 / noise: 0.005
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Temperature: 100 / noise: 0.01
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Temperature: 100 / noise: 0.05
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Temperature: 100 / noise: 0.1
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Temperature: 100 / noise: 0.2
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Temperature: 1000 / noise: 0
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Temperature: 1000 / noise: 0.0005
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Temperature: 1000 / noise: 0.001
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Temperature: 1000 / noise: 0.0014
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Temperature: 1000 / noise: 0.002
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Temperature: 1000 / noise: 0.0024
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Temperature: 1000 / noise: 0.005
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Temperature: 1000 / noise: 0.01
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Temperature: 1000 / noise: 0.05
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Temperature: 1000 / noise: 0.1
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Temperature: 1000 / noise: 0.2
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+Baseline method: in_distribution: imagenet10==========
+out_distribution: iSUN
+ TNR95  TNR99  AUROC  DTACC  AUIN   AUOUT 
+ 56.98  12.24  92.70  87.14  82.43  97.14
+
+ODIN method: in_distribution: imagenet10==========
+out_distribution: iSUN
+ TNR95  TNR99  AUROC  DTACC  AUIN   AUOUT 
+ 70.47  33.64  94.58  88.09  86.72  98.13
+temperature: 10
+magnitude: 0.0014
+

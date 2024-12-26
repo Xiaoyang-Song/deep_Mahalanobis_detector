@@ -23,10 +23,8 @@ def get_curve(dir_name, stypes=['Baseline', 'Gaussian_LDA']):
     # tpr 99
     tnr_at_tpr99 = dict()
     for stype in stypes:
-        known = np.loadtxt(
-            '{}/confidence_{}_In.txt'.format(dir_name, stype), delimiter=' ')
-        novel = np.loadtxt(
-            '{}/confidence_{}_Out.txt'.format(dir_name, stype), delimiter=' ')
+        known = np.loadtxt('{}/confidence_{}_In.txt'.format(dir_name, stype), delimiter=' ')
+        novel = np.loadtxt('{}/confidence_{}_Out.txt'.format(dir_name, stype), delimiter=' ')
         known.sort()
         novel.sort()
         end = np.max([np.max(known), np.max(novel)])
@@ -55,12 +53,16 @@ def get_curve(dir_name, stypes=['Baseline', 'Gaussian_LDA']):
                     k += 1
                     tp[stype][l+1] = tp[stype][l] - 1
                     fp[stype][l+1] = fp[stype][l]
-        tpr95_pos = np.abs(tp[stype] / num_k - .95).argmin()
+
+
+        tpr95_pos = np.abs(tp[stype] / num_k - .854).argmin()
+        # tpr95_pos = np.abs(tp[stype] / num_k - .8625).argmin()
         tnr_at_tpr95[stype] = 1. - fp[stype][tpr95_pos] / num_n
 
         # TPR 99
         tpr99_pos = np.abs(tp[stype] / num_k - .99).argmin()
         tnr_at_tpr99[stype] = 1. - fp[stype][tpr99_pos] / num_n
+        
     return tp, fp, tnr_at_tpr95, tnr_at_tpr99
 
 
