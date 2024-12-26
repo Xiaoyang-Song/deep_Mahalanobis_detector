@@ -183,7 +183,6 @@ def get_Mahalanobis_score(model, test_loader, num_classes, outf, out_flag, net_t
         tempInputs = torch.add(data.data, -magnitude, gradient)
 
         with torch.no_grad():
- 
             noise_out_features = model.intermediate_forward(Variable(tempInputs, volatile=True), layer_index)
             noise_out_features = noise_out_features.view(noise_out_features.size(0), noise_out_features.size(1), -1)
             noise_out_features = torch.mean(noise_out_features, 2)

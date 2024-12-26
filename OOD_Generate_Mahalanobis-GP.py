@@ -66,8 +66,8 @@ def main():
         n_features=64
 
     elif args.dataset == 'imagenet10':
-        # out_dist_list = ['DTD', 'LSUN-C', 'LSUN-R', 'Places365-small', 'iSUN', 'svhn']
-        out_dist_list = ['DTD']
+        out_dist_list = ['DTD', 'LSUN-C', 'LSUN-R', 'Places365-small', 'iSUN', 'svhn']
+        # out_dist_list = ['DTD']
         # out_dist_list = ['iSUN']
         num_channels = 3
         assert args.nf is not None

@@ -16,6 +16,7 @@ from tqdm import tqdm
 parser = argparse.ArgumentParser(description='PyTorch code: Mahalanobis detector')
 parser.add_argument('--net_type', required=True, help='resnet | densenet')
 parser.add_argument('--ind_dset', required=True, help='resnet | densenet')
+parser.add_argument('--nf', type=int, default=None, help='n_features')
 args = parser.parse_args()
 print(args)
 
@@ -26,6 +27,7 @@ def main():
     dataset_list = [ind_dset]
     score_list = ['Mahalanobis_0.0', 'Mahalanobis_0.01', 'Mahalanobis_0.005',
                   'Mahalanobis_0.002', 'Mahalanobis_0.0014', 'Mahalanobis_0.001', 'Mahalanobis_0.0005']
+    # score_list = ['Mahalanobis_0.0']
 
     # train and measure the performance of Mahalanobis detector
     # Evaluation
@@ -36,17 +38,17 @@ def main():
     maha_auroc = [[], [], [], [], [], []]
     for dataset in dataset_list:
         print('In-distribution: ', dataset)
-        outf = './output/' + args.net_type + '_' + args.dataset + '_' + str(args.nf) + '/'
+        outf = './output/' + args.net_type + '_' + dataset + '_' + str(args.nf) + '/'
 
         if dataset == 'mnist':
             out_list = ['fm']
         elif dataset == 'imagenet10':
-            # out_list = ['DTD', 'LSUN-C', 'LSUN-R', 'Places365-small', 'iSUN', 'svhn']
-            out_list = ['DTD']
+            out_list = ['DTD', 'LSUN-C', 'LSUN-R', 'Places365-small', 'iSUN', 'svhn']
+            # out_list = ['DTD']
 
         for idx, out in tqdm(enumerate(out_list)):
             print('Out-of-distribution: ', out)
-            for score in tqdm(score_list):
+            for score in score_list:
                 total_X, total_Y = lib_regression.load_characteristics(score, dataset, out, outf)
                 X_val, Y_val, X_test, Y_test = lib_regression.block_split(total_X, total_Y, out, n_test)
                 # Train logistic regression classifier on validation set

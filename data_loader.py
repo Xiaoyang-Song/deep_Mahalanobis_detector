@@ -244,7 +244,7 @@ def getTargetDataSet(data_type, batch_size, input_TF, dataroot):
     return train_loader, test_loader
 
 
-def getNonTargetDataSet(data_type, batch_size, input_TF, dataroot):
+def getNonTargetDataSet(data_type, batch_size, input_TF, dataroot, n_test=5000):
 
     # CIFAR10-SVHN Between-Dataset Experiment: OoD
     if data_type == 'cifar10':
@@ -308,7 +308,8 @@ def getNonTargetDataSet(data_type, batch_size, input_TF, dataroot):
                                                                 transforms.CenterCrop(32), 
                                                                 transforms.ToTensor(),
                                                                 transforms.Normalize(mean, std)]))
-        test_loader = torch.utils.data.DataLoader(data, shuffle=False, batch_size=batch_size)
+        tset = torch.utils.data.Subset(data, range(n_test))
+        test_loader = torch.utils.data.DataLoader(data, shuffle=False, batch_size=batch_size, num_workers=16)
 
     elif data_type == 'LSUN-R':
         print('######################################')
@@ -320,7 +321,8 @@ def getNonTargetDataSet(data_type, batch_size, input_TF, dataroot):
                                                                 transforms.CenterCrop(32), 
                                                                 transforms.ToTensor(),
                                                                 transforms.Normalize(mean, std)]))
-        test_loader = torch.utils.data.DataLoader(data, shuffle=False, batch_size=batch_size)
+        tset = torch.utils.data.Subset(data, range(n_test))
+        test_loader = torch.utils.data.DataLoader(data, shuffle=False, batch_size=batch_size, num_workers=16)
 
     elif data_type == 'iSUN':
         print('######################################')
@@ -332,7 +334,8 @@ def getNonTargetDataSet(data_type, batch_size, input_TF, dataroot):
                                                                 transforms.CenterCrop(32), 
                                                                 transforms.ToTensor(),
                                                                 transforms.Normalize(mean, std)]))
-        test_loader = torch.utils.data.DataLoader(data, shuffle=False, batch_size=batch_size)
+        tset = torch.utils.data.Subset(data, range(n_test))
+        test_loader = torch.utils.data.DataLoader(data, shuffle=False, batch_size=batch_size, num_workers=16)
 
     elif data_type == 'Places365-small':
         print('######################################')
@@ -344,7 +347,8 @@ def getNonTargetDataSet(data_type, batch_size, input_TF, dataroot):
                                                                 transforms.CenterCrop(32), 
                                                                 transforms.ToTensor(),
                                                                 transforms.Normalize(mean, std)]))
-        test_loader = torch.utils.data.DataLoader(data, shuffle=False, batch_size=batch_size, num_workers=1)
+        tset = torch.utils.data.Subset(data, range(n_test))
+        test_loader = torch.utils.data.DataLoader(data, shuffle=False, batch_size=batch_size, num_workers=16)
 
     elif data_type == 'DTD':
         print('######################################')
@@ -353,6 +357,7 @@ def getNonTargetDataSet(data_type, batch_size, input_TF, dataroot):
                                     transform=transforms.Compose([transforms.Resize((32, 32)), transforms.CenterCrop(32), 
                                                                   transforms.ToTensor(), 
                                                                   transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),]))
-        test_loader = torch.utils.data.DataLoader(data, shuffle=False, batch_size=batch_size, num_workers=1)
+        tset = torch.utils.data.Subset(data, range(n_test))
+        test_loader = torch.utils.data.DataLoader(data, shuffle=False, batch_size=batch_size, num_workers=16)
 
     return test_loader

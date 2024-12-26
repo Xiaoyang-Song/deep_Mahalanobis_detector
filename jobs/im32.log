@@ -1,0 +1,9 @@
+Namespace(batch_size=200, dataset='imagenet10', dataroot='./data', ckpt='imagenet10-32-0-o1', nf=32, outf='./output/', num_classes=10, net_type='densenet', gpu=0)
+load model: densenet
+load target data:  imagenet10
+Training dataset size:  13000
+Dataset size:  10400 2600 500
+3100
+get sample mean and covariance
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:70: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  data = Variable(data, volatile=True)
