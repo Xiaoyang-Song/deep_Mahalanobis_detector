@@ -132,11 +132,11 @@ def main():
 
     # measure the performance
     TPR=0.95
-    # M_list = [0, 0.0005, 0.001, 0.0014, 0.002,
-    #           0.0024, 0.005, 0.01, 0.05, 0.1, 0.2]
-    # T_list = [1, 10, 100, 1000]
-    M_list = [0, 0.0005]
-    T_list = [1, 10]
+    M_list = [0, 0.0005, 0.001, 0.0014, 0.002,
+              0.0024, 0.005, 0.01, 0.05, 0.1, 0.2]
+    T_list = [1, 10, 100, 1000]
+    # M_list = [0, 0.0005]
+    # T_list = [1, 10]
 
     # BASELINE
     base_line_list_ind = []
@@ -162,10 +162,10 @@ def main():
 
                 # InD and OoD validation set
                 dir_name = args.outf
-                ind_val = np.loadtxt('{}/confidence_{}_In.txt'.format(dir_name, ['PoV']), delimiter=' ')
-                ood_val = np.loadtxt('{}/confidence_{}_Out.txt'.format(dir_name, ['PoV']), delimiter=' ')
-                ind_test = np.loadtxt('{}/confidence_{}_In.txt'.format(dir_name, ['PoT']), delimiter=' ')
-                ood_test = np.loadtxt('{}/confidence_{}_Out.txt'.format(dir_name, ['PoT']), delimiter=' ')
+                ind_val = np.loadtxt('{}/confidence_{}_In.txt'.format(dir_name, 'PoV'), delimiter=' ')
+                ood_val = np.loadtxt('{}/confidence_{}_Out.txt'.format(dir_name, 'PoV'), delimiter=' ')
+                ind_test = np.loadtxt('{}/confidence_{}_In.txt'.format(dir_name, 'PoT'), delimiter=' ')
+                ood_test = np.loadtxt('{}/confidence_{}_Out.txt'.format(dir_name, 'PoT'), delimiter=' ')
                 # Lower -> OOD; Higher -> InD
                 threshold = np.quantile(ind_val, 1 - TPR)
                 # Print out test statistics
@@ -174,7 +174,7 @@ def main():
                 ood_acc = sum(ood_test < threshold) / len(ood_test)
                 # AUROC calculation
                 scores = np.concatenate((ind_test, ood_test))  # Combine the arrays
-                labels = np.concatenate((np.zeros(ind_test.shape[0]), np.ones(ood_test.shape[0])))  # Labels: 0 for InD, 1 for OoD
+                labels = np.concatenate((np.ones(ind_test.shape[0]), np.zeros(ood_test.shape[0])))  # Labels: 0 for InD, 1 for OoD
                 # Calculate AUROC
                 auroc = roc_auc_score(labels, scores)
                 # Find threshold using validation set

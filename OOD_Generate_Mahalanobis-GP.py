@@ -14,6 +14,7 @@ import lib_generation
 
 from torchvision import transforms
 from torch.autograd import Variable
+from tqdm import tqdm
 
 parser = argparse.ArgumentParser(
     description='PyTorch code: Mahalanobis detector')
@@ -22,6 +23,10 @@ parser.add_argument('--batch_size', type=int, default=200,
 parser.add_argument('--dataset', required=True,
                     help='cifar10 | cifar100 | svhn')
 parser.add_argument('--dataroot', default='./data', help='path to dataset')
+# Only for imagenet 10
+parser.add_argument('--ckpt', type=str, default=None, help='checkpoint')
+parser.add_argument('--nf', type=int, default=None, help='n_features')
+# For saving files
 parser.add_argument('--outf', default='./output/',
                     help='folder to output results')
 parser.add_argument('--num_classes', type=int,
@@ -34,83 +39,47 @@ print(args)
 
 def main():
     C = 3
-    # set the path to pre-trained model and output
-    # pre_trained_net = './pre_trained/' + args.net_type + '_' + args.dataset + '.pth'
     if args.dataset == 'mnist':
         experiment = 'mnist'
+        pre_trained_net = f"/scratch/sunwbgt_root/sunwbgt98/xysong/GP-ImageNet/ckpt/{experiment}/densenet.pth"
     elif args.dataset == 'cifar10':
         experiment = 'CIFAR10'
+        pre_trained_net = f"/scratch/sunwbgt_root/sunwbgt98/xysong/GP-ImageNet/ckpt/{experiment}/densenet.pth"
+    elif args.dataset == 'imagenet10':
+        assert args.ckpt is not None
+        experiment = args.ckpt
+        pre_trained_net = f"/scratch/sunwbgt_root/sunwbgt98/xysong/GP-ImageNet/ckpt/{experiment}/densenet_{args.dataset}.pth"
     else:
         assert False
-    # GP-OOD
-    pre_trained_net = f"/scratch/sunwbgt_root/sunwbgt98/xysong/GP-ImageNet/ckpt/{experiment}/densenet.pth"
 
     args.outf = args.outf + args.net_type + '_' + args.dataset + '/'
-    if os.path.isdir(args.outf) == False:
-        os.mkdir(args.outf)
+    os.makedirs(args.outf, exist_ok=True)
     torch.cuda.manual_seed(0)
     torch.cuda.set_device(args.gpu)
     # check the in-distribution dataset
     if args.dataset == 'cifar100':
         args.num_classes = 100
-
-    if args.dataset == 'svhn':
-        out_dist_list = ['cifar10', 'imagenet_resize', 'lsun_resize']
-
-    # CIFAR10-SVHN Between-Dataset Experiment
-    elif args.dataset == 'cifar10':
-        out_dist_list = ['svhn']
-
-    # MNIST Within-Dataset Experiment
-    elif args.dataset == 'mnist23689':
-        out_dist_list = ['mnist17']
-        C = 1
-
-    # FashionMNIST Within-Dataset Experiment
-    elif args.dataset == 'fm07':
-        out_dist_list = ['fm89']
-        C = 1
-
-    # MNIST-FashionMNIST Between-Dataset Experiment
+        
     elif args.dataset == 'mnist':
         out_dist_list = ['fm']
         C = 3
         n_features=64
 
-    # SVHN Within-Dataset Experiment
-    elif args.dataset == 'svhn07':
-        out_dist_list = ['svhn89']
+    elif args.dataset == 'imagenet10':
+        out_dist_list = ['DTD', 'LSUN-C', 'LSUN-R', 'Places365-small', 'iSUN', 'svhn']
+        # out_dist_list = ['iSUN']
+        num_channels = 3
+        assert args.nf is not None
+        n_features = args.nf
+
 
     # load networks
     # This part is customized
     if args.net_type == 'densenet':
-
         # Useless
-        if args.dataset == 'svhn':
-            model = models.DenseNet3(100, int(args.num_classes))
-            model.load_state_dict(torch.load(
-                pre_trained_net, map_location="cuda:" + str(args.gpu)))
-
-        # SVHN Within-Dataset Experiment
-        elif args.dataset == 'svhn07':
-            model = models.DenseNet3(100, num_channels=3, num_classes=8)
-            model.load_state_dict(torch.load(
-                pre_trained_net, map_location="cuda:" + str(args.gpu)))
-
-        # FashionMNIST Within-Dataset Experiment
-        elif args.dataset == 'fm07':
-            model = models.DenseNet3(100, num_channels=1, num_classes=8)
-            model.load_state_dict(torch.load(
-                pre_trained_net, map_location="cuda:" + str(args.gpu)))
-            in_transform = transforms.Compose([transforms.ToTensor()])
-
-        # MNIST Within-Dataset Experiment
-        elif args.dataset == 'mnist23689':
-            model = models.DenseNet3(100, num_channels=1, num_classes=5)
-            model.load_state_dict(torch.load(
-                pre_trained_net, map_location="cuda:" + str(args.gpu)))
-            in_transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize(
-                (0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)), ])
+        if args.dataset == 'imagenet10':
+            model = models.DenseNet3GP(100, num_channels=3, num_classes=10, feature_size=args.nf)
+            model.load_state_dict(torch.load(pre_trained_net, map_location="cuda:" + str(args.gpu)))
 
         # MNIST-FashionMNIST Between-Dataset Experiment
         elif args.dataset == 'mnist':
@@ -143,21 +112,12 @@ def main():
         in_transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize(
             (0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)), ])
 
-    elif args.net_type == "dcd":
-        if args.dataset == 'mnist23689':
-            model = models.DC_D(5,  {'H': 28, 'W': 28, 'C': 1})
-            model.load_state_dict(torch.load(
-                pre_trained_net, map_location="cuda:" + str(args.gpu)))
-            in_transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize(
-                (0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)), ])
-
     model.cuda()
     print('load model: ' + args.net_type)
 
     # load dataset
     print('load target data: ', args.dataset)
-    train_loader, test_loader = data_loader.getTargetDataSet(
-        args.dataset, args.batch_size, in_transform, args.dataroot)
+    train_loader, test_loader = data_loader.getTargetDataSet(args.dataset, args.batch_size, in_transform, args.dataroot)
 
     # set information about feature extaction
     model.eval()
@@ -175,12 +135,11 @@ def main():
         count += 1
 
     print('get sample mean and covariance')
-    sample_mean, precision = lib_generation.sample_estimator(
-        model, args.num_classes, feature_list, train_loader)
+    sample_mean, precision = lib_generation.sample_estimator(model, args.num_classes, feature_list, train_loader)
 
     print('get Mahalanobis scores')
     m_list = [0.0, 0.01, 0.005, 0.002, 0.0014, 0.001, 0.0005]
-    for magnitude in m_list:
+    for magnitude in tqdm(m_list):
         print('Noise: ' + str(magnitude))
         for i in range(num_output):
             M_in = lib_generation.get_Mahalanobis_score(model, test_loader, args.num_classes, args.outf,
@@ -211,10 +170,8 @@ def main():
             Mahalanobis_out = np.asarray(Mahalanobis_out, dtype=np.float32)
             Mahalanobis_data, Mahalanobis_labels = lib_generation.merge_and_generate_labels(
                 Mahalanobis_out, Mahalanobis_in)
-            file_name = os.path.join(args.outf, 'Mahalanobis_%s_%s_%s.npy' % (
-                str(magnitude), args.dataset, out_dist))
-            Mahalanobis_data = np.concatenate(
-                (Mahalanobis_data, Mahalanobis_labels), axis=1)
+            file_name = os.path.join(args.outf, 'Mahalanobis_%s_%s_%s.npy' % (str(magnitude), args.dataset, out_dist))
+            Mahalanobis_data = np.concatenate((Mahalanobis_data, Mahalanobis_labels), axis=1)
             np.save(file_name, Mahalanobis_data)
 
 

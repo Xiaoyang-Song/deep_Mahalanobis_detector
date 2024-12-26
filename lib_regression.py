@@ -25,9 +25,7 @@ def block_split(X, Y, out):
     elif out == 'fm':
         partition = 5000
 
-        
-
-
+    # Structure: OOD + IND
     # print(Counter(Y))
     X_adv, Y_adv = X[:partition], Y[:partition]
     print(Counter(Y_adv))
@@ -66,6 +64,7 @@ def block_split_adv(X, Y):
     return X_train, Y_train, X_test, Y_test
 
 def detection_performance(regressor, X, Y, outf):
+
     """
     Measure the detection performance
     return: detection metrics
@@ -84,6 +83,9 @@ def detection_performance(regressor, X, Y, outf):
     l2.close()
     results = callog.metric(outf, ['TMP'])
     return results
+
+
+
     
 def load_characteristics(score, dataset, out, outf):
     """

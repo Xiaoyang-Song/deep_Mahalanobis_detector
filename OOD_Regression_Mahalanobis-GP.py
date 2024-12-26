@@ -52,23 +52,18 @@ def main():
             best_tnr_95, best_result_95, best_index_95 = 0, 0, 0
             best_tnr_99, best_result_99, best_index_99 = 0, 0, 0
             for score in score_list:
-                total_X, total_Y = lib_regression.load_characteristics(
-                    score, dataset, out, outf)
-                X_val, Y_val, X_test, Y_test = lib_regression.block_split(
-                    total_X, total_Y, out)
+                total_X, total_Y = lib_regression.load_characteristics(score, dataset, out, outf)
+                X_val, Y_val, X_test, Y_test = lib_regression.block_split(total_X, total_Y, out)
                 X_train = np.concatenate((X_val[:500], X_val[1000:1500]))
                 Y_train = np.concatenate((Y_val[:500], Y_val[1000:1500]))
-                X_val_for_test = np.concatenate(
-                    (X_val[500:1000], X_val[1500:]))
-                Y_val_for_test = np.concatenate(
-                    (Y_val[500:1000], Y_val[1500:]))
+                X_val_for_test = np.concatenate((X_val[500:1000], X_val[1500:]))
+                Y_val_for_test = np.concatenate((Y_val[500:1000], Y_val[1500:]))
                 lr = LogisticRegressionCV(n_jobs=-1, max_iter=1000).fit(X_train, Y_train)
                 y_pred = lr.predict_proba(X_train)[:, 1]
                 #print('training mse: {:.4f}'.format(np.mean(y_pred - Y_train)))
                 y_pred = lr.predict_proba(X_val_for_test)[:, 1]
                 #print('test mse: {:.4f}'.format(np.mean(y_pred - Y_val_for_test)))
-                results = lib_regression.detection_performance(
-                    lr, X_val_for_test, Y_val_for_test, outf)
+                results = lib_regression.detection_performance(lr, X_val_for_test, Y_val_for_test, outf)
                 print(score)
                 print(results)
                 if best_tnr_95 < results['TMP']['TNR95']:
