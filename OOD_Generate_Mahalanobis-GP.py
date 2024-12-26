@@ -168,6 +168,8 @@ def main():
 
             Mahalanobis_in = np.asarray(Mahalanobis_in, dtype=np.float32)
             Mahalanobis_out = np.asarray(Mahalanobis_out, dtype=np.float32)
+            print(Mahalanobis_in.shape)
+            print(Mahalanobis_out.shape)
             Mahalanobis_data, Mahalanobis_labels = lib_generation.merge_and_generate_labels(
                 Mahalanobis_out, Mahalanobis_in)
             file_name = os.path.join(args.outf, 'Mahalanobis_%s_%s_%s.npy' % (str(magnitude), args.dataset, out_dist))
