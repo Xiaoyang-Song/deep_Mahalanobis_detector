@@ -13,5 +13,5 @@
 #SBATCH --output=/scratch/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/jobs/im64-1500.log
 
 
-python OOD_Generate_Mahalanobis-GP.py --dataset imagenet10 --ckpt imagenet10-64-0-o1 --nf 64 --net_type densenet --gpu 0 --n_test_prep 5000
+# python OOD_Generate_Mahalanobis-GP.py --dataset imagenet10 --ckpt imagenet10-64-0-o1 --nf 64 --net_type densenet --gpu 0 --n_test_prep 5000
 python OOD_Regression_Mahalanobis-GP-Eval.py --net_type densenet --ind_dset imagenet10 --nf 64

@@ -8,36 +8,58 @@ from collections import Counter
 from scipy.spatial.distance import pdist, cdist, squareform
 
 
-def block_split(X, Y, out, n_test=100000):
+def block_split(X, Y, out, n_test=100000, n_val=1600):
     """
     Split the data training and testing
     :return: X (data) and Y (label) for training / testing
     """
     num_samples = X.shape[0]
-    if out == 'svhn':
-        partition = 26032
-    elif out == 'DTD':
-        partition = 5640
+    # if out == 'svhn':
+    #     partition = 26032
+    # elif out == 'DTD':
+    #     partition = 5640
+    # elif out == 'LSUN-C':
+    #     partition = 10000
+    # elif out == 'LSUN-R':
+    #     partition = 10000
+    # elif out == 'Places365-small':
+    #     partition = 36500
+    # elif out == 'iSUN':
+    #     partition = 8925
+    # elif out == 'fm89':
+    #     partition = 2000
+    # elif out == 'svhn89':
+    #     partition = 3255
+    # elif out == 'mnist17':
+    #     partition = 1983
+    # elif out == 'fm':
+    #     partition = 5000
+    # elif out == 'cifar10':
+    #     partition = 5000
+    # elif out == 'imagenet-c':
+    #     partition = 5000
+
+    if out == 'DTD':
+        partition = 3100
     elif out == 'LSUN-C':
-        partition = 10000
+        partition = 3100
     elif out == 'LSUN-R':
-        partition = 10000
+        partition = 3100
     elif out == 'Places365-small':
-        partition = 36500
+        partition = 3100
     elif out == 'iSUN':
-        partition = 8925
-    elif out == 'fm89':
-        partition = 2000
-    elif out == 'svhn89':
-        partition = 3255
-    elif out == 'mnist17':
-        partition = 1983
+        partition = 3100
     elif out == 'fm':
-        partition = 5000
+        partition = 4000
     elif out == 'cifar10':
-        partition = 5000
+        partition = 4000
     elif out == 'imagenet-c':
-        partition = 5000
+        partition = 4000
+    elif out == 'svhn':
+        # MNIST
+        # partition = 4000
+        # Imagenet10
+        partition = 3100
 
     partition = min(partition, n_test)
 
@@ -48,7 +70,7 @@ def block_split(X, Y, out, n_test=100000):
     X_norm, Y_norm = X[partition: :], Y[partition: :]
     print(Counter(Y_norm))
     # num_train = 1000
-    num_train = 1500
+    num_train = n_val
 
     X_train = np.concatenate((X_norm[:num_train], X_adv[:num_train]))
     Y_train = np.concatenate((Y_norm[:num_train], Y_adv[:num_train]))
