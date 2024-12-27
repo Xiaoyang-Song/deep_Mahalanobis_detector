@@ -1,3 +1,241 @@
+Namespace(batch_size=200, dataset='imagenet10', dataroot='./data', ckpt='imagenet10-32-0-o1', nf=32, n_test=5000, outf='./output/', num_classes=10, net_type='densenet', gpu=0)
+load model: densenet
+load target data:  imagenet10
+Training dataset size:  13000
+Dataset size:  10400 2600 500
+3100
+get sample mean and covariance
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:70: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  data = Variable(data, volatile=True)
+
+ Training Accuracy:(98.09%)
+
+get Mahalanobis scores
+  0%|          | 0/7 [00:00<?, ?it/s]Noise: 0.0
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:183: UserWarning: This overload of add is deprecated:
+	add(Tensor input, Number alpha, Tensor other, *, Tensor out)
+Consider using one of the following signatures instead:
+	add(Tensor input, Tensor other, *, Number alpha, Tensor out) (Triggered internally at ../torch/csrc/utils/python_arg_parser.cpp:1485.)
+  tempInputs = torch.add(data.data, -magnitude, gradient)
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:186: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  noise_out_features = model.intermediate_forward(Variable(tempInputs, volatile=True), layer_index)
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+(3100, 4)
+(5000, 4)
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+(3100, 4)
+(5000, 4)
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+(3100, 4)
+(5000, 4)
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+(3100, 4)
+(5000, 4)
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+(3100, 4)
+(5000, 4)
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+ 14%|█▍        | 1/7 [06:18<37:50, 378.40s/it](3100, 4)
+(5000, 4)
+Noise: 0.01
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+(3100, 4)
+(5000, 4)
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+(3100, 4)
+(5000, 4)
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+(3100, 4)
+(5000, 4)
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+(3100, 4)
+(5000, 4)
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+(3100, 4)
+(5000, 4)
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+ 29%|██▊       | 2/7 [12:45<31:57, 383.51s/it](3100, 4)
+(5000, 4)
+Noise: 0.005
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+(3100, 4)
+(5000, 4)
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+(3100, 4)
+(5000, 4)
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+(3100, 4)
+(5000, 4)
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+(3100, 4)
+(5000, 4)
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+(3100, 4)
+(5000, 4)
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+ 43%|████▎     | 3/7 [19:30<26:13, 393.36s/it](3100, 4)
+(5000, 4)
+Noise: 0.002
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+(3100, 4)
+(5000, 4)
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+(3100, 4)
+(5000, 4)
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+(3100, 4)
+(5000, 4)
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+(3100, 4)
+(5000, 4)
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+(3100, 4)
+(5000, 4)
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+ 57%|█████▋    | 4/7 [26:18<19:57, 399.13s/it](3100, 4)
+(5000, 4)
+Noise: 0.0014
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+(3100, 4)
+(5000, 4)
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+(3100, 4)
+(5000, 4)
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+(3100, 4)
+(5000, 4)
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+(3100, 4)
+(5000, 4)
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+(3100, 4)
+(5000, 4)
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+ 71%|███████▏  | 5/7 [33:04<13:22, 401.42s/it](3100, 4)
+(5000, 4)
+Noise: 0.001
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+(3100, 4)
+(5000, 4)
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+(3100, 4)
+(5000, 4)
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+(3100, 4)
+(5000, 4)
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+(3100, 4)
+(5000, 4)
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+(3100, 4)
+(5000, 4)
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+ 86%|████████▌ | 6/7 [39:37<06:38, 398.73s/it](3100, 4)
+(5000, 4)
+Noise: 0.0005
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+(3100, 4)
+(5000, 4)
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+(3100, 4)
+(5000, 4)
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+(3100, 4)
+(5000, 4)
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+(3100, 4)
+(5000, 4)
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+(3100, 4)
+(5000, 4)
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+100%|██████████| 7/7 [46:08<00:00, 396.33s/it]100%|██████████| 7/7 [46:08<00:00, 395.56s/it]
+(3100, 4)
+(5000, 4)
 Namespace(net_type='densenet', ind_dset='imagenet10', nf=32, n_test=5000)
 In-distribution:  imagenet10
 0it [00:00, ?it/s]Out-of-distribution:  DTD
@@ -5,7 +243,7 @@ Counter({1.0: 5000})
 Counter({0.0: 3100})
 Counter({0.0: 1500, 1.0: 1500})
 Counter({1.0: 3500, 0.0: 1600})
-1it [00:06,  6.78s/it]2it [00:07,  3.36s/it]3it [00:08,  2.26s/it]4it [00:09,  1.77s/it]5it [00:10,  1.54s/it]6it [00:11,  1.38s/it]6it [00:11,  1.99s/it]
+1it [00:05,  5.39s/it]2it [00:06,  2.79s/it]3it [00:07,  1.99s/it]4it [00:08,  1.61s/it]5it [00:09,  1.44s/it]6it [00:10,  1.31s/it]6it [00:10,  1.77s/it]
 1500
 Testing set size: 1600, 3500
 Counter({1.0: 5000})

@@ -230,7 +230,6 @@ def getTargetDataSet(data_type, batch_size, input_TF, dataroot):
         if train_size + val_size != total_size:
             val_size = val_size + 1 # This is specifically for imagenet100
 
-
         # Perform the split
         train_dataset, validation_dataset = torch.utils.data.random_split(train_set, [train_size, val_size])
         print("Dataset size: ", len(train_dataset), len(validation_dataset), len(test_set))

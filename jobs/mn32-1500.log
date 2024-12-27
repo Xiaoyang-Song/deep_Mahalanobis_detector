@@ -1,3 +1,154 @@
+Namespace(batch_size=200, dataset='mnist', dataroot='./data', ckpt='mnist-32', nf=32, n_test=5000, outf='./output/', num_classes=10, net_type='densenet', gpu=0)
+load model: densenet
+load target data:  mnist
+get sample mean and covariance
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:70: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  data = Variable(data, volatile=True)
+
+ Training Accuracy:(98.55%)
+
+get Mahalanobis scores
+  0%|          | 0/7 [00:00<?, ?it/s]Noise: 0.0
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:183: UserWarning: This overload of add is deprecated:
+	add(Tensor input, Number alpha, Tensor other, *, Tensor out)
+Consider using one of the following signatures instead:
+	add(Tensor input, Tensor other, *, Number alpha, Tensor out) (Triggered internally at ../torch/csrc/utils/python_arg_parser.cpp:1485.)
+  tempInputs = torch.add(data.data, -magnitude, gradient)
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:186: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  noise_out_features = model.intermediate_forward(Variable(tempInputs, volatile=True), layer_index)
+Out-distribution: fm
+(10000, 4)
+(5000, 4)
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+(10000, 4)
+(5000, 4)
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+(10000, 4)
+(5000, 4)
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+ 14%|█▍        | 1/7 [03:01<18:11, 181.92s/it](10000, 4)
+(5000, 4)
+Noise: 0.01
+Out-distribution: fm
+(10000, 4)
+(5000, 4)
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+(10000, 4)
+(5000, 4)
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+(10000, 4)
+(5000, 4)
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+ 29%|██▊       | 2/7 [06:03<15:07, 181.50s/it](10000, 4)
+(5000, 4)
+Noise: 0.005
+Out-distribution: fm
+(10000, 4)
+(5000, 4)
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+(10000, 4)
+(5000, 4)
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+(10000, 4)
+(5000, 4)
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+ 43%|████▎     | 3/7 [09:03<12:04, 181.01s/it](10000, 4)
+(5000, 4)
+Noise: 0.002
+Out-distribution: fm
+(10000, 4)
+(5000, 4)
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+(10000, 4)
+(5000, 4)
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+(10000, 4)
+(5000, 4)
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+ 57%|█████▋    | 4/7 [12:05<09:04, 181.48s/it](10000, 4)
+(5000, 4)
+Noise: 0.0014
+Out-distribution: fm
+(10000, 4)
+(5000, 4)
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+(10000, 4)
+(5000, 4)
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+(10000, 4)
+(5000, 4)
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+ 71%|███████▏  | 5/7 [15:06<06:02, 181.04s/it](10000, 4)
+(5000, 4)
+Noise: 0.001
+Out-distribution: fm
+(10000, 4)
+(5000, 4)
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+(10000, 4)
+(5000, 4)
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+(10000, 4)
+(5000, 4)
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+ 86%|████████▌ | 6/7 [18:07<03:01, 181.04s/it](10000, 4)
+(5000, 4)
+Noise: 0.0005
+Out-distribution: fm
+(10000, 4)
+(5000, 4)
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+(10000, 4)
+(5000, 4)
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+(10000, 4)
+(5000, 4)
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+100%|██████████| 7/7 [21:07<00:00, 180.84s/it]100%|██████████| 7/7 [21:07<00:00, 181.07s/it]
+(10000, 4)
+(5000, 4)
 Namespace(net_type='densenet', ind_dset='mnist', nf=32, n_test=5000)
 In-distribution:  mnist
 0it [00:00, ?it/s]Out-of-distribution:  fm
@@ -29,7 +180,7 @@ Increase the number of iterations (max_iter) or scale the data as shown in:
 Please also refer to the documentation for alternative solver options:
     https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
   n_iter_i = _check_optimize_result(
-1it [00:05,  5.04s/it]/home/xysong/.conda/envs/OoD/lib/python3.9/site-packages/sklearn/linear_model/_logistic.py:458: ConvergenceWarning: lbfgs failed to converge (status=2):
+1it [00:05,  5.02s/it]/home/xysong/.conda/envs/OoD/lib/python3.9/site-packages/sklearn/linear_model/_logistic.py:458: ConvergenceWarning: lbfgs failed to converge (status=2):
 ABNORMAL_TERMINATION_IN_LNSRCH.
 
 Increase the number of iterations (max_iter) or scale the data as shown in:
@@ -365,7 +516,7 @@ Increase the number of iterations (max_iter) or scale the data as shown in:
 Please also refer to the documentation for alternative solver options:
     https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
   n_iter_i = _check_optimize_result(
-2it [00:05,  2.59s/it]/home/xysong/.conda/envs/OoD/lib/python3.9/site-packages/sklearn/linear_model/_logistic.py:458: ConvergenceWarning: lbfgs failed to converge (status=2):
+2it [00:06,  2.65s/it]/home/xysong/.conda/envs/OoD/lib/python3.9/site-packages/sklearn/linear_model/_logistic.py:458: ConvergenceWarning: lbfgs failed to converge (status=2):
 ABNORMAL_TERMINATION_IN_LNSRCH.
 
 Increase the number of iterations (max_iter) or scale the data as shown in:
@@ -701,7 +852,7 @@ Increase the number of iterations (max_iter) or scale the data as shown in:
 Please also refer to the documentation for alternative solver options:
     https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
   n_iter_i = _check_optimize_result(
-3it [00:06,  1.86s/it]/home/xysong/.conda/envs/OoD/lib/python3.9/site-packages/sklearn/linear_model/_logistic.py:458: ConvergenceWarning: lbfgs failed to converge (status=2):
+3it [00:07,  1.92s/it]/home/xysong/.conda/envs/OoD/lib/python3.9/site-packages/sklearn/linear_model/_logistic.py:458: ConvergenceWarning: lbfgs failed to converge (status=2):
 ABNORMAL_TERMINATION_IN_LNSRCH.
 
 Increase the number of iterations (max_iter) or scale the data as shown in:
@@ -1037,7 +1188,7 @@ Increase the number of iterations (max_iter) or scale the data as shown in:
 Please also refer to the documentation for alternative solver options:
     https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
   n_iter_i = _check_optimize_result(
-4it [00:07,  1.55s/it]4it [00:07,  2.00s/it]
+4it [00:08,  1.58s/it]4it [00:08,  2.03s/it]
 1500
 Testing set size: 8500, 3500
 Counter({1.0: 5000})
