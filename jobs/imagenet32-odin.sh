@@ -13,4 +13,4 @@
 #SBATCH --output=/scratch/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/jobs/im32-odin-1500.log
 
 
-python OOD_Baseline_and_ODIN-GP-Eval.py --dataset imagenet10 --net_type densenet --ckpt imagenet10-32-0-o1 --nf 32 --gpu 0 --batch_size 100 --n_test 5000
+python OOD_Baseline_and_ODIN-GP-Eval.py --dataset imagenet10 --net_type densenet --ckpt imagenet10-32-0-o1 --nf 32 --gpu 0 --batch_size 100 --n_test_prep 5000

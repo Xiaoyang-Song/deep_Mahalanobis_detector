@@ -35,7 +35,7 @@ def getSVHN(batch_size, TF, data_root='/tmp/public_dataset/pytorch', train=True,
                 root=data_root, split='train', download=True,
                 transform=TF,
             ),
-            batch_size=batch_size, shuffle=True, **kwargs)
+            batch_size=batch_size, shuffle=False, **kwargs)
         ds.append(train_loader)
 
     if val:
@@ -295,7 +295,7 @@ def getNonTargetDataSet(data_type, batch_size, input_TF, dataroot, n_test=5000):
         
         tset = datasets.ImageFolder(os.path.join('../GP-ImageNet/data/Imagenet'), transform=transform) 
         tset = torch.utils.data.Subset(tset, range(n_test))
-        test_loader = torch.utils.data.DataLoader(tset, batch_size=batch_size, shuffle=True)
+        test_loader = torch.utils.data.DataLoader(tset, batch_size=batch_size, shuffle=False)
 
     elif data_type == 'fm':
         transform = transforms.Compose([ transforms.Resize((32, 32)), 

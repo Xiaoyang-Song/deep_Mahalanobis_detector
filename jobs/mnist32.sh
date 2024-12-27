@@ -13,5 +13,5 @@
 #SBATCH --output=/scratch/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/jobs/mn32-1500.log
 
 
-python OOD_Generate_Mahalanobis-GP.py --dataset mnist --ckpt mnist-32 --nf 32 --net_type densenet --gpu 0 --n_test 5000
-python OOD_Regression_Mahalanobis-GP-Eval.py --net_type densenet --ind_dset mnist --nf 32 --n_test 5000
+python OOD_Generate_Mahalanobis-GP.py --dataset mnist --ckpt mnist-32 --nf 32 --net_type densenet --gpu 0 --n_test_prep 5000
+python OOD_Regression_Mahalanobis-GP-Eval.py --net_type densenet --ind_dset mnist --nf 32

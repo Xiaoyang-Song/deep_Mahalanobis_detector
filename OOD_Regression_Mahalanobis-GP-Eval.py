@@ -17,7 +17,6 @@ parser = argparse.ArgumentParser(description='PyTorch code: Mahalanobis detector
 parser.add_argument('--net_type', required=True, help='resnet | densenet')
 parser.add_argument('--ind_dset', required=True, help='resnet | densenet')
 parser.add_argument('--nf', type=int, default=None, help='n_features')
-parser.add_argument('--n_test', type=int, default=None, help='n_test')
 args = parser.parse_args()
 print(args)
 
@@ -33,7 +32,7 @@ def main():
     # train and measure the performance of Mahalanobis detector
     # Evaluation
     TPR=0.95
-    n_test = args.n_test
+    n_test = args.n_val
     maha_ind_acc = [[], [], [], [], [], []]
     maha_ood_acc = [[], [], [], [], [], []]
     maha_auroc = [[], [], [], [], [], []]
@@ -43,15 +42,17 @@ def main():
 
         if dataset == 'mnist':
             out_list = ['fm', 'svhn', 'imagenet-c', 'cifar10']
+            n_val = 2000
         elif dataset == 'imagenet10':
             out_list = ['DTD', 'LSUN-C', 'LSUN-R', 'Places365-small', 'iSUN', 'svhn']
+            n_val = 1500
             # out_list = ['DTD']
 
         for idx, out in tqdm(enumerate(out_list)):
             print('Out-of-distribution: ', out)
             for score in score_list:
                 total_X, total_Y = lib_regression.load_characteristics(score, dataset, out, outf)
-                X_val, Y_val, X_test, Y_test = lib_regression.block_split(total_X, total_Y, out, n_test)
+                X_val, Y_val, X_test, Y_test = lib_regression.block_split(total_X, total_Y, out, n_val)
                 # Train logistic regression classifier on validation set
                 lr = LogisticRegressionCV(n_jobs=-1, max_iter=100000).fit(X_val, Y_val)
                 # Find threshold on validation set

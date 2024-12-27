@@ -205,7 +205,7 @@ def get_Mahalanobis_score(model, test_loader, num_classes, outf, out_flag, net_t
 
     return Mahalanobis
 
-def get_posterior(model, net_type, C, test_loader, magnitude, temperature, outf, out_flag):
+def get_posterior(model, net_type, C, test_loader, magnitude, temperature, outf, out_flag, n_val):
     
     '''
     Compute the maximum value of (processed) posterior distribution - ODIN
@@ -257,7 +257,6 @@ def get_posterior(model, net_type, C, test_loader, magnitude, temperature, outf,
             soft_out = F.softmax(outputs, dim=1)
             soft_out, _ = torch.max(soft_out.data, dim=1)
             
-        n_val = 1500
         for i in range(data.size(0)):
             if total <= n_val:
                 g.write("{}\n".format(soft_out[i]))

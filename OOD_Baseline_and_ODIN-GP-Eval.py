@@ -27,7 +27,7 @@ parser.add_argument('--dataset', required=True,
 # Only for imagenet 10
 parser.add_argument('--ckpt', type=str, default=None, help='checkpoint')
 parser.add_argument('--nf', type=int, default=None, help='n_features')
-parser.add_argument('--n_test', type=int, default=10000, help='n_test')
+parser.add_argument('--n_test_prep', type=int, default=10000, help='n_test')
 # For saving files
 parser.add_argument('--dataroot', default='./data', help='path to dataset')
 parser.add_argument('--outf', default='output/',
@@ -77,11 +77,17 @@ def main():
     elif args.dataset == 'mnist':
         out_dist_list = ['fm', 'svhn', 'imagenet-c', 'cifar10']
         num_channels = 3
+        n_val = 2000
+        n_ind_test = 2000
+        n_ood_test = 2000
         assert args.nf is not None
         n_features = args.nf
     elif args.dataset == 'imagenet10':
         out_dist_list = ['DTD', 'LSUN-C', 'LSUN-R', 'Places365-small', 'iSUN', 'svhn']
         # out_dist_list = ['iSUN']
+        n_val = 1500
+        n_ind_test = 1600
+        n_ood_test = 1600
         num_channels = 3
         assert args.nf is not None
         n_features = args.nf
@@ -151,21 +157,24 @@ def main():
         for m in M_list:
             magnitude = m
             temperature = T
-            lib_generation.get_posterior(model, args.net_type, num_channels, test_loader, magnitude, temperature, args.outf, True)
+            lib_generation.get_posterior(model, args.net_type, num_channels, test_loader, magnitude, temperature, args.outf, True, n_val)
             out_count = 0
             print('Temperature: ' + str(temperature) + ' / noise: ' + str(magnitude))
             for out_dist in out_dist_list:
-                out_test_loader = data_loader.getNonTargetDataSet(
-                    out_dist, args.batch_size, in_transform, args.dataroot)
+                out_test_loader = data_loader.getNonTargetDataSet(out_dist, args.batch_size, in_transform, args.dataroot, args.n_test_prep)
                 print('Out-distribution: ' + out_dist)
-                lib_generation.get_posterior(model, args.net_type, num_channels, out_test_loader, magnitude, temperature, args.outf, False)
+                lib_generation.get_posterior(model, args.net_type, num_channels, out_test_loader, magnitude, temperature, args.outf, False, n_val)
 
                 # InD and OoD validation set
                 dir_name = args.outf
                 ind_val = np.loadtxt('{}/confidence_{}_In.txt'.format(dir_name, 'PoV'), delimiter=' ')
                 ood_val = np.loadtxt('{}/confidence_{}_Out.txt'.format(dir_name, 'PoV'), delimiter=' ')
-                ind_test = np.loadtxt('{}/confidence_{}_In.txt'.format(dir_name, 'PoT'), delimiter=' ')[0:args.n_test]
-                ood_test = np.loadtxt('{}/confidence_{}_Out.txt'.format(dir_name, 'PoT'), delimiter=' ')[0:args.n_test]
+                ind_test = np.loadtxt('{}/confidence_{}_In.txt'.format(dir_name, 'PoT'), delimiter=' ')
+                print(len(ind_test))
+                ind_test = ind_test[0:n_ind_test]
+                ood_test = np.loadtxt('{}/confidence_{}_Out.txt'.format(dir_name, 'PoT'), delimiter=' ')
+                print(len(ood_test))
+                ood_test = ood_test[0:n_ood_test]
                 # Lower -> OOD; Higher -> InD
                 threshold = np.quantile(ind_val, 1 - TPR)
                 # Print out test statistics
