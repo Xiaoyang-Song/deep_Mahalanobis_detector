@@ -8,3 +8,1467 @@ Consider using one of the following signatures instead:
   tempInputs = torch.add(data.data,  -magnitude, gradient)
 /gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
   outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 1 / noise: 0
+Out-distribution: fm
+8000
+3000
+Testing set size: 2000, 2000
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+24032
+Testing set size: 2000, 2000
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+8000
+3000
+Testing set size: 2000, 2000
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+8000
+Testing set size: 2000, 2000
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 1 / noise: 0.0005
+Out-distribution: fm
+8000
+3000
+Testing set size: 2000, 2000
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+24032
+Testing set size: 2000, 2000
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+8000
+3000
+Testing set size: 2000, 2000
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+8000
+Testing set size: 2000, 2000
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 1 / noise: 0.001
+Out-distribution: fm
+8000
+3000
+Testing set size: 2000, 2000
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+24032
+Testing set size: 2000, 2000
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+8000
+3000
+Testing set size: 2000, 2000
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+8000
+Testing set size: 2000, 2000
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 1 / noise: 0.0014
+Out-distribution: fm
+8000
+3000
+Testing set size: 2000, 2000
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+24032
+Testing set size: 2000, 2000
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+8000
+3000
+Testing set size: 2000, 2000
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+8000
+Testing set size: 2000, 2000
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 1 / noise: 0.002
+Out-distribution: fm
+8000
+3000
+Testing set size: 2000, 2000
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+24032
+Testing set size: 2000, 2000
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+8000
+3000
+Testing set size: 2000, 2000
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+8000
+Testing set size: 2000, 2000
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 1 / noise: 0.0024
+Out-distribution: fm
+8000
+3000
+Testing set size: 2000, 2000
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+24032
+Testing set size: 2000, 2000
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+8000
+3000
+Testing set size: 2000, 2000
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+8000
+Testing set size: 2000, 2000
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 1 / noise: 0.005
+Out-distribution: fm
+8000
+3000
+Testing set size: 2000, 2000
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+24032
+Testing set size: 2000, 2000
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+8000
+3000
+Testing set size: 2000, 2000
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+8000
+Testing set size: 2000, 2000
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 1 / noise: 0.01
+Out-distribution: fm
+8000
+3000
+Testing set size: 2000, 2000
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+24032
+Testing set size: 2000, 2000
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+8000
+3000
+Testing set size: 2000, 2000
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+8000
+Testing set size: 2000, 2000
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 1 / noise: 0.05
+Out-distribution: fm
+8000
+3000
+Testing set size: 2000, 2000
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+24032
+Testing set size: 2000, 2000
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+8000
+3000
+Testing set size: 2000, 2000
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+8000
+Testing set size: 2000, 2000
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 1 / noise: 0.1
+Out-distribution: fm
+8000
+3000
+Testing set size: 2000, 2000
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+24032
+Testing set size: 2000, 2000
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+8000
+3000
+Testing set size: 2000, 2000
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+8000
+Testing set size: 2000, 2000
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 1 / noise: 0.2
+Out-distribution: fm
+8000
+3000
+Testing set size: 2000, 2000
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+24032
+Testing set size: 2000, 2000
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+8000
+3000
+Testing set size: 2000, 2000
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+ 25%|██▌       | 1/4 [12:34<37:43, 754.65s/it]8000
+8000
+Testing set size: 2000, 2000
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 10 / noise: 0
+Out-distribution: fm
+8000
+3000
+Testing set size: 2000, 2000
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+24032
+Testing set size: 2000, 2000
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+8000
+3000
+Testing set size: 2000, 2000
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+8000
+Testing set size: 2000, 2000
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 10 / noise: 0.0005
+Out-distribution: fm
+8000
+3000
+Testing set size: 2000, 2000
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+24032
+Testing set size: 2000, 2000
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+8000
+3000
+Testing set size: 2000, 2000
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+8000
+Testing set size: 2000, 2000
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 10 / noise: 0.001
+Out-distribution: fm
+8000
+3000
+Testing set size: 2000, 2000
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+24032
+Testing set size: 2000, 2000
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+8000
+3000
+Testing set size: 2000, 2000
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+8000
+Testing set size: 2000, 2000
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 10 / noise: 0.0014
+Out-distribution: fm
+8000
+3000
+Testing set size: 2000, 2000
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+24032
+Testing set size: 2000, 2000
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+8000
+3000
+Testing set size: 2000, 2000
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+8000
+Testing set size: 2000, 2000
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 10 / noise: 0.002
+Out-distribution: fm
+8000
+3000
+Testing set size: 2000, 2000
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+24032
+Testing set size: 2000, 2000
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+8000
+3000
+Testing set size: 2000, 2000
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+8000
+Testing set size: 2000, 2000
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 10 / noise: 0.0024
+Out-distribution: fm
+8000
+3000
+Testing set size: 2000, 2000
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+24032
+Testing set size: 2000, 2000
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+8000
+3000
+Testing set size: 2000, 2000
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+8000
+Testing set size: 2000, 2000
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 10 / noise: 0.005
+Out-distribution: fm
+8000
+3000
+Testing set size: 2000, 2000
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+24032
+Testing set size: 2000, 2000
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+8000
+3000
+Testing set size: 2000, 2000
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+8000
+Testing set size: 2000, 2000
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 10 / noise: 0.01
+Out-distribution: fm
+8000
+3000
+Testing set size: 2000, 2000
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+24032
+Testing set size: 2000, 2000
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+8000
+3000
+Testing set size: 2000, 2000
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+8000
+Testing set size: 2000, 2000
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 10 / noise: 0.05
+Out-distribution: fm
+8000
+3000
+Testing set size: 2000, 2000
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+24032
+Testing set size: 2000, 2000
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+8000
+3000
+Testing set size: 2000, 2000
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+8000
+Testing set size: 2000, 2000
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 10 / noise: 0.1
+Out-distribution: fm
+8000
+3000
+Testing set size: 2000, 2000
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+24032
+Testing set size: 2000, 2000
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+8000
+3000
+Testing set size: 2000, 2000
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+8000
+Testing set size: 2000, 2000
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 10 / noise: 0.2
+Out-distribution: fm
+8000
+3000
+Testing set size: 2000, 2000
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+24032
+Testing set size: 2000, 2000
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+8000
+3000
+Testing set size: 2000, 2000
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+ 50%|█████     | 2/4 [25:12<25:12, 756.47s/it]8000
+8000
+Testing set size: 2000, 2000
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 100 / noise: 0
+Out-distribution: fm
+8000
+3000
+Testing set size: 2000, 2000
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+24032
+Testing set size: 2000, 2000
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+8000
+3000
+Testing set size: 2000, 2000
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+8000
+Testing set size: 2000, 2000
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 100 / noise: 0.0005
+Out-distribution: fm
+8000
+3000
+Testing set size: 2000, 2000
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+24032
+Testing set size: 2000, 2000
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+8000
+3000
+Testing set size: 2000, 2000
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+8000
+Testing set size: 2000, 2000
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 100 / noise: 0.001
+Out-distribution: fm
+8000
+3000
+Testing set size: 2000, 2000
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+24032
+Testing set size: 2000, 2000
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+8000
+3000
+Testing set size: 2000, 2000
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+8000
+Testing set size: 2000, 2000
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 100 / noise: 0.0014
+Out-distribution: fm
+8000
+3000
+Testing set size: 2000, 2000
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+24032
+Testing set size: 2000, 2000
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+8000
+3000
+Testing set size: 2000, 2000
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+8000
+Testing set size: 2000, 2000
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 100 / noise: 0.002
+Out-distribution: fm
+8000
+3000
+Testing set size: 2000, 2000
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+24032
+Testing set size: 2000, 2000
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+8000
+3000
+Testing set size: 2000, 2000
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+8000
+Testing set size: 2000, 2000
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 100 / noise: 0.0024
+Out-distribution: fm
+8000
+3000
+Testing set size: 2000, 2000
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+24032
+Testing set size: 2000, 2000
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+8000
+3000
+Testing set size: 2000, 2000
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+8000
+Testing set size: 2000, 2000
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 100 / noise: 0.005
+Out-distribution: fm
+8000
+3000
+Testing set size: 2000, 2000
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+24032
+Testing set size: 2000, 2000
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+8000
+3000
+Testing set size: 2000, 2000
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+8000
+Testing set size: 2000, 2000
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 100 / noise: 0.01
+Out-distribution: fm
+8000
+3000
+Testing set size: 2000, 2000
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+24032
+Testing set size: 2000, 2000
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+8000
+3000
+Testing set size: 2000, 2000
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+8000
+Testing set size: 2000, 2000
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 100 / noise: 0.05
+Out-distribution: fm
+8000
+3000
+Testing set size: 2000, 2000
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+24032
+Testing set size: 2000, 2000
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+8000
+3000
+Testing set size: 2000, 2000
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+8000
+Testing set size: 2000, 2000
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 100 / noise: 0.1
+Out-distribution: fm
+8000
+3000
+Testing set size: 2000, 2000
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+24032
+Testing set size: 2000, 2000
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+8000
+3000
+Testing set size: 2000, 2000
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+8000
+Testing set size: 2000, 2000
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 100 / noise: 0.2
+Out-distribution: fm
+8000
+3000
+Testing set size: 2000, 2000
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+24032
+Testing set size: 2000, 2000
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+8000
+3000
+Testing set size: 2000, 2000
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+ 75%|███████▌  | 3/4 [37:49<12:36, 756.70s/it]8000
+8000
+Testing set size: 2000, 2000
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 1000 / noise: 0
+Out-distribution: fm
+8000
+3000
+Testing set size: 2000, 2000
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+24032
+Testing set size: 2000, 2000
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+8000
+3000
+Testing set size: 2000, 2000
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+8000
+Testing set size: 2000, 2000
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 1000 / noise: 0.0005
+Out-distribution: fm
+8000
+3000
+Testing set size: 2000, 2000
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+24032
+Testing set size: 2000, 2000
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+8000
+3000
+Testing set size: 2000, 2000
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+8000
+Testing set size: 2000, 2000
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 1000 / noise: 0.001
+Out-distribution: fm
+8000
+3000
+Testing set size: 2000, 2000
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+24032
+Testing set size: 2000, 2000
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+8000
+3000
+Testing set size: 2000, 2000
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+8000
+Testing set size: 2000, 2000
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 1000 / noise: 0.0014
+Out-distribution: fm
+8000
+3000
+Testing set size: 2000, 2000
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+24032
+Testing set size: 2000, 2000
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+8000
+3000
+Testing set size: 2000, 2000
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+8000
+Testing set size: 2000, 2000
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 1000 / noise: 0.002
+Out-distribution: fm
+8000
+3000
+Testing set size: 2000, 2000
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+24032
+Testing set size: 2000, 2000
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+8000
+3000
+Testing set size: 2000, 2000
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+8000
+Testing set size: 2000, 2000
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 1000 / noise: 0.0024
+Out-distribution: fm
+8000
+3000
+Testing set size: 2000, 2000
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+24032
+Testing set size: 2000, 2000
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+8000
+3000
+Testing set size: 2000, 2000
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+8000
+Testing set size: 2000, 2000
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 1000 / noise: 0.005
+Out-distribution: fm
+8000
+3000
+Testing set size: 2000, 2000
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+24032
+Testing set size: 2000, 2000
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+8000
+3000
+Testing set size: 2000, 2000
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+8000
+Testing set size: 2000, 2000
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 1000 / noise: 0.01
+Out-distribution: fm
+8000
+3000
+Testing set size: 2000, 2000
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+24032
+Testing set size: 2000, 2000
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+8000
+3000
+Testing set size: 2000, 2000
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+8000
+Testing set size: 2000, 2000
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 1000 / noise: 0.05
+Out-distribution: fm
+8000
+3000
+Testing set size: 2000, 2000
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+24032
+Testing set size: 2000, 2000
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+8000
+3000
+Testing set size: 2000, 2000
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+8000
+Testing set size: 2000, 2000
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 1000 / noise: 0.1
+Out-distribution: fm
+8000
+3000
+Testing set size: 2000, 2000
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+24032
+Testing set size: 2000, 2000
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+8000
+3000
+Testing set size: 2000, 2000
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+8000
+Testing set size: 2000, 2000
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 1000 / noise: 0.2
+Out-distribution: fm
+8000
+3000
+Testing set size: 2000, 2000
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+8000
+24032
+Testing set size: 2000, 2000
+######################################
+Testing on ImageNet-c
+Out-distribution: imagenet-c
+8000
+3000
+Testing set size: 2000, 2000
+Files already downloaded and verified
+Files already downloaded and verified
+Out-distribution: cifar10
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+100%|██████████| 4/4 [50:25<00:00, 756.37s/it]100%|██████████| 4/4 [50:25<00:00, 756.31s/it]
+8000
+8000
+Testing set size: 2000, 2000
+Baseline method: in_distribution: mnist==========
+out_distribution: fm
+95.7
+22.1
+59.992999999999995
+out_distribution: svhn
+95.7
+6.2
+24.708
+out_distribution: imagenet-c
+95.7
+4.45
+16.793
+out_distribution: cifar10
+95.7
+6.3
+25.416
+ODIN method: in_distribution: mnist==========
+out_distribution: fm
+IND ACC
+[95.45 95.25 95.75 95.05 94.9  95.45 94.9  94.15 93.85 96.25 95.85 95.8
+ 94.4  93.65 95.2  95.8  96.05 94.45 95.05 94.95 94.   95.7  95.25 95.2
+ 94.6  94.85 94.4  95.7  94.15 95.55 94.8  94.85 95.35 95.1  95.35 95.45
+ 93.6  94.55 93.2  94.4  95.6  94.6  95.55]
+94.977
+OOD ACC
+[16.05 12.2   8.6   5.35  4.3   0.7   1.85  1.8   5.15  6.45  9.    7.15
+  6.55  5.5   4.55  4.05  2.8   2.3   0.05  0.45 13.3   7.55  6.55  4.85
+  4.55  3.65  3.5   2.75  2.25  0.05  0.9  24.4   7.65  6.55  4.9   4.45
+  3.75  3.55  2.7   2.25  0.05  0.9  24.5 ]
+5.591
+AUROC
+[52.22  43.412 36.378 29.998 28.083 25.327 29.075 33.891 42.854 52.247
+ 27.267 24.916 22.715 21.668 20.78  20.828 19.07  19.29  17.674 24.26
+ 48.703 21.235 19.734 18.544 18.159 16.923 16.921 15.627 15.123  8.391
+ 20.003 47.98  20.58  19.442 18.44  17.364 16.448 16.352 15.256 14.468
+  8.406 20.978 47.779]
+24.996
+out_distribution: svhn
+IND ACC
+[95.45 95.25 95.75 95.05 94.9  95.45 94.9  94.15 93.85 96.25 95.85 95.8
+ 94.4  93.65 95.2  95.8  96.05 94.45 95.05 94.95 94.   95.7  95.25 95.2
+ 94.6  94.85 94.4  95.7  94.15 95.55 94.8  94.85 95.35 95.1  95.35 95.45
+ 93.6  94.55 93.2  94.4  95.6  94.6  95.55]
+94.977
+OOD ACC
+[ 1.2   0.25  0.1   0.05  0.05  0.    0.2   0.55  3.45  3.15  0.    0.
+  0.    0.    0.    0.    0.    0.    0.    0.05 12.1   0.    0.    0.
+  0.    0.    0.    0.    0.    0.    0.1  38.65  0.    0.    0.    0.
+  0.    0.    0.    0.    0.    0.1  40.6 ]
+2.34
+AUROC
+[16.94   9.57   5.501  3.103  2.6    3.584  6.424 23.755 33.902 45.572
+  1.53   1.236  1.009  0.904  0.823  0.853  0.813  1.05   5.408 15.603
+ 48.596  0.678  0.581  0.55   0.559  0.488  0.519  0.558  0.668  0.145
+ 15.39  58.15   0.601  0.568  0.542  0.485  0.458  0.468  0.549  0.62
+  0.123 15.441 63.242]
+9.073
+out_distribution: imagenet-c
+IND ACC
+[95.45 95.25 95.75 95.05 94.9  95.45 94.9  94.15 93.85 96.25 95.85 95.8
+ 94.4  93.65 95.2  95.8  96.05 94.45 95.05 94.95 94.   95.7  95.25 95.2
+ 94.6  94.85 94.4  95.7  94.15 95.55 94.8  94.85 95.35 95.1  95.35 95.45
+ 93.6  94.55 93.2  94.4  95.6  94.6  95.55]
+94.977
+OOD ACC
+[2.2  0.9  0.55 0.2  0.1  0.15 0.7  0.25 2.65 3.45 0.   0.   0.   0.
+ 0.   0.   0.   0.   0.   0.35 2.05 0.   0.   0.   0.   0.   0.   0.
+ 0.   0.   0.1  0.25 0.   0.   0.05 0.   0.   0.   0.   0.   0.   0.1
+ 0.35]
+0.335
+AUROC
+[13.69   9.275  6.616  4.693  3.807  5.521 11.251 15.114 23.531 45.488
+  1.436  1.129  1.086  1.001  1.027  0.978  0.816  0.878  1.468  3.502
+ 14.416  0.645  0.566  0.447  0.62   0.349  0.432  0.43   0.28   0.31
+  0.543  3.542  0.568  0.608  0.541  0.273  0.335  0.371  0.283  0.232
+  0.322  0.678  2.312]
+4.218999999999999
+out_distribution: cifar10
+IND ACC
+[95.45 95.25 95.75 95.05 94.9  95.45 94.9  94.15 93.85 96.25 95.85 95.8
+ 94.4  93.65 95.2  95.8  96.05 94.45 95.05 94.95 94.   95.7  95.25 95.2
+ 94.6  94.85 94.4  95.7  94.15 95.55 94.8  94.85 95.35 95.1  95.35 95.45
+ 93.6  94.55 93.2  94.4  95.6  94.6  95.55]
+94.977
+OOD ACC
+[ 1.15  0.4   0.4   0.1   0.    0.    0.45  0.35  6.45  7.    0.1   0.05
+  0.05  0.05  0.05  0.05  0.    0.    0.    0.05 22.35  0.05  0.05  0.05
+  0.05  0.05  0.05  0.    0.    0.    0.   30.8   0.05  0.05  0.05  0.05
+  0.05  0.05  0.    0.    0.    0.   31.55]
+2.3720000000000003
+AUROC
+[1.7915e+01 1.0207e+01 5.8030e+00 3.1640e+00 2.5600e+00 3.7310e+00
+ 7.6630e+00 1.8406e+01 4.6509e+01 5.7184e+01 1.3050e+00 8.7800e-01
+ 6.5100e-01 5.6900e-01 4.9400e-01 5.0300e-01 4.8200e-01 5.7800e-01
+ 2.8960e+00 1.9869e+01 6.8481e+01 3.8100e-01 3.2100e-01 3.0100e-01
+ 3.0800e-01 2.6400e-01 2.7300e-01 2.5200e-01 2.2700e-01 5.7000e-02
+ 3.9240e+00 6.3913e+01 3.3500e-01 3.1200e-01 2.9300e-01 2.6400e-01
+ 2.4800e-01 2.4700e-01 2.4100e-01 2.0500e-01 5.4000e-02 3.9980e+00
+ 6.2709e+01]
+9.511

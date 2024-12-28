@@ -15,3 +15,2312 @@ Temperature: 1 / noise: 0
 ######################################
 Testing on DTD Texture
 Out-distribution: DTD
+1600
+4140
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+35000
+Testing set size: 1600, 1600
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+7425
+Testing set size: 1600, 1600
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+24532
+Testing set size: 1600, 1600
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 1 / noise: 0.0005
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+1600
+4140
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+35000
+Testing set size: 1600, 1600
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+7425
+Testing set size: 1600, 1600
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+24532
+Testing set size: 1600, 1600
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 1 / noise: 0.001
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+1600
+4140
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+35000
+Testing set size: 1600, 1600
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+7425
+Testing set size: 1600, 1600
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+24532
+Testing set size: 1600, 1600
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 1 / noise: 0.0014
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+1600
+4140
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+35000
+Testing set size: 1600, 1600
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+7425
+Testing set size: 1600, 1600
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+24532
+Testing set size: 1600, 1600
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 1 / noise: 0.002
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+1600
+4140
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+35000
+Testing set size: 1600, 1600
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+7425
+Testing set size: 1600, 1600
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+24532
+Testing set size: 1600, 1600
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 1 / noise: 0.0024
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+1600
+4140
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+35000
+Testing set size: 1600, 1600
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+7425
+Testing set size: 1600, 1600
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+24532
+Testing set size: 1600, 1600
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 1 / noise: 0.005
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+1600
+4140
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+35000
+Testing set size: 1600, 1600
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+7425
+Testing set size: 1600, 1600
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+24532
+Testing set size: 1600, 1600
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 1 / noise: 0.01
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+1600
+4140
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+35000
+Testing set size: 1600, 1600
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+7425
+Testing set size: 1600, 1600
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+24532
+Testing set size: 1600, 1600
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 1 / noise: 0.05
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+1600
+4140
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+35000
+Testing set size: 1600, 1600
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+7425
+Testing set size: 1600, 1600
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+24532
+Testing set size: 1600, 1600
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 1 / noise: 0.1
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+1600
+4140
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+35000
+Testing set size: 1600, 1600
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+7425
+Testing set size: 1600, 1600
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+24532
+Testing set size: 1600, 1600
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 1 / noise: 0.2
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+1600
+4140
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+35000
+Testing set size: 1600, 1600
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+7425
+Testing set size: 1600, 1600
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+ 25%|██▌       | 1/4 [25:18<1:15:54, 1518.25s/it]1600
+24532
+Testing set size: 1600, 1600
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 10 / noise: 0
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+1600
+4140
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+35000
+Testing set size: 1600, 1600
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+7425
+Testing set size: 1600, 1600
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+24532
+Testing set size: 1600, 1600
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 10 / noise: 0.0005
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+1600
+4140
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+35000
+Testing set size: 1600, 1600
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+7425
+Testing set size: 1600, 1600
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+24532
+Testing set size: 1600, 1600
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 10 / noise: 0.001
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+1600
+4140
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+35000
+Testing set size: 1600, 1600
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+7425
+Testing set size: 1600, 1600
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+24532
+Testing set size: 1600, 1600
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 10 / noise: 0.0014
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+1600
+4140
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+35000
+Testing set size: 1600, 1600
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+7425
+Testing set size: 1600, 1600
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+24532
+Testing set size: 1600, 1600
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 10 / noise: 0.002
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+1600
+4140
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+35000
+Testing set size: 1600, 1600
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+7425
+Testing set size: 1600, 1600
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+24532
+Testing set size: 1600, 1600
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 10 / noise: 0.0024
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+1600
+4140
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+35000
+Testing set size: 1600, 1600
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+7425
+Testing set size: 1600, 1600
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+24532
+Testing set size: 1600, 1600
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 10 / noise: 0.005
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+1600
+4140
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+35000
+Testing set size: 1600, 1600
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+7425
+Testing set size: 1600, 1600
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+24532
+Testing set size: 1600, 1600
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 10 / noise: 0.01
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+1600
+4140
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+35000
+Testing set size: 1600, 1600
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+7425
+Testing set size: 1600, 1600
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+24532
+Testing set size: 1600, 1600
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 10 / noise: 0.05
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+1600
+4140
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+35000
+Testing set size: 1600, 1600
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+7425
+Testing set size: 1600, 1600
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+24532
+Testing set size: 1600, 1600
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 10 / noise: 0.1
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+1600
+4140
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+35000
+Testing set size: 1600, 1600
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+7425
+Testing set size: 1600, 1600
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+24532
+Testing set size: 1600, 1600
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 10 / noise: 0.2
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+1600
+4140
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+35000
+Testing set size: 1600, 1600
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+7425
+Testing set size: 1600, 1600
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+ 50%|█████     | 2/4 [50:59<51:03, 1531.81s/it]  1600
+24532
+Testing set size: 1600, 1600
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 100 / noise: 0
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+1600
+4140
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+35000
+Testing set size: 1600, 1600
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+7425
+Testing set size: 1600, 1600
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+24532
+Testing set size: 1600, 1600
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 100 / noise: 0.0005
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+1600
+4140
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+35000
+Testing set size: 1600, 1600
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+7425
+Testing set size: 1600, 1600
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+24532
+Testing set size: 1600, 1600
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 100 / noise: 0.001
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+1600
+4140
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+35000
+Testing set size: 1600, 1600
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+7425
+Testing set size: 1600, 1600
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+24532
+Testing set size: 1600, 1600
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 100 / noise: 0.0014
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+1600
+4140
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+35000
+Testing set size: 1600, 1600
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+7425
+Testing set size: 1600, 1600
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+24532
+Testing set size: 1600, 1600
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 100 / noise: 0.002
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+1600
+4140
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+35000
+Testing set size: 1600, 1600
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+7425
+Testing set size: 1600, 1600
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+24532
+Testing set size: 1600, 1600
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 100 / noise: 0.0024
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+1600
+4140
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+35000
+Testing set size: 1600, 1600
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+7425
+Testing set size: 1600, 1600
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+24532
+Testing set size: 1600, 1600
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 100 / noise: 0.005
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+1600
+4140
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+35000
+Testing set size: 1600, 1600
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+7425
+Testing set size: 1600, 1600
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+24532
+Testing set size: 1600, 1600
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 100 / noise: 0.01
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+1600
+4140
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+35000
+Testing set size: 1600, 1600
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+7425
+Testing set size: 1600, 1600
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+24532
+Testing set size: 1600, 1600
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 100 / noise: 0.05
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+1600
+4140
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+35000
+Testing set size: 1600, 1600
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+7425
+Testing set size: 1600, 1600
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+24532
+Testing set size: 1600, 1600
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 100 / noise: 0.1
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+1600
+4140
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+35000
+Testing set size: 1600, 1600
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+7425
+Testing set size: 1600, 1600
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+24532
+Testing set size: 1600, 1600
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 100 / noise: 0.2
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+1600
+4140
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+35000
+Testing set size: 1600, 1600
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+7425
+Testing set size: 1600, 1600
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+ 75%|███████▌  | 3/4 [1:15:21<24:59, 1499.97s/it]1600
+24532
+Testing set size: 1600, 1600
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 1000 / noise: 0
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+1600
+4140
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+35000
+Testing set size: 1600, 1600
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+7425
+Testing set size: 1600, 1600
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+24532
+Testing set size: 1600, 1600
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 1000 / noise: 0.0005
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+1600
+4140
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+35000
+Testing set size: 1600, 1600
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+7425
+Testing set size: 1600, 1600
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+24532
+Testing set size: 1600, 1600
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 1000 / noise: 0.001
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+1600
+4140
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+35000
+Testing set size: 1600, 1600
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+7425
+Testing set size: 1600, 1600
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+24532
+Testing set size: 1600, 1600
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 1000 / noise: 0.0014
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+1600
+4140
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+35000
+Testing set size: 1600, 1600
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+7425
+Testing set size: 1600, 1600
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+24532
+Testing set size: 1600, 1600
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 1000 / noise: 0.002
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+1600
+4140
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+35000
+Testing set size: 1600, 1600
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+7425
+Testing set size: 1600, 1600
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+24532
+Testing set size: 1600, 1600
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 1000 / noise: 0.0024
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+1600
+4140
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+35000
+Testing set size: 1600, 1600
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+7425
+Testing set size: 1600, 1600
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+24532
+Testing set size: 1600, 1600
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 1000 / noise: 0.005
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+1600
+4140
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+35000
+Testing set size: 1600, 1600
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+7425
+Testing set size: 1600, 1600
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+24532
+Testing set size: 1600, 1600
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 1000 / noise: 0.01
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+1600
+4140
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+35000
+Testing set size: 1600, 1600
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+7425
+Testing set size: 1600, 1600
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+24532
+Testing set size: 1600, 1600
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 1000 / noise: 0.05
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+1600
+4140
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+35000
+Testing set size: 1600, 1600
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+7425
+Testing set size: 1600, 1600
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+24532
+Testing set size: 1600, 1600
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 1000 / noise: 0.1
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+1600
+4140
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+35000
+Testing set size: 1600, 1600
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+7425
+Testing set size: 1600, 1600
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+24532
+Testing set size: 1600, 1600
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+Temperature: 1000 / noise: 0.2
+######################################
+Testing on DTD Texture
+Out-distribution: DTD
+1600
+4140
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-C
+Out-distribution: LSUN-C
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on LSUN-R
+Out-distribution: LSUN-R
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+8500
+Testing set size: 1600, 1600
+######################################
+Testing on Places365
+Out-distribution: Places365-small
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+35000
+Testing set size: 1600, 1600
+######################################
+Testing on iSUN
+Out-distribution: iSUN
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+1600
+7425
+Testing set size: 1600, 1600
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
+Out-distribution: svhn
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+100%|██████████| 4/4 [1:39:16<00:00, 1474.17s/it]100%|██████████| 4/4 [1:39:16<00:00, 1489.07s/it]
+1600
+24532
+Testing set size: 1600, 1600
+Baseline method: in_distribution: imagenet10==========
+out_distribution: DTD
+89.875
+70.562
+89.399
+out_distribution: LSUN-C
+89.875
+76.93799999999999
+91.689
+out_distribution: LSUN-R
+89.875
+80.375
+92.77300000000001
+out_distribution: Places365-small
+89.875
+71.25
+89.639
+out_distribution: iSUN
+89.875
+78.25
+92.154
+out_distribution: svhn
+89.875
+38.562000000000005
+75.728
+ODIN method: in_distribution: imagenet10==========
+out_distribution: DTD
+IND ACC
+[90.562 89.875 91.625 91.5   92.5   93.438 93.438 95.    96.188 95.438
+ 92.375 91.875 91.438 91.125 91.562 91.812 93.438 92.875 95.25  95.062
+ 94.75  91.75  90.938 90.312 91.5   91.625 91.875 93.25  92.875 94.125
+ 94.875 94.312 91.625 91.625 91.688 91.125 91.375 92.    92.438 92.875
+ 94.5   94.75  94.188]
+92.715
+OOD ACC
+[69.75  71.125 67.5   67.    65.    51.875 26.875  9.688  8.     5.25
+ 68.188 69.625 70.812 72.    71.25  71.25  59.062 51.    16.562  8.125
+  7.25  68.688 69.688 70.562 69.938 69.688 68.938 59.688 51.875 18.438
+  8.375  7.375 68.438 67.375 69.312 69.812 70.688 68.938 59.938 51.25
+ 18.438  8.688  7.625]
+49.557
+AUROC
+[89.968 89.964 89.683 88.989 88.284 82.947 76.046 57.283 54.892 48.573
+ 90.757 91.142 91.191 91.157 90.98  90.758 88.324 86.112 65.271 55.441
+ 50.796 90.653 91.026 91.036 91.141 90.936 90.626 88.583 86.433 66.699
+ 55.991 50.976 90.589 90.886 91.169 91.152 90.936 90.691 88.465 86.528
+ 66.924 56.143 51.242]
+80.172
+out_distribution: LSUN-C
+IND ACC
+[90.562 89.875 91.625 91.5   92.5   93.438 93.438 95.    96.188 95.438
+ 92.375 91.875 91.438 91.125 91.562 91.812 93.438 92.875 95.25  95.062
+ 94.75  91.75  90.938 90.312 91.5   91.625 91.875 93.25  92.875 94.125
+ 94.875 94.312 91.625 91.625 91.688 91.125 91.375 92.    92.438 92.875
+ 94.5   94.75  94.188]
+92.715
+OOD ACC
+[73.25  74.875 72.5   72.188 71.562 66.812 56.     2.438  1.562  2.375
+ 81.375 81.562 82.375 82.875 82.938 82.938 77.125 78.062  3.312  0.812
+  0.5   83.688 83.438 83.938 83.562 84.    83.375 79.625 79.625  3.625
+  0.562  0.5   83.812 82.562 83.    83.688 84.562 83.812 80.25  79.438
+  3.75   0.625  0.562]
+57.660999999999994
+AUROC
+[92.178 92.472 92.603 92.786 92.63  90.814 88.616 45.732 47.382 49.646
+ 94.625 94.645 94.611 94.704 94.843 94.887 94.358 94.317 53.041 44.191
+ 42.854 94.918 94.966 94.888 95.082 95.181 95.161 94.755 94.56  55.618
+ 44.797 40.076 94.965 94.924 95.089 95.114 95.237 95.288 94.732 94.659
+ 55.926 45.018 40.119]
+81.0
+out_distribution: LSUN-R
+IND ACC
+[90.562 89.875 91.625 91.5   92.5   93.438 93.438 95.    96.188 95.438
+ 92.375 91.875 91.438 91.125 91.562 91.812 93.438 92.875 95.25  95.062
+ 94.75  91.75  90.938 90.312 91.5   91.625 91.875 93.25  92.875 94.125
+ 94.875 94.312 91.625 91.625 91.688 91.125 91.375 92.    92.438 92.875
+ 94.5   94.75  94.188]
+92.715
+OOD ACC
+[82.375 85.625 84.562 83.875 81.125 54.937  7.938  3.75  13.5    7.5
+ 75.125 80.875 83.812 85.125 85.75  85.688 68.125 35.625  3.25   7.812
+  5.875 75.438 80.438 82.812 83.188 83.812 83.125 70.5   39.875  3.375
+  7.375  4.812 75.312 78.312 81.5   83.062 84.438 83.312 71.125 39.188
+  3.438  7.688  5.062]
+54.638
+AUROC
+[94.237 94.845 94.949 94.704 94.199 87.95  74.309 50.076 73.832 61.815
+ 93.421 94.385 94.871 95.149 95.338 95.3   93.006 87.399 49.755 67.256
+ 53.725 93.161 94.145 94.593 94.99  95.167 95.111 93.236 87.975 50.186
+ 64.87  49.772 93.129 94.013 94.745 94.957 95.159 95.195 93.131 88.167
+ 50.32  64.796 49.765]
+82.956
+out_distribution: Places365-small
+IND ACC
+[90.562 89.875 91.625 91.5   92.5   93.438 93.438 95.    96.188 95.438
+ 92.375 91.875 91.438 91.125 91.562 91.812 93.438 92.875 95.25  95.062
+ 94.75  91.75  90.938 90.312 91.5   91.625 91.875 93.25  92.875 94.125
+ 94.875 94.312 91.625 91.625 91.688 91.125 91.375 92.    92.438 92.875
+ 94.5   94.75  94.188]
+92.715
+OOD ACC
+[67.062 65.812 61.562 57.5   53.562 33.75  14.125  4.688  3.75   4.438
+ 67.938 67.625 66.062 65.188 61.125 59.438 41.375 29.938  5.438  2.875
+  1.938 68.688 67.375 66.438 63.688 60.188 57.188 43.812 31.25   6.438
+  2.688  1.875 68.562 65.938 64.688 64.    61.438 57.5   44.812 30.5
+  6.562  2.688  2.188]
+41.249
+AUROC
+[89.367 88.604 87.726 86.41  85.236 77.351 69.658 48.358 46.235 51.031
+ 90.736 90.486 89.943 89.525 88.885 88.373 84.422 80.63  52.246 44.362
+ 45.977 90.703 90.484 89.933 89.69  89.03  88.448 85.182 81.435 52.94
+ 44.312 44.074 90.663 90.354 90.107 89.749 89.078 88.575 85.035 81.619
+ 53.083 44.468 44.192]
+76.017
+out_distribution: iSUN
+IND ACC
+[90.562 89.875 91.625 91.5   92.5   93.438 93.438 95.    96.188 95.438
+ 92.375 91.875 91.438 91.125 91.562 91.812 93.438 92.875 95.25  95.062
+ 94.75  91.75  90.938 90.312 91.5   91.625 91.875 93.25  92.875 94.125
+ 94.875 94.312 91.625 91.625 91.688 91.125 91.375 92.    92.438 92.875
+ 94.5   94.75  94.188]
+92.715
+OOD ACC
+[79.938 83.5   81.438 79.875 77.625 51.75   8.5    4.688 10.625  6.562
+ 71.5   77.    80.812 82.688 82.688 82.438 63.5   31.812  3.938  8.125
+  7.062 71.    76.25  79.812 79.938 80.062 79.312 66.062 34.438  4.188
+  7.75   6.188 71.    74.188 78.    79.875 80.688 79.375 66.688 33.375
+  4.312  8.625  6.312]
+52.174
+AUROC
+[93.511 94.085 94.122 93.801 93.255 86.873 72.854 48.389 68.662 59.216
+ 92.479 93.464 93.963 94.257 94.451 94.419 92.125 86.515 48.2   62.89
+ 52.781 92.082 93.078 93.548 93.984 94.179 94.106 92.278 87.005 48.66
+ 61.069 49.877 92.018 92.928 93.704 93.944 94.159 94.187 92.129 87.186
+ 48.709 60.997 49.928]
+81.63
+out_distribution: svhn
+IND ACC
+[90.562 89.875 91.625 91.5   92.5   93.438 93.438 95.    96.188 95.438
+ 92.375 91.875 91.438 91.125 91.562 91.812 93.438 92.875 95.25  95.062
+ 94.75  91.75  90.938 90.312 91.5   91.625 91.875 93.25  92.875 94.125
+ 94.875 94.312 91.625 91.625 91.688 91.125 91.375 92.    92.438 92.875
+ 94.5   94.75  94.188]
+92.715
+OOD ACC
+[31.312 30.562 29.063 33.062 35.5   42.688 45.875  1.875  1.75   3.438
+ 38.625 34.438 33.188 35.125 38.688 42.938 50.5   68.062  4.688  1.438
+  2.375 41.125 36.875 35.    35.625 39.875 42.938 52.938 69.812  5.312
+  1.375  2.375 41.25  34.938 33.75  35.75  40.625 43.312 53.75  69.562
+  5.5    1.5    2.375]
+30.947999999999997
+AUROC
+[74.532 74.205 74.864 76.467 77.359 80.016 84.405 39.373 35.339 47.476
+ 78.688 77.175 76.361 76.372 77.475 78.4   83.503 90.558 46.943 33.42
+ 41.096 79.863 78.327 77.5   77.617 78.531 79.222 84.364 90.954 49.414
+ 33.721 38.872 79.829 78.309 77.669 77.938 78.731 79.425 84.378 91.111
+ 49.726 33.975 38.904]
+68.893
