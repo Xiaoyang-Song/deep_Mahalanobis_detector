@@ -198,26 +198,27 @@ def main():
                 out_count += 1
 
     # print the results
+    prec = 5
     print('Baseline method: in_distribution: ' + args.dataset + '==========')
 
     for out_idx, name in enumerate(out_dist_list):
         print('out_distribution: ' + name)
-        print(100*np.round(base_line_list_ind[out_idx], 2))
-        print(100*np.round(base_line_list_ood[out_idx], 2))
-        print(100*np.round(base_line_list_auroc[out_idx], 2))
+        print(100*np.round(base_line_list_ind[out_idx], prec))
+        print(100*np.round(base_line_list_ood[out_idx], prec))
+        print(100*np.round(base_line_list_auroc[out_idx], prec))
 
     print('ODIN method: in_distribution: ' + args.dataset + '==========')
     for count_out, name in enumerate(out_dist_list):
         print('out_distribution: ' + name)
         print('IND ACC')
-        print(100*np.round(odin_ind_acc[count_out],2))
-        print(100*np.round(np.mean(odin_ind_acc[count_out]), 2))
+        print(100*np.round(odin_ind_acc[count_out], prec))
+        print(100*np.round(np.mean(odin_ind_acc[count_out]), prec))
         print("OOD ACC")
-        print(100*np.round(odin_ood_acc[count_out],2))
-        print(100*np.round(np.mean(odin_ood_acc[count_out]), 2))
+        print(100*np.round(odin_ood_acc[count_out], prec))
+        print(100*np.round(np.mean(odin_ood_acc[count_out]), prec))
         print("AUROC")
-        print(100*np.round(odin_auroc[count_out],2))
-        print(100*np.round(np.mean(odin_auroc[count_out]), 2))
+        print(100*np.round(odin_auroc[count_out],prec))
+        print(100*np.round(np.mean(odin_auroc[count_out]), prec))
 
 
 if __name__ == '__main__':

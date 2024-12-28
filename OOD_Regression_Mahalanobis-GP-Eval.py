@@ -84,17 +84,18 @@ def main():
                 maha_auroc[idx].append(auroc)
 
 
+    prec = 5
     for count_out, out in enumerate(out_list):
         print(f"OOD dataset: {out}")
         print('IND ACC')
-        print(100*np.round(maha_ind_acc[count_out],2))
-        print(100*np.round(np.mean(maha_ind_acc[count_out]), 2))
+        print(100*np.round(maha_ind_acc[count_out],prec))
+        print(100*np.round(np.mean(maha_ind_acc[count_out]), prec))
         print("OOD ACC")
-        print(100*np.round(maha_ood_acc[count_out],2))
-        print(100*np.round(np.mean(maha_ood_acc[count_out]), 2))
+        print(100*np.round(maha_ood_acc[count_out],prec))
+        print(100*np.round(np.mean(maha_ood_acc[count_out]), prec))
         print("AUROC")
-        print(100*np.round(maha_auroc[count_out],2))
-        print(100*np.round(np.mean(maha_auroc[count_out]), 2))
+        print(100*np.round(maha_auroc[count_out],prec))
+        print(100*np.round(np.mean(maha_auroc[count_out]), prec))
 
 
 
