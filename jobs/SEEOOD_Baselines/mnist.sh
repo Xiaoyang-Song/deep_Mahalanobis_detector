@@ -15,6 +15,6 @@
 
 python OOD_Baseline_and_ODIN.py --dataset mnist07 --net_type densenet --gpu 0
 
-python OOD_Generate_Mahalanobis.py --dataset mnist07 --net_type densenet --gpu 0
+python OOD_Generate_Mahalanobis.py --dataset mnist07 --net_type densenet --num_classes 8 --gpu 0
 
 python OOD_Regression_Mahalanobis.py --net_type densenet --ind_dset mnist07

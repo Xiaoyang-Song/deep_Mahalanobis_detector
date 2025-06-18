@@ -40,7 +40,7 @@ def main():
         experiment = 'CIFAR10-SVHN'
     elif args.dataset == 'svhn07':
         experiment = 'SVHN'
-    elif args.dataset == 'mnist23689':
+    elif args.dataset == 'mnist07':
         experiment = 'MNIST'
     elif args.dataset == 'fm07':
         experiment = 'FashionMNIST'
@@ -111,7 +111,7 @@ def main():
 
         # MNIST Within-Dataset Experiment
         elif args.dataset == 'mnist07':
-            model = models.DenseNet3(100, num_channels=1, num_classes=5)
+            model = models.DenseNet3(100, num_channels=1, num_classes=8)
             model.load_state_dict(torch.load(
                 pre_trained_net, map_location="cuda:" + str(args.gpu)))
             in_transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize(

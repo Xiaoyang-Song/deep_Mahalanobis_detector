@@ -45,6 +45,9 @@ def main():
         # SVHN Within-Dataset Experiment
         elif dataset == 'svhn07':
             out_list = ['svhn89']
+        # CIFAR10-SVHN Between-Dataset Experiment
+        elif dataset == 'cifar10':
+            out_list = ['svhn']
 
         list_best_results_out, list_best_results_index_out = [], []
         for out in out_list:
@@ -62,7 +65,7 @@ def main():
                     (X_val[500:1000], X_val[1500:]))
                 Y_val_for_test = np.concatenate(
                     (Y_val[500:1000], Y_val[1500:]))
-                lr = LogisticRegressionCV(n_jobs=-1).fit(X_train, Y_train)
+                lr = LogisticRegressionCV(n_jobs=-1, max_iter=100000).fit(X_train, Y_train)
                 y_pred = lr.predict_proba(X_train)[:, 1]
                 #print('training mse: {:.4f}'.format(np.mean(y_pred - Y_train)))
                 y_pred = lr.predict_proba(X_val_for_test)[:, 1]

@@ -8,7 +8,7 @@ from collections import Counter
 from scipy.spatial.distance import pdist, cdist, squareform
 
 
-def block_split(X, Y, out, n_test=100000, n_val=1600):
+def block_split(X, Y, out, n_test=100000, n_val=1000):
     """
     Split the data training and testing
     :return: X (data) and Y (label) for training / testing
@@ -49,7 +49,7 @@ def block_split(X, Y, out, n_test=100000, n_val=1600):
         partition = 3100
     elif out == 'iSUN':
         partition = 3100
-    elif out == 'fm':
+    elif out == 'fm32':
         partition = 4000
     elif out == 'cifar10':
         partition = 4000
@@ -59,28 +59,38 @@ def block_split(X, Y, out, n_test=100000, n_val=1600):
         # MNIST
         # partition = 4000
         # Imagenet10
-        partition = 3100
+        # partition = 3100
+        partition = 26032
+    elif out == 'fm89':
+        partition = 2000
+    elif out == 'svhn89':
+        partition = 3255
+    elif out == 'mnist89':
+        partition = 1983
+    elif out == 'fm':
+        partition = 10000
 
     partition = min(partition, n_test)
 
     # Structure: OOD + IND
     # print(Counter(Y))
     X_adv, Y_adv = X[:partition], Y[:partition]
-    print(Counter(Y_adv))
+    # print(Counter(Y_adv))
     X_norm, Y_norm = X[partition: :], Y[partition: :]
-    print(Counter(Y_norm))
+    # print(Counter(Y_norm))
     # num_train = 1000
     num_train = n_val
 
     X_train = np.concatenate((X_norm[:num_train], X_adv[:num_train]))
     Y_train = np.concatenate((Y_norm[:num_train], Y_adv[:num_train]))
-    print(Counter(Y_train))
+    # print(Counter(Y_train))
 
     X_test = np.concatenate((X_norm[num_train:], X_adv[num_train:]))
     Y_test = np.concatenate((Y_norm[num_train:], Y_adv[num_train:]))
-    print(Counter(Y_test))
+    # print(Counter(Y_test))
 
     return X_train, Y_train, X_test, Y_test
+
 
 
 def block_split_adv(X, Y):

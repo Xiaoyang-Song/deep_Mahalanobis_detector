@@ -74,8 +74,8 @@ def main():
         out_dist_list = ['svhn']
 
     # MNIST-FashionMNIST Between-Dataset Experiment
-    elif args.dataset == 'mnist':
-        out_dist_list = ['fm', 'svhn', 'imagenet-c', 'cifar10']
+    elif args.dataset == 'mnist32':
+        out_dist_list = ['fm32', 'svhn', 'imagenet-c', 'cifar10']
         num_channels = 3
         n_val = 2000
         n_ind_test = 2000
@@ -95,7 +95,7 @@ def main():
     # load networks
     # This part is customized
     if args.net_type == 'densenet':
-        if args.dataset == 'mnist':
+        if args.dataset == 'mnist32':
             model = models.DenseNet3GP(100, int(args.num_classes), num_channels,feature_size=n_features)
             model.load_state_dict(torch.load(pre_trained_net, map_location="cuda:" + str(args.gpu)))
             in_transform = transforms.Compose([transforms.Resize((32, 32)), 
