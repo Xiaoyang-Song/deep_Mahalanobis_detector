@@ -57,7 +57,7 @@ def get_curve(dir_name, stypes=['Baseline', 'Gaussian_LDA']):
                     fp[stype][l+1] = fp[stype][l]
 
 
-        tpr95_pos = np.abs(tp[stype] / num_k - .854).argmin()
+        tpr95_pos = np.abs(tp[stype] / num_k - .95).argmin()
         # tpr95_pos = np.abs(tp[stype] / num_k - .8625).argmin()
         tnr_at_tpr95[stype] = 1. - fp[stype][tpr95_pos] / num_n
 

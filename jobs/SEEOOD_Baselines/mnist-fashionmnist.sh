@@ -8,12 +8,12 @@
 #SBATCH --partition=gpu
 #SBATCH --gpus=1
 #SBATCH --cpus-per-task=32
-#SBATCH --mem=64G
-#SBATCH --time=1:00:00
+#SBATCH --mem-per-gpu=16GB
+#SBATCH --time=4:00:00
 #SBATCH --output=/scratch/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/jobs/SEEOOD_Baselines/out/mnist-fashionmnist.log
 
 
-python OOD_Baseline_and_ODIN.py --dataset mnist --net_type densenet --gpu 0
+python OOD_Baseline_and_ODIN.py --dataset mnist --net_type densenet --gpu 0 --metric original
 
 python OOD_Generate_Mahalanobis.py --dataset mnist --net_type densenet --num_classes 10 --gpu 0
 
