@@ -186,18 +186,20 @@ def getTargetDataSet(data_type, batch_size, input_TF, dataroot):
 
     # CIFAR10 as InD
     if data_type == 'cifar10':
-        mean = [x / 255 for x in [125.3, 123.0, 113.9]]
-        std = [x / 255 for x in [63.0, 62.1, 66.7]]
-        train_transform = transforms.Compose([transforms.RandomHorizontalFlip(), transforms.RandomCrop(32, padding=4),
-                                    transforms.ToTensor(), transforms.Normalize(mean, std)])
-        test_transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize(mean, std)])
-        train_set = torchvision.datasets.CIFAR10('./Datasets/CIFAR-10', train=True, transform=train_transform, download=True)
-        # Truncate testing data
-        n_test = 5000
-        test_set = torchvision.datasets.CIFAR10('./Datasets/CIFAR-10', train=False, transform=test_transform, download=True)
-        test_set = torch.utils.data.Subset(test_set, range(n_test))
-        train_loader = DataLoader(train_set, batch_size=256, shuffle=True, num_workers=1)
-        test_loader = DataLoader(test_set, batch_size=256, shuffle=True, num_workers=1)
+        # mean = [x / 255 for x in [125.3, 123.0, 113.9]]
+        # std = [x / 255 for x in [63.0, 62.1, 66.7]]
+        # train_transform = transforms.Compose([transforms.RandomHorizontalFlip(), transforms.RandomCrop(32, padding=4),
+        #                             transforms.ToTensor(), transforms.Normalize(mean, std)])
+        # test_transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize(mean, std)])
+        # train_set = torchvision.datasets.CIFAR10('./Datasets/CIFAR-10', train=True, transform=train_transform, download=True)
+        # # Truncate testing data
+        # n_test = 5000
+        # test_set = torchvision.datasets.CIFAR10('./Datasets/CIFAR-10', train=False, transform=test_transform, download=True)
+        # test_set = torch.utils.data.Subset(test_set, range(n_test))
+        # train_loader = DataLoader(train_set, batch_size=256, shuffle=True, num_workers=1)
+        # test_loader = DataLoader(test_set, batch_size=256, shuffle=True, num_workers=1)
+        train_loader, test_loader = getCIFAR10(
+                    batch_size=batch_size, TF=input_TF, data_root=dataroot, num_workers=1)
         
     elif data_type == 'cifar100':
         train_loader, test_loader = getCIFAR100(
@@ -205,9 +207,31 @@ def getTargetDataSet(data_type, batch_size, input_TF, dataroot):
     elif data_type == 'svhn':
         train_loader, test_loader = getSVHN(
             batch_size=batch_size, TF=input_TF, data_root=dataroot, num_workers=1)
+        
+    # MNIST Within-Dataset Experiment
+    elif data_type == 'mnist07':
+        dset = DSET('MNIST', True, batch_size, batch_size, [0, 1, 2, 3, 4, 5, 6, 7], [8, 9])
+        train_loader = dset.ind_train_loader
+        test_loader = dset.ind_val_loader
 
-    # MNIST as InD
+    # FashionMNIST Within-Dataset Experiment: InD
+    elif data_type == 'fm07':
+        dset = DSET('FashionMNIST', True, batch_size, batch_size, [0, 1, 2, 3, 4, 5, 6, 7], [8, 9])
+        train_loader = dset.ind_train_loader
+        test_loader = dset.ind_val_loader
+
+    elif data_type == 'svhn07':
+        dset = DSET('SVHN', True, batch_size, batch_size, [0, 1, 2, 3, 4, 5, 6, 7], [8, 9])
+        train_loader = dset.ind_train_loader
+        test_loader = dset.ind_val_loader
+
     elif data_type == 'mnist':
+        dset = DSET('MNIST-FashionMNIST', False, batch_size, batch_size)
+        train_loader = dset.ind_train_loader
+        test_loader = dset.ind_val_loader 
+
+    # MNIST as InD (up-sampled version)
+    elif data_type == 'mnist32':
         transform = transforms.Compose([ transforms.Resize((32, 32)), 
                                         transforms.Grayscale(num_output_channels=3),
                                         transforms.ToTensor()])
@@ -268,9 +292,9 @@ def getNonTargetDataSet(data_type, batch_size, input_TF, dataroot, n_test=5000):
             testsetout, batch_size=batch_size, shuffle=False, num_workers=1)
         
     # MNIST Within-Dataset Experiment: OoD 
-    elif data_type == 'mnist17':
+    elif data_type == 'mnist89':
         dset = DSET('MNIST', True, batch_size,
-                    batch_size, [2, 3, 6, 8, 9], [1, 7])
+                    batch_size, [0, 1, 2, 3, 4, 5, 6, 7], [8, 9])
         test_loader = dset.ood_val_loader
 
     # SVHN Within-Dataset Experiment: OoD
@@ -298,6 +322,10 @@ def getNonTargetDataSet(data_type, batch_size, input_TF, dataroot, n_test=5000):
         test_loader = torch.utils.data.DataLoader(tset, batch_size=batch_size, shuffle=False)
 
     elif data_type == 'fm':
+        dset = DSET('MNIST-FashionMNIST', False, batch_size, batch_size)
+        test_loader = dset.ood_val_loader
+
+    elif data_type == 'fm32':
         transform = transforms.Compose([ transforms.Resize((32, 32)), 
                                 transforms.Grayscale(num_output_channels=3),
                                 transforms.ToTensor()])

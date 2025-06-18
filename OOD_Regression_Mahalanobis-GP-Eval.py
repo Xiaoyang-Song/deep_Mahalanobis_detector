@@ -40,8 +40,8 @@ def main():
         print('In-distribution: ', dataset)
         outf = './output/' + args.net_type + '_' + dataset + '_' + str(args.nf) + '/'
 
-        if dataset == 'mnist':
-            out_list = ['fm', 'svhn', 'imagenet-c', 'cifar10']
+        if dataset == 'mnist32':
+            out_list = ['fm32', 'svhn', 'imagenet-c', 'cifar10']
             n_val = 2000
         elif dataset == 'imagenet10':
             out_list = ['DTD', 'LSUN-C', 'LSUN-R', 'Places365-small', 'iSUN', 'svhn']

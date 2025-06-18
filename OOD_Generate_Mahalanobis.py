@@ -68,8 +68,8 @@ def main():
         out_dist_list = ['svhn']
 
     # MNIST Within-Dataset Experiment
-    elif args.dataset == 'mnist23689':
-        out_dist_list = ['mnist17']
+    elif args.dataset == 'mnist07':
+        out_dist_list = ['mnist89']
         C = 1
 
     # FashionMNIST Within-Dataset Experiment
@@ -110,7 +110,7 @@ def main():
             in_transform = transforms.Compose([transforms.ToTensor()])
 
         # MNIST Within-Dataset Experiment
-        elif args.dataset == 'mnist23689':
+        elif args.dataset == 'mnist07':
             model = models.DenseNet3(100, num_channels=1, num_classes=5)
             model.load_state_dict(torch.load(
                 pre_trained_net, map_location="cuda:" + str(args.gpu)))
@@ -147,6 +147,7 @@ def main():
             (0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)), ])
 
     elif args.net_type == "dcd":
+        # Deprecated! DO NOT USE!
         if args.dataset == 'mnist23689':
             model = models.DC_D(5,  {'H': 28, 'W': 28, 'C': 1})
             model.load_state_dict(torch.load(

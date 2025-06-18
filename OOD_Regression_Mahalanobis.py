@@ -34,8 +34,8 @@ def main():
         if dataset == 'svhn':
             out_list = ['cifar10', 'imagenet_resize', 'lsun_resize']
         # MNIST Within-Dataset Experiment
-        elif dataset == 'mnist23689':
-            out_list = ['mnist17']
+        elif dataset == 'mnist07':
+            out_list = ['mnist89']
         # FashionMNIST Within-Dataset Experiment
         elif dataset == 'fm07':
             out_list = ['fm89']
@@ -92,8 +92,8 @@ def main():
         if dataset_list[count_in] == 'svhn':
             out_list = ['cifar10', 'imagenet_resize', 'lsun_resize']
         # MNIST Within-Dataset Experiment
-        elif dataset_list[count_in] == 'mnist23689':
-            out_list = ['mnist17']
+        elif dataset_list[count_in] == 'mnist07':
+            out_list = ['mnist89']
         # FashionMNIST Within-Dataset Experiment
         elif dataset_list[count_in] == 'fm07':
             out_list = ['fm89']

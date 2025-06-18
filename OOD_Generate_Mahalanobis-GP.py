@@ -62,8 +62,8 @@ def main():
     if args.dataset == 'cifar100':
         args.num_classes = 100
         
-    elif args.dataset == 'mnist':
-        out_dist_list = ['fm', 'svhn', 'imagenet-c', 'cifar10']
+    elif args.dataset == 'mnist32':
+        out_dist_list = ['fm32', 'svhn', 'imagenet-c', 'cifar10']
         n_val = 2000
         n_ind_test = 2000
         n_ood_test = 2000
@@ -89,7 +89,7 @@ def main():
             model = models.DenseNet3GP(100, num_channels=num_channels, num_classes=10, feature_size=args.nf)
             model.load_state_dict(torch.load(pre_trained_net, map_location="cuda:" + str(args.gpu)))
 
-        elif args.dataset == 'mnist':
+        elif args.dataset == 'mnist32':
             model = models.DenseNet3GP(100, num_channels=3, num_classes=10, feature_size=n_features)
             model.load_state_dict(torch.load(
                 pre_trained_net, map_location="cuda:" + str(args.gpu)))

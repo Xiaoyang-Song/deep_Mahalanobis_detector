@@ -71,8 +71,8 @@ def main():
         out_dist_list = ['svhn']
 
     # MNIST-FashionMNIST Between-Dataset Experiment
-    elif args.dataset == 'mnist':
-        out_dist_list = ['fm']
+    elif args.dataset == 'mnist32':
+        out_dist_list = ['fm32']
         num_channels=3
         n_features=64
     elif args.dataset == 'imagenet10':
@@ -87,7 +87,7 @@ def main():
     if args.net_type == 'densenet':
 
         # Useless
-        if args.dataset == 'mnist':
+        if args.dataset == 'mnist32':
             # model = models.DenseNet3(100, int(args.num_classes))
             model = models.DenseNet3GP(100, int(args.num_classes), num_channels,feature_size=n_features)
             model.load_state_dict(torch.load(

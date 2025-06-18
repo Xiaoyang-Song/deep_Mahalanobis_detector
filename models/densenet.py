@@ -82,7 +82,7 @@ class DenseBlock(nn.Module):
 
 class DenseNet3(nn.Module):
     def __init__(self, depth, num_classes, num_channels=3,  growth_rate=12,
-                 reduction=0.5, bottleneck=True, dropRate=0.0, feature_size=64):
+                 reduction=0.5, bottleneck=True, dropRate=0.0):
         super(DenseNet3, self).__init__()
         in_planes = 2 * growth_rate
         n = (depth - 4) / 3
@@ -113,9 +113,9 @@ class DenseNet3(nn.Module):
         self.bn1 = nn.BatchNorm2d(in_planes)
         self.relu = nn.ReLU(inplace=True)
         # penultimate feature layers (modified)
-        self.fc0 = nn.Linear(in_planes, feature_size)
-        self.fc = nn.Linear(feature_size, num_classes)
-        # self.fc = nn.Linear(in_planes, num_classes)
+        # self.fc0 = nn.Linear(in_planes, feature_size)
+        # self.fc = nn.Linear(feature_size, num_classes)
+        self.fc = nn.Linear(in_planes, num_classes)
         self.in_planes = in_planes
 
         for m in self.modules():
@@ -136,11 +136,11 @@ class DenseNet3(nn.Module):
         out = self.relu(self.bn1(out))
         out = F.avg_pool2d(out, 7)
         out = out.view(-1, self.in_planes)
-        # return self.fc(out)
+        return self.fc(out)
         # Modified
-        feature = self.fc0(out)
-        out = self.relu(feature)
-        return feature, self.fc(out)
+        # feature = self.fc0(out)
+        # out = self.relu(feature)
+        # return feature, self.fc(out)
 
     # function to extact the multiple features
     def feature_list(self, x):
@@ -157,10 +157,10 @@ class DenseNet3(nn.Module):
         out = F.avg_pool2d(out, 7)
         out = out.view(-1, self.in_planes)
         # ic(out_list)
-        # return self.fc(out), out_list
-        # Modified
-        out = self.relu(self.fc0(out))
         return self.fc(out), out_list
+        # Modified
+        # out = self.relu(self.fc0(out))
+        # return self.fc(out), out_list
 
     def intermediate_forward(self, x, layer_index):
         out = self.conv1(x)
@@ -182,16 +182,16 @@ class DenseNet3(nn.Module):
         out = self.trans1(self.block1(out))
         out = self.trans2(self.block2(out))
         out = self.block3(out)
-        # penultimate = self.relu(self.bn1(out))
-        # out = F.avg_pool2d(penultimate, 7)
-        # out = out.view(-1, self.in_planes)
-        # return self.fc(out), penultimate
-        # Modified
-        out = self.relu(self.bn1(out))
-        out = F.avg_pool2d(out, 7)
+        penultimate = self.relu(self.bn1(out))
+        out = F.avg_pool2d(penultimate, 7)
         out = out.view(-1, self.in_planes)
-        penultimate = self.fc0(out)
-        return self.fc(self.relu(penultimate)), penultimate
+        return self.fc(out), penultimate
+        # Modified
+        # out = self.relu(self.bn1(out))
+        # out = F.avg_pool2d(out, 7)
+        # out = out.view(-1, self.in_planes)
+        # penultimate = self.fc0(out)
+        # return self.fc(self.relu(penultimate)), penultimate
     
 
 if __name__ == '__main__':

@@ -41,7 +41,7 @@ def main():
         experiment = 'CIFAR10-SVHN'
     elif args.dataset == 'svhn07':
         experiment = 'SVHN'
-    elif args.dataset == 'mnist23689':
+    elif args.dataset == 'mnist07':
         experiment = 'MNIST'
     elif args.dataset == 'fm07':
         experiment = 'FashionMNIST'
@@ -50,10 +50,8 @@ def main():
     else:
         assert False
 
-    # GP-OOD
-    
-
-    pre_trained_net = f"/scratch/sunwbgt_root/sunwbgt98/xysong/GP-ImageNet/ckpt/{experiment}/densenet.pth"
+    # Please replace the following path with your own path for pretrained model
+    pre_trained_net = f"/scratch/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/pre_trained/[{experiment}]-pretrained-classifier.pt"
 
     args.outf = args.outf + args.net_type + '_' + args.dataset + '/'
     os.makedirs(args.outf, exist_ok=True)
@@ -74,8 +72,8 @@ def main():
         out_dist_list = ['svhn']
 
     # MNIST Within-Dataset Experiment
-    elif args.dataset == 'mnist23689':
-        out_dist_list = ['mnist17']
+    elif args.dataset == 'mnist07':
+        out_dist_list = ['mnist89']
 
     # FashionMNIST Within-Dataset Experiment
     elif args.dataset == 'fm07':
@@ -115,8 +113,8 @@ def main():
             in_transform = transforms.Compose([transforms.ToTensor()])
 
         # MNIST Within-Dataset Experiment
-        elif args.dataset == 'mnist23689':
-            model = models.DenseNet3(100, num_channels=1, num_classes=5)
+        elif args.dataset == 'mnist07':
+            model = models.DenseNet3(100, num_channels=1, num_classes=8)
             model.load_state_dict(torch.load(
                 pre_trained_net, map_location="cuda:" + str(args.gpu)))
             in_transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize(
