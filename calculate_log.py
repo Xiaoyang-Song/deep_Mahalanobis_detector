@@ -27,6 +27,8 @@ def get_curve(dir_name, stypes=['Baseline', 'Gaussian_LDA']):
         novel = np.loadtxt('{}/confidence_{}_Out.txt'.format(dir_name, stype), delimiter=' ')
         known.sort()
         novel.sort()
+        # print(known.shape, novel.shape)
+        # print(np.max(known), np.max(novel))
         end = np.max([np.max(known), np.max(novel)])
         start = np.min([np.min(known), np.min(novel)])
         num_k = known.shape[0]

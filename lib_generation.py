@@ -205,7 +205,7 @@ def get_Mahalanobis_score(model, test_loader, num_classes, outf, out_flag, net_t
 
     return Mahalanobis
 
-def get_posterior(model, net_type, C, test_loader, magnitude, temperature, outf, out_flag, n_val=1000):
+def get_posterior(model, net_type, C, test_loader, magnitude, temperature, outf, out_flag, n_val=100):
     
     '''
     Compute the maximum value of (processed) posterior distribution - ODIN

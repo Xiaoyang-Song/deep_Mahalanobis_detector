@@ -1,4 +1,5 @@
 ic| len(dset): 60000
+ic| len(dset): 10000
 /gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:254: UserWarning: This overload of add is deprecated:
 	add(Tensor input, Number alpha, Tensor other, *, Tensor out)
 Consider using one of the following signatures instead:
@@ -7,150 +8,194 @@ Consider using one of the following signatures instead:
 /gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
   outputs = model(Variable(tempInputs, volatile=True))
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
-Namespace(batch_size=200, dataset='mnist', dataroot='./data', outf='output/', num_classes=10, net_type='densenet', gpu=0)
+ic| len(dset): 10000
+Namespace(batch_size=200, dataset='fm07', dataroot='./data', outf='output/', num_classes=10, net_type='densenet', gpu=0)
 load model: densenet
-load target data:  mnist
+load target data:  fm07
 Temperature: 1 / noise: 0
-Out-distribution: fm
+Out-distribution: fm89
 Temperature: 1 / noise: 0.0005
-Out-distribution: fm
+Out-distribution: fm89
 Temperature: 1 / noise: 0.001
-Out-distribution: fm
+Out-distribution: fm89
 Temperature: 1 / noise: 0.0014
-Out-distribution: fm
+Out-distribution: fm89
 Temperature: 1 / noise: 0.002
-Out-distribution: fm
+Out-distribution: fm89
 Temperature: 1 / noise: 0.0024
-Out-distribution: fm
+Out-distribution: fm89
 Temperature: 1 / noise: 0.005
-Out-distribution: fm
+Out-distribution: fm89
 Temperature: 1 / noise: 0.01
-Out-distribution: fm
+Out-distribution: fm89
 Temperature: 1 / noise: 0.05
-Out-distribution: fm
+Out-distribution: fm89
 Temperature: 1 / noise: 0.1
-Out-distribution: fm
+Out-distribution: fm89
 Temperature: 1 / noise: 0.2
-Out-distribution: fm
+Out-distribution: fm89
 Temperature: 10 / noise: 0
-Out-distribution: fm
+Out-distribution: fm89
 Temperature: 10 / noise: 0.0005
-Out-distribution: fm
+Out-distribution: fm89
 Temperature: 10 / noise: 0.001
-Out-distribution: fm
+Out-distribution: fm89
 Temperature: 10 / noise: 0.0014
-Out-distribution: fm
+Out-distribution: fm89
 Temperature: 10 / noise: 0.002
-Out-distribution: fm
+Out-distribution: fm89
 Temperature: 10 / noise: 0.0024
-Out-distribution: fm
+Out-distribution: fm89
 Temperature: 10 / noise: 0.005
-Out-distribution: fm
+Out-distribution: fm89
 Temperature: 10 / noise: 0.01
-Out-distribution: fm
+Out-distribution: fm89
 Temperature: 10 / noise: 0.05
-Out-distribution: fm
+Out-distribution: fm89
 Temperature: 10 / noise: 0.1
-Out-distribution: fm
+Out-distribution: fm89
 Temperature: 10 / noise: 0.2
-Out-distribution: fm
+Out-distribution: fm89
 Temperature: 100 / noise: 0
-Out-distribution: fm
+Out-distribution: fm89
 Temperature: 100 / noise: 0.0005
-Out-distribution: fm
+Out-distribution: fm89
 Temperature: 100 / noise: 0.001
-Out-distribution: fm
+Out-distribution: fm89
 Temperature: 100 / noise: 0.0014
-Out-distribution: fm
+Out-distribution: fm89
 Temperature: 100 / noise: 0.002
-Out-distribution: fm
+Out-distribution: fm89
 Temperature: 100 / noise: 0.0024
-Out-distribution: fm
+Out-distribution: fm89
 Temperature: 100 / noise: 0.005
-Out-distribution: fm
+Out-distribution: fm89
 Temperature: 100 / noise: 0.01
-Out-distribution: fm
+Out-distribution: fm89
 Temperature: 100 / noise: 0.05
-Out-distribution: fm
+Out-distribution: fm89
 Temperature: 100 / noise: 0.1
-Out-distribution: fm
+Out-distribution: fm89
 Temperature: 100 / noise: 0.2
-Out-distribution: fm
+Out-distribution: fm89
 Temperature: 1000 / noise: 0
-Out-distribution: fm
+Out-distribution: fm89
 Temperature: 1000 / noise: 0.0005
-Out-distribution: fm
+Out-distribution: fm89
 Temperature: 1000 / noise: 0.001
-Out-distribution: fm
+Out-distribution: fm89
 Temperature: 1000 / noise: 0.0014
-Out-distribution: fm
+Out-distribution: fm89
 Temperature: 1000 / noise: 0.002
-Out-distribution: fm
+Out-distribution: fm89
 Temperature: 1000 / noise: 0.0024
-Out-distribution: fm
+Out-distribution: fm89
 Temperature: 1000 / noise: 0.005
-Out-distribution: fm
+Out-distribution: fm89
 Temperature: 1000 / noise: 0.01
-Out-distribution: fm
+Out-distribution: fm89
 Temperature: 1000 / noise: 0.05
-Out-distribution: fm
+Out-distribution: fm89
 Temperature: 1000 / noise: 0.1
-Out-distribution: fm
+Out-distribution: fm89
 Temperature: 1000 / noise: 0.2
-Out-distribution: fm
-Baseline method: in_distribution: mnist==========
-out_distribution: fm
+Out-distribution: fm89
+Baseline method: in_distribution: fm07==========
+out_distribution: fm89
  TNR95  TNR99  AUROC  DTACC  AUIN   AUOUT 
- 99.68  75.74  99.14  97.04  99.32  98.76
+ 76.40  15.50  90.23  83.64  98.50  54.43
 
-ODIN method: in_distribution: mnist==========
-out_distribution: fm
+ODIN method: in_distribution: fm07==========
+out_distribution: fm89
  TNR95  TNR99  AUROC  DTACC  AUIN   AUOUT 
- 99.67  71.69  99.00  96.61  99.21  98.46
-temperature: 1
+ 89.40  39.30  94.66  87.61  99.16  74.59
+temperature: 1000
 magnitude: 0.0005
 
 Traceback (most recent call last):
@@ -160,6 +205,7 @@ Traceback (most recent call last):
     print('out_distribution: ' + out_dist_list[count_out])
 IndexError: list index out of range
 ic| len(dset): 60000
+ic| len(dset): 10000
 /gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:70: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
   data = Variable(data, volatile=True)
 /gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:183: UserWarning: This overload of add is deprecated:
@@ -170,40 +216,47 @@ Consider using one of the following signatures instead:
 /gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:186: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
   noise_out_features = model.intermediate_forward(Variable(tempInputs, volatile=True), layer_index)
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
+ic| len(dset): 10000
 ic| len(dset): 60000
-Namespace(batch_size=200, dataset='mnist', dataroot='./data', outf='./output/', num_classes=10, net_type='densenet', gpu=0)
+ic| len(dset): 10000
+Namespace(batch_size=200, dataset='fm07', dataroot='./data', outf='./output/', num_classes=8, net_type='densenet', gpu=0)
 load model: densenet
-load target data:  mnist
+load target data:  fm07
 get sample mean and covariance
 
  Training Accuracy:(100.00%)
 
 get Mahalanobis scores
 Noise: 0.0
-Out-distribution: fm
+Out-distribution: fm89
 Noise: 0.01
-Out-distribution: fm
+Out-distribution: fm89
 Noise: 0.005
-Out-distribution: fm
+Out-distribution: fm89
 Noise: 0.002
-Out-distribution: fm
+Out-distribution: fm89
 Noise: 0.0014
-Out-distribution: fm
+Out-distribution: fm89
 Noise: 0.001
-Out-distribution: fm
+Out-distribution: fm89
 Noise: 0.0005
-Out-distribution: fm
-Namespace(net_type='densenet', ind_dset='mnist')
-In-distribution:  mnist
-Out-of-distribution:  fm
-in_distribution: mnist==========
-out_distribution: fm
+Out-distribution: fm89
+Namespace(net_type='densenet', ind_dset='fm07')
+In-distribution:  fm07
+Out-of-distribution:  fm89
+in_distribution: fm07==========
+out_distribution: fm89
  TNR95  TNR99  AUROC  DTACC  AUIN   AUOUT 
-100.00100.00 100.00 100.00  99.99  99.99
-Input noise: Mahalanobis_0.0
+ 89.80 44.90  94.86  88.55  99.13  77.70
+Input noise: Mahalanobis_0.0005
 

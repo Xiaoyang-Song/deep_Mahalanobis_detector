@@ -1,49 +1,262 @@
-Downloading http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz
-Failed to download (trying next):
-HTTP Error 404: Not Found
-
-Downloading https://ossci-datasets.s3.amazonaws.com/mnist/train-images-idx3-ubyte.gz
-Downloading https://ossci-datasets.s3.amazonaws.com/mnist/train-images-idx3-ubyte.gz to ./Datasets/MNIST/raw/train-images-idx3-ubyte.gz
-  0%|          | 0/9912422 [00:00<?, ?it/s] 17%|█▋        | 1638400/9912422 [00:00<00:00, 16374099.74it/s]100%|██████████| 9912422/9912422 [00:00<00:00, 54916891.32it/s]
-Extracting ./Datasets/MNIST/raw/train-images-idx3-ubyte.gz to ./Datasets/MNIST/raw
-
-Downloading http://yann.lecun.com/exdb/mnist/train-labels-idx1-ubyte.gz
-Failed to download (trying next):
-HTTP Error 404: Not Found
-
-Downloading https://ossci-datasets.s3.amazonaws.com/mnist/train-labels-idx1-ubyte.gz
-Downloading https://ossci-datasets.s3.amazonaws.com/mnist/train-labels-idx1-ubyte.gz to ./Datasets/MNIST/raw/train-labels-idx1-ubyte.gz
-  0%|          | 0/28881 [00:00<?, ?it/s]100%|██████████| 28881/28881 [00:00<00:00, 1205966.27it/s]
-Extracting ./Datasets/MNIST/raw/train-labels-idx1-ubyte.gz to ./Datasets/MNIST/raw
-
-Downloading http://yann.lecun.com/exdb/mnist/t10k-images-idx3-ubyte.gz
-Failed to download (trying next):
-HTTP Error 404: Not Found
-
-Downloading https://ossci-datasets.s3.amazonaws.com/mnist/t10k-images-idx3-ubyte.gz
-Downloading https://ossci-datasets.s3.amazonaws.com/mnist/t10k-images-idx3-ubyte.gz to ./Datasets/MNIST/raw/t10k-images-idx3-ubyte.gz
-  0%|          | 0/1648877 [00:00<?, ?it/s] 46%|████▌     | 753664/1648877 [00:00<00:00, 7099518.10it/s]100%|██████████| 1648877/1648877 [00:00<00:00, 12758934.99it/s]
-Extracting ./Datasets/MNIST/raw/t10k-images-idx3-ubyte.gz to ./Datasets/MNIST/raw
-
-Downloading http://yann.lecun.com/exdb/mnist/t10k-labels-idx1-ubyte.gz
-Failed to download (trying next):
-HTTP Error 404: Not Found
-
-Downloading https://ossci-datasets.s3.amazonaws.com/mnist/t10k-labels-idx1-ubyte.gz
-Downloading https://ossci-datasets.s3.amazonaws.com/mnist/t10k-labels-idx1-ubyte.gz to ./Datasets/MNIST/raw/t10k-labels-idx1-ubyte.gz
-  0%|          | 0/4542 [00:00<?, ?it/s]100%|██████████| 4542/4542 [00:00<00:00, 6167215.53it/s]
 ic| len(dset): 60000
 ic| len(dset): 10000
-Extracting ./Datasets/MNIST/raw/t10k-labels-idx1-ubyte.gz to ./Datasets/MNIST/raw
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:254: UserWarning: This overload of add is deprecated:
+	add(Tensor input, Number alpha, Tensor other, *, Tensor out)
+Consider using one of the following signatures instead:
+	add(Tensor input, Tensor other, *, Number alpha, Tensor out) (Triggered internally at  ../torch/csrc/utils/python_arg_parser.cpp:1174.)
+  tempInputs = torch.add(data.data,  -magnitude, gradient)
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+Namespace(batch_size=200, dataset='mnist07', dataroot='./data', outf='output/', num_classes=10, net_type='densenet', gpu=0)
+load model: densenet
+load target data:  mnist07
+Temperature: 1 / noise: 0
+Out-distribution: mnist89
+Temperature: 1 / noise: 0.0005
+Out-distribution: mnist89
+Temperature: 1 / noise: 0.001
+Out-distribution: mnist89
+Temperature: 1 / noise: 0.0014
+Out-distribution: mnist89
+Temperature: 1 / noise: 0.002
+Out-distribution: mnist89
+Temperature: 1 / noise: 0.0024
+Out-distribution: mnist89
+Temperature: 1 / noise: 0.005
+Out-distribution: mnist89
+Temperature: 1 / noise: 0.01
+Out-distribution: mnist89
+Temperature: 1 / noise: 0.05
+Out-distribution: mnist89
+Temperature: 1 / noise: 0.1
+Out-distribution: mnist89
+Temperature: 1 / noise: 0.2
+Out-distribution: mnist89
+Temperature: 10 / noise: 0
+Out-distribution: mnist89
+Temperature: 10 / noise: 0.0005
+Out-distribution: mnist89
+Temperature: 10 / noise: 0.001
+Out-distribution: mnist89
+Temperature: 10 / noise: 0.0014
+Out-distribution: mnist89
+Temperature: 10 / noise: 0.002
+Out-distribution: mnist89
+Temperature: 10 / noise: 0.0024
+Out-distribution: mnist89
+Temperature: 10 / noise: 0.005
+Out-distribution: mnist89
+Temperature: 10 / noise: 0.01
+Out-distribution: mnist89
+Temperature: 10 / noise: 0.05
+Out-distribution: mnist89
+Temperature: 10 / noise: 0.1
+Out-distribution: mnist89
+Temperature: 10 / noise: 0.2
+Out-distribution: mnist89
+Temperature: 100 / noise: 0
+Out-distribution: mnist89
+Temperature: 100 / noise: 0.0005
+Out-distribution: mnist89
+Temperature: 100 / noise: 0.001
+Out-distribution: mnist89
+Temperature: 100 / noise: 0.0014
+Out-distribution: mnist89
+Temperature: 100 / noise: 0.002
+Out-distribution: mnist89
+Temperature: 100 / noise: 0.0024
+Out-distribution: mnist89
+Temperature: 100 / noise: 0.005
+Out-distribution: mnist89
+Temperature: 100 / noise: 0.01
+Out-distribution: mnist89
+Temperature: 100 / noise: 0.05
+Out-distribution: mnist89
+Temperature: 100 / noise: 0.1
+Out-distribution: mnist89
+Temperature: 100 / noise: 0.2
+Out-distribution: mnist89
+Temperature: 1000 / noise: 0
+Out-distribution: mnist89
+Temperature: 1000 / noise: 0.0005
+Out-distribution: mnist89
+Temperature: 1000 / noise: 0.001
+Out-distribution: mnist89
+Temperature: 1000 / noise: 0.0014
+Out-distribution: mnist89
+Temperature: 1000 / noise: 0.002
+Out-distribution: mnist89
+Temperature: 1000 / noise: 0.0024
+Out-distribution: mnist89
+Temperature: 1000 / noise: 0.005
+Out-distribution: mnist89
+Temperature: 1000 / noise: 0.01
+Out-distribution: mnist89
+Temperature: 1000 / noise: 0.05
+Out-distribution: mnist89
+Temperature: 1000 / noise: 0.1
+Out-distribution: mnist89
+Temperature: 1000 / noise: 0.2
+Out-distribution: mnist89
+Baseline method: in_distribution: mnist07==========
+out_distribution: mnist89
+ TNR95  TNR99  AUROC  DTACC  AUIN   AUOUT 
+ 99.80  73.75  99.00  96.60  99.83  91.67
 
-  0%|          | 0/100 [00:00<?, ?it/s]  0%|          | 0/100 [00:00<?, ?it/s]
+ODIN method: in_distribution: mnist07==========
+out_distribution: mnist89
+ TNR95  TNR99  AUROC  DTACC  AUIN   AUOUT 
+ 99.39  77.31  99.00  96.57  99.82  92.90
+temperature: 1
+magnitude: 0.002
+
 Traceback (most recent call last):
-  File "/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/classifier_training.py", line 99, in <module>
-    loss = criterion(logits, labels)
-  File "/home/xysong/.conda/envs/OoD/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
-    return forward_call(*input, **kwargs)
-  File "/home/xysong/.conda/envs/OoD/lib/python3.9/site-packages/torch/nn/modules/loss.py", line 1164, in forward
-    return F.cross_entropy(input, target, weight=self.weight,
-  File "/home/xysong/.conda/envs/OoD/lib/python3.9/site-packages/torch/nn/functional.py", line 3014, in cross_entropy
-    return torch._C._nn.cross_entropy_loss(input, target, weight, _Reduction.get_enum(reduction), ignore_index, label_smoothing)
-TypeError: cross_entropy_loss(): argument 'input' (position 1) must be Tensor, not tuple
+  File "/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/OOD_Baseline_and_ODIN.py", line 231, in <module>
+    main()
+  File "/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/OOD_Baseline_and_ODIN.py", line 215, in main
+    print('out_distribution: ' + out_dist_list[count_out])
+IndexError: list index out of range
+ic| len(dset): 60000
+ic| len(dset): 10000
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:70: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  data = Variable(data, volatile=True)
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:183: UserWarning: This overload of add is deprecated:
+	add(Tensor input, Number alpha, Tensor other, *, Tensor out)
+Consider using one of the following signatures instead:
+	add(Tensor input, Tensor other, *, Number alpha, Tensor out) (Triggered internally at  ../torch/csrc/utils/python_arg_parser.cpp:1174.)
+  tempInputs = torch.add(data.data, -magnitude, gradient)
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:186: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  noise_out_features = model.intermediate_forward(Variable(tempInputs, volatile=True), layer_index)
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+ic| len(dset): 60000
+ic| len(dset): 10000
+Namespace(batch_size=200, dataset='mnist07', dataroot='./data', outf='./output/', num_classes=8, net_type='densenet', gpu=0)
+load model: densenet
+load target data:  mnist07
+get sample mean and covariance
+
+ Training Accuracy:(100.00%)
+
+get Mahalanobis scores
+Noise: 0.0
+Out-distribution: mnist89
+Noise: 0.01
+Out-distribution: mnist89
+Noise: 0.005
+Out-distribution: mnist89
+Noise: 0.002
+Out-distribution: mnist89
+Noise: 0.0014
+Out-distribution: mnist89
+Noise: 0.001
+Out-distribution: mnist89
+Noise: 0.0005
+Out-distribution: mnist89
+Namespace(net_type='densenet', ind_dset='mnist07')
+In-distribution:  mnist07
+Out-of-distribution:  mnist89
+in_distribution: mnist07==========
+out_distribution: mnist89
+ TNR95  TNR99  AUROC  DTACC  AUIN   AUOUT 
+ 99.69 88.30  99.45  96.96  99.91  96.54
+Input noise: Mahalanobis_0.0
+

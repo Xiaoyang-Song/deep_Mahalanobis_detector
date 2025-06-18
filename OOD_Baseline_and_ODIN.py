@@ -18,7 +18,7 @@ from torch.autograd import Variable
 
 parser = argparse.ArgumentParser(
     description='PyTorch code: Mahalanobis detector')
-parser.add_argument('--batch_size', type=int, default=200,
+parser.add_argument('--batch_size', type=int, default=100,
                     metavar='N', help='batch size for data loader')
 parser.add_argument('--dataset', required=True,
                     help='cifar10 | cifar100 | svhn')
@@ -97,8 +97,6 @@ def main():
             model.load_state_dict(torch.load(
                 pre_trained_net, map_location="cuda:" + str(args.gpu)))
 
-            # model = torch.load(
-            #     pre_trained_net, map_location="cuda:" + str(args.gpu))
         # SVHN Within-Dataset Experiment
         elif args.dataset == 'svhn07':
             model = models.DenseNet3(100, num_channels=3, num_classes=8)
@@ -170,8 +168,7 @@ def main():
         for m in M_list:
             magnitude = m
             temperature = T
-            lib_generation.get_posterior(
-                model, args.net_type, 1, test_loader, magnitude, temperature, args.outf, True)
+            lib_generation.get_posterior(model, args.net_type, 1, test_loader, magnitude, temperature, args.outf, True)
             out_count = 0
             print('Temperature: ' + str(temperature) +
                   ' / noise: ' + str(magnitude))
@@ -188,8 +185,7 @@ def main():
                     val_results = callog.metric(args.outf, ['PoV'])
                     if ODIN_best_tnr[out_count] < val_results['PoV']['TNR95']:
                         ODIN_best_tnr[out_count] = val_results['PoV']['TNR95']
-                        ODIN_best_results[out_count] = callog.metric(
-                            args.outf, ['PoT'])
+                        ODIN_best_results[out_count] = callog.metric(args.outf, ['PoT'])
                         ODIN_best_temperature[out_count] = temperature
                         ODIN_best_magnitude[out_count] = magnitude
                 out_count += 1

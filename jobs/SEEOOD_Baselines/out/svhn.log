@@ -1,0 +1,368 @@
+ic| len(dset): 73257
+ic| len(dset): 26032
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:254: UserWarning: This overload of add is deprecated:
+	add(Tensor input, Number alpha, Tensor other, *, Tensor out)
+Consider using one of the following signatures instead:
+	add(Tensor input, Tensor other, *, Number alpha, Tensor out) (Triggered internally at  ../torch/csrc/utils/python_arg_parser.cpp:1174.)
+  tempInputs = torch.add(data.data,  -magnitude, gradient)
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  outputs = model(Variable(tempInputs, volatile=True))
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+Namespace(batch_size=200, dataset='svhn07', dataroot='./data', outf='output/', num_classes=10, net_type='densenet', gpu=0)
+load model: densenet
+load target data:  svhn07
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Temperature: 1 / noise: 0
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Temperature: 1 / noise: 0.0005
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Temperature: 1 / noise: 0.001
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Temperature: 1 / noise: 0.0014
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Temperature: 1 / noise: 0.002
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Temperature: 1 / noise: 0.0024
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Temperature: 1 / noise: 0.005
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Temperature: 1 / noise: 0.01
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Temperature: 1 / noise: 0.05
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Temperature: 1 / noise: 0.1
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Temperature: 1 / noise: 0.2
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Temperature: 10 / noise: 0
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Temperature: 10 / noise: 0.0005
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Temperature: 10 / noise: 0.001
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Temperature: 10 / noise: 0.0014
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Temperature: 10 / noise: 0.002
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Temperature: 10 / noise: 0.0024
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Temperature: 10 / noise: 0.005
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Temperature: 10 / noise: 0.01
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Temperature: 10 / noise: 0.05
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Temperature: 10 / noise: 0.1
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Temperature: 10 / noise: 0.2
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Temperature: 100 / noise: 0
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Temperature: 100 / noise: 0.0005
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Temperature: 100 / noise: 0.001
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Temperature: 100 / noise: 0.0014
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Temperature: 100 / noise: 0.002
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Temperature: 100 / noise: 0.0024
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Temperature: 100 / noise: 0.005
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Temperature: 100 / noise: 0.01
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Temperature: 100 / noise: 0.05
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Temperature: 100 / noise: 0.1
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Temperature: 100 / noise: 0.2
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Temperature: 1000 / noise: 0
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Temperature: 1000 / noise: 0.0005
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Temperature: 1000 / noise: 0.001
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Temperature: 1000 / noise: 0.0014
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Temperature: 1000 / noise: 0.002
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Temperature: 1000 / noise: 0.0024
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Temperature: 1000 / noise: 0.005
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Temperature: 1000 / noise: 0.01
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Temperature: 1000 / noise: 0.05
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Temperature: 1000 / noise: 0.1
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Temperature: 1000 / noise: 0.2
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Baseline method: in_distribution: svhn07==========
+out_distribution: svhn89
+ TNR95  TNR99  AUROC  DTACC  AUIN   AUOUT 
+ 88.56  18.71  93.17  87.12  99.20  57.14
+
+ODIN method: in_distribution: svhn07==========
+out_distribution: svhn89
+ TNR95  TNR99  AUROC  DTACC  AUIN   AUOUT 
+ 89.00  33.26  93.87  87.27  99.25  65.65
+temperature: 10
+magnitude: 0.0005
+
+Traceback (most recent call last):
+  File "/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/OOD_Baseline_and_ODIN.py", line 231, in <module>
+    main()
+  File "/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/OOD_Baseline_and_ODIN.py", line 215, in main
+    print('out_distribution: ' + out_dist_list[count_out])
+IndexError: list index out of range
+ic| len(dset): 73257
+ic| len(dset): 26032
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:70: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  data = Variable(data, volatile=True)
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:183: UserWarning: This overload of add is deprecated:
+	add(Tensor input, Number alpha, Tensor other, *, Tensor out)
+Consider using one of the following signatures instead:
+	add(Tensor input, Tensor other, *, Number alpha, Tensor out) (Triggered internally at  ../torch/csrc/utils/python_arg_parser.cpp:1174.)
+  tempInputs = torch.add(data.data, -magnitude, gradient)
+/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:186: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  noise_out_features = model.intermediate_forward(Variable(tempInputs, volatile=True), layer_index)
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+ic| len(dset): 73257
+ic| len(dset): 26032
+Namespace(batch_size=200, dataset='svhn07', dataroot='./data', outf='./output/', num_classes=8, net_type='densenet', gpu=0)
+load model: densenet
+load target data:  svhn07
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+get sample mean and covariance
+
+ Training Accuracy:(100.00%)
+
+get Mahalanobis scores
+Noise: 0.0
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Noise: 0.01
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Noise: 0.005
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Noise: 0.002
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Noise: 0.0014
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Noise: 0.001
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Noise: 0.0005
+Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
+Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Out-distribution: svhn89
+Namespace(net_type='densenet', ind_dset='svhn07')
+In-distribution:  svhn07
+Out-of-distribution:  svhn89
+in_distribution: svhn07==========
+out_distribution: svhn89
+ TNR95  TNR99  AUROC  DTACC  AUIN   AUOUT 
+ 48.03  4.70  76.80  70.66  96.63  24.41
+Input noise: Mahalanobis_0.01
+

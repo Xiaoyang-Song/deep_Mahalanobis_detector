@@ -14,4 +14,4 @@
 
 
 # python OOD_Generate_Mahalanobis-GP.py --dataset mnist32 --ckpt mnist-32 --nf 32 --net_type densenet --gpu 0 --n_test_prep 5000
-python OOD_Regression_Mahalanobis-GP-Eval.py --net_type densenet --ind_dset mnist --nf 32
+python OOD_Regression_Mahalanobis-GP-Eval.py --net_type densenet --ind_dset mnist32 --nf 32
