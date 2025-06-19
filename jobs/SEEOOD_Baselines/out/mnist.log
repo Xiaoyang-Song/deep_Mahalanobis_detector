@@ -95,113 +95,158 @@ ic| len(dset): 60000
 ic| len(dset): 10000
 ic| len(dset): 60000
 ic| len(dset): 10000
-Namespace(batch_size=200, dataset='mnist07', dataroot='./data', outf='output/', num_classes=10, net_type='densenet', gpu=0)
+Namespace(batch_size=100, dataset='mnist07', dataroot='./data', outf='output/', num_classes=10, net_type='densenet', gpu=0, metric='original')
 load model: densenet
 load target data:  mnist07
+Evaluating with original ODIN method (OOD samples are used for tuning parameters...)
+Note that this is an unfaithful comparison as the paper claims using no OOD samples.
 Temperature: 1 / noise: 0
 Out-distribution: mnist89
 Temperature: 1 / noise: 0.0005
 Out-distribution: mnist89
+0.9766330323951142
 Temperature: 1 / noise: 0.001
 Out-distribution: mnist89
+0.9761019649495486
 Temperature: 1 / noise: 0.0014
 Out-distribution: mnist89
+0.9766330323951142
 Temperature: 1 / noise: 0.002
 Out-distribution: mnist89
+0.9766330323951142
 Temperature: 1 / noise: 0.0024
 Out-distribution: mnist89
+0.9745087626128518
 Temperature: 1 / noise: 0.005
 Out-distribution: mnist89
+0.9745087626128518
 Temperature: 1 / noise: 0.01
 Out-distribution: mnist89
+0.9638874137015401
 Temperature: 1 / noise: 0.05
 Out-distribution: mnist89
+0.1938396176314392
 Temperature: 1 / noise: 0.1
 Out-distribution: mnist89
+0.029208709506107322
 Temperature: 1 / noise: 0.2
 Out-distribution: mnist89
+0.03292618162506633
 Temperature: 10 / noise: 0
 Out-distribution: mnist89
+0.9792883696229421
 Temperature: 10 / noise: 0.0005
 Out-distribution: mnist89
+0.9787573021773766
 Temperature: 10 / noise: 0.001
 Out-distribution: mnist89
+0.9787573021773766
 Temperature: 10 / noise: 0.0014
 Out-distribution: mnist89
+0.9782262347318109
 Temperature: 10 / noise: 0.002
 Out-distribution: mnist89
+0.9787573021773766
 Temperature: 10 / noise: 0.0024
 Out-distribution: mnist89
+0.9792883696229421
 Temperature: 10 / noise: 0.005
 Out-distribution: mnist89
+0.9750398300584174
 Temperature: 10 / noise: 0.01
 Out-distribution: mnist89
+0.9580456718003186
 Temperature: 10 / noise: 0.05
 Out-distribution: mnist89
+0.16569304301646304
 Temperature: 10 / noise: 0.1
 Out-distribution: mnist89
+0.014338821030270843
 Temperature: 10 / noise: 0.2
 Out-distribution: mnist89
+0.026553372278279364
 Temperature: 100 / noise: 0
 Out-distribution: mnist89
+0.9792883696229421
 Temperature: 100 / noise: 0.0005
 Out-distribution: mnist89
+0.9782262347318109
 Temperature: 100 / noise: 0.001
 Out-distribution: mnist89
+0.9782262347318109
 Temperature: 100 / noise: 0.0014
 Out-distribution: mnist89
+0.9803505045140732
 Temperature: 100 / noise: 0.002
 Out-distribution: mnist89
+0.9787573021773766
 Temperature: 100 / noise: 0.0024
 Out-distribution: mnist89
+0.9798194370685077
 Temperature: 100 / noise: 0.005
 Out-distribution: mnist89
+0.9745087626128518
 Temperature: 100 / noise: 0.01
 Out-distribution: mnist89
+0.9564524694636218
 Temperature: 100 / noise: 0.05
 Out-distribution: mnist89
+0.1614445034519384
 Temperature: 100 / noise: 0.1
 Out-distribution: mnist89
+0.018056293149229963
 Temperature: 100 / noise: 0.2
 Out-distribution: mnist89
+0.02442910249601704
 Temperature: 1000 / noise: 0
 Out-distribution: mnist89
+0.9808815719596389
 Temperature: 1000 / noise: 0.0005
 Out-distribution: mnist89
+0.9792883696229421
 Temperature: 1000 / noise: 0.001
 Out-distribution: mnist89
+0.9787573021773766
 Temperature: 1000 / noise: 0.0014
 Out-distribution: mnist89
+0.98194370685077
 Temperature: 1000 / noise: 0.002
 Out-distribution: mnist89
+0.9808815719596389
 Temperature: 1000 / noise: 0.0024
 Out-distribution: mnist89
+0.9803505045140732
 Temperature: 1000 / noise: 0.005
 Out-distribution: mnist89
+0.9745087626128518
 Temperature: 1000 / noise: 0.01
 Out-distribution: mnist89
+0.9575146043547531
 Temperature: 1000 / noise: 0.05
 Out-distribution: mnist89
+0.16622411046202867
 Temperature: 1000 / noise: 0.1
 Out-distribution: mnist89
+0.01593202336696764
 Temperature: 1000 / noise: 0.2
 Out-distribution: mnist89
+0.023898035050451405
 Baseline method: in_distribution: mnist07==========
 out_distribution: mnist89
  TNR95  TNR99  AUROC  DTACC  AUIN   AUOUT 
- 99.80  73.75  99.00  96.60  99.83  91.67
+ 97.72  74.72  99.00  96.39  99.74  94.81
 
 ODIN method: in_distribution: mnist07==========
 out_distribution: mnist89
  TNR95  TNR99  AUROC  DTACC  AUIN   AUOUT 
- 99.39  77.31  99.00  96.57  99.82  92.90
-temperature: 1
-magnitude: 0.002
+ 97.82  76.05  99.05  96.53  99.74  95.71
+temperature: 100
+magnitude: 0.0005
 
 Traceback (most recent call last):
-  File "/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/OOD_Baseline_and_ODIN.py", line 231, in <module>
+  File "/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/OOD_Baseline_and_ODIN.py", line 324, in <module>
     main()
-  File "/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/OOD_Baseline_and_ODIN.py", line 215, in main
+  File "/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/OOD_Baseline_and_ODIN.py", line 225, in main
     print('out_distribution: ' + out_dist_list[count_out])
 IndexError: list index out of range
 ic| len(dset): 60000
@@ -257,6 +302,6 @@ Out-of-distribution:  mnist89
 in_distribution: mnist07==========
 out_distribution: mnist89
  TNR95  TNR99  AUROC  DTACC  AUIN   AUOUT 
- 99.69 88.30  99.45  96.96  99.91  96.54
-Input noise: Mahalanobis_0.0
+ 98.17 90.84  99.57  97.02  99.93  97.23
+Input noise: Mahalanobis_0.002
 

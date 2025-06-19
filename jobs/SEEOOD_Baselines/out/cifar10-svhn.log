@@ -1,10 +1,10 @@
-Namespace(batch_size=200, dataset='cifar10', dataroot='./data', outf='output/', num_classes=10, net_type='densenet', gpu=0)
+Namespace(batch_size=100, dataset='cifar10', dataroot='./data', outf='output/', num_classes=10, net_type='densenet', gpu=0, metric='original')
 load model: densenet
 load target data:  cifar10
-Downloading https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz to ./data/cifar10-data/cifar-10-python.tar.gz
-  0%|          | 0/170498071 [00:00<?, ?it/s]  0%|          | 229376/170498071 [00:00<01:24, 2018142.35it/s]  1%|          | 1605632/170498071 [00:00<00:19, 8543319.76it/s]  2%|▏         | 3702784/170498071 [00:00<00:11, 13941418.01it/s]  4%|▎         | 6356992/170498071 [00:00<00:08, 18799845.11it/s]  5%|▌         | 9273344/170498071 [00:00<00:07, 22466781.59it/s]  7%|▋         | 12550144/170498071 [00:00<00:06, 25900656.26it/s]  9%|▉         | 15695872/170498071 [00:00<00:05, 27659655.49it/s] 11%|█         | 18972672/170498071 [00:00<00:05, 29247563.08it/s] 13%|█▎        | 22052864/170498071 [00:00<00:05, 29668738.29it/s] 15%|█▍        | 25034752/170498071 [00:01<00:04, 29533176.61it/s] 16%|█▋        | 28016640/170498071 [00:01<00:04, 29220597.92it/s] 18%|█▊        | 31031296/170498071 [00:01<00:04, 29421063.74it/s] 20%|█▉        | 34078720/170498071 [00:01<00:04, 29546702.29it/s] 22%|██▏       | 37060608/170498071 [00:01<00:04, 29441705.14it/s] 24%|██▎       | 40108032/170498071 [00:01<00:04, 29661889.24it/s] 25%|██▌       | 43089920/170498071 [00:01<00:04, 29298918.68it/s] 28%|██▊       | 47087616/170498071 [00:01<00:03, 32319182.70it/s] 30%|███       | 51511296/170498071 [00:01<00:03, 35826640.28it/s] 33%|███▎      | 56885248/170498071 [00:01<00:02, 41112359.58it/s] 37%|███▋      | 62947328/170498071 [00:02<00:02, 46869581.00it/s] 41%|████      | 69730304/170498071 [00:02<00:01, 53098899.46it/s] 46%|████▌     | 77692928/170498071 [00:02<00:01, 60431173.30it/s] 50%|█████     | 85655552/170498071 [00:02<00:01, 65788340.78it/s] 55%|█████▍    | 93716480/170498071 [00:02<00:01, 69575757.44it/s] 60%|█████▉    | 101679104/170498071 [00:02<00:00, 72175470.69it/s] 64%|██████▍   | 109674496/170498071 [00:02<00:00, 73758671.23it/s] 69%|██████▉   | 117604352/170498071 [00:02<00:00, 75155341.14it/s] 74%|███████▎  | 125632512/170498071 [00:02<00:00, 76604411.54it/s] 78%|███████▊  | 133562368/170498071 [00:02<00:00, 77159077.95it/s] 83%|████████▎ | 141590528/170498071 [00:03<00:00, 77978695.31it/s] 88%|████████▊ | 149389312/170498071 [00:03<00:00, 77855149.02it/s] 92%|█████████▏| 157188096/170498071 [00:03<00:00, 77886587.54it/s] 97%|█████████▋| 164986880/170498071 [00:03<00:00, 77441278.03it/s]100%|██████████| 170498071/170498071 [00:03<00:00, 49669965.20it/s]
-Extracting ./data/cifar10-data/cifar-10-python.tar.gz to ./data/cifar10-data
 Files already downloaded and verified
+Files already downloaded and verified
+Evaluating with original ODIN method (OOD samples are used for tuning parameters...)
+Note that this is an unfaithful comparison as the paper claims using no OOD samples.
 /gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:254: UserWarning: This overload of add is deprecated:
 	add(Tensor input, Number alpha, Tensor other, *, Tensor out)
 Consider using one of the following signatures instead:
@@ -13,199 +13,240 @@ Consider using one of the following signatures instead:
 /gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/lib_generation.py:255: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
   outputs = model(Variable(tempInputs, volatile=True))
 Temperature: 1 / noise: 0
-Downloading http://ufldl.stanford.edu/housenumbers/train_32x32.mat to ./data/svhn-data/train_32x32.mat
-  0%|          | 0/182040794 [00:00<?, ?it/s]  0%|          | 32768/182040794 [00:00<10:02, 301844.71it/s]  0%|          | 98304/182040794 [00:00<06:21, 476486.95it/s]  0%|          | 229376/182040794 [00:00<03:46, 802552.65it/s]  0%|          | 393216/182040794 [00:00<02:48, 1076629.39it/s]  0%|          | 688128/182040794 [00:00<01:49, 1658295.72it/s]  1%|          | 1212416/182040794 [00:00<01:06, 2718379.41it/s]  1%|          | 2064384/182040794 [00:00<00:41, 4368739.85it/s]  2%|▏         | 3211264/182040794 [00:00<00:28, 6312210.85it/s]  3%|▎         | 4653056/182040794 [00:00<00:21, 8399052.77it/s]  3%|▎         | 6225920/182040794 [00:01<00:17, 10275169.97it/s]  4%|▍         | 8028160/182040794 [00:01<00:14, 12158815.64it/s]  6%|▌         | 10125312/182040794 [00:01<00:12, 14216760.29it/s]  7%|▋         | 12517376/182040794 [00:01<00:10, 16495716.22it/s]  8%|▊         | 15269888/182040794 [00:01<00:08, 19081928.91it/s] 10%|█         | 18382848/182040794 [00:01<00:07, 21798134.63it/s] 12%|█▏        | 21331968/182040794 [00:01<00:06, 23956215.12it/s] 13%|█▎        | 23756800/182040794 [00:01<00:06, 23579041.09it/s] 14%|█▍        | 26148864/182040794 [00:01<00:06, 22867366.45it/s] 16%|█▌        | 28475392/182040794 [00:02<00:06, 22429048.04it/s] 17%|█▋        | 30736384/182040794 [00:02<00:06, 22336567.32it/s] 18%|█▊        | 32997376/182040794 [00:02<00:06, 22146522.63it/s] 19%|█▉        | 35225600/182040794 [00:02<00:06, 21673507.33it/s] 21%|██        | 37519360/182040794 [00:02<00:06, 21930756.10it/s] 22%|██▏       | 39747584/182040794 [00:02<00:06, 21707597.56it/s] 23%|██▎       | 41975808/182040794 [00:02<00:06, 21728656.12it/s] 24%|██▍       | 44171264/182040794 [00:05<01:00, 2270599.24it/s]  26%|██▌       | 47448064/182040794 [00:05<00:38, 3536918.04it/s] 27%|██▋       | 49512448/182040794 [00:06<00:42, 3126942.12it/s] 28%|██▊       | 51052544/182040794 [00:06<00:36, 3552531.38it/s] 29%|██▊       | 52330496/182040794 [00:07<00:31, 4131110.03it/s] 29%|██▉       | 53575680/182040794 [00:07<00:26, 4801973.93it/s] 30%|███       | 54788096/182040794 [00:07<00:22, 5541936.94it/s] 31%|███       | 56066048/182040794 [00:07<00:19, 6442085.09it/s] 32%|███▏      | 57901056/182040794 [00:07<00:15, 8199946.49it/s] 33%|███▎      | 60162048/182040794 [00:07<00:11, 10734934.69it/s] 34%|███▍      | 62783488/182040794 [00:07<00:08, 13854366.52it/s] 36%|███▋      | 66093056/182040794 [00:07<00:06, 17804547.63it/s] 38%|███▊      | 69206016/182040794 [00:07<00:05, 20927567.10it/s] 39%|███▉      | 71696384/182040794 [00:08<00:05, 21272702.45it/s] 41%|████      | 74121216/182040794 [00:08<00:05, 21315349.58it/s] 42%|████▏     | 76546048/182040794 [00:08<00:04, 22060183.74it/s] 43%|████▎     | 79101952/182040794 [00:08<00:04, 22879000.17it/s] 45%|████▍     | 81526784/182040794 [00:08<00:04, 23022516.33it/s] 46%|████▌     | 83951616/182040794 [00:08<00:04, 23282451.33it/s] 47%|████▋     | 86343680/182040794 [00:08<00:04, 22710153.34it/s] 49%|████▊     | 88670208/182040794 [00:11<00:38, 2408098.49it/s]  51%|█████     | 92798976/182040794 [00:11<00:22, 3904870.25it/s] 52%|█████▏    | 94732288/182040794 [00:13<00:31, 2806429.93it/s] 53%|█████▎    | 96141312/182040794 [00:13<00:28, 2998620.49it/s] 53%|█████▎    | 97255424/182040794 [00:13<00:25, 3319244.24it/s] 54%|█████▍    | 98238464/182040794 [00:13<00:22, 3741562.98it/s] 54%|█████▍    | 99188736/182040794 [00:13<00:19, 4223619.23it/s] 55%|█████▌    | 100368384/182040794 [00:14<00:16, 5062511.36it/s] 56%|█████▌    | 101974016/182040794 [00:14<00:12, 6476033.37it/s] 57%|█████▋    | 103841792/182040794 [00:14<00:09, 8352220.99it/s] 58%|█████▊    | 106135552/182040794 [00:14<00:07, 10816691.45it/s] 60%|█████▉    | 108920832/182040794 [00:14<00:05, 14086848.22it/s] 62%|██████▏   | 112099328/182040794 [00:14<00:03, 17935833.99it/s] 63%|██████▎   | 114327552/182040794 [00:14<00:03, 18087482.27it/s] 64%|██████▍   | 116457472/182040794 [00:14<00:03, 18062586.34it/s] 65%|██████▌   | 118489088/182040794 [00:15<00:03, 17443741.97it/s] 66%|██████▌   | 120389632/182040794 [00:15<00:03, 16756754.92it/s] 67%|██████▋   | 122454016/182040794 [00:15<00:03, 17634349.28it/s] 68%|██████▊   | 124321792/182040794 [00:15<00:03, 17836952.25it/s] 69%|██████▉   | 126255104/182040794 [00:15<00:03, 18218581.80it/s] 71%|███████   | 128417792/182040794 [00:15<00:02, 19078486.70it/s] 72%|███████▏  | 130416640/182040794 [00:15<00:02, 19325563.91it/s] 73%|███████▎  | 132612096/182040794 [00:15<00:02, 19943273.98it/s] 74%|███████▍  | 134643712/182040794 [00:18<00:22, 2110859.53it/s]  75%|███████▌  | 137232384/182040794 [00:18<00:14, 3044535.36it/s] 76%|███████▌  | 138772480/182040794 [00:19<00:17, 2447477.83it/s] 77%|███████▋  | 139886592/182040794 [00:20<00:15, 2650378.81it/s] 77%|███████▋  | 140804096/182040794 [00:20<00:13, 3025545.31it/s] 78%|███████▊  | 141688832/182040794 [00:20<00:11, 3460195.05it/s] 78%|███████▊  | 142540800/182040794 [00:20<00:10, 3937179.73it/s] 79%|███████▉  | 143392768/182040794 [00:20<00:08, 4475654.76it/s] 80%|███████▉  | 144736256/182040794 [00:20<00:06, 5739848.39it/s] 80%|████████  | 146374656/182040794 [00:20<00:04, 7495145.31it/s] 82%|████████▏ | 148406272/182040794 [00:21<00:03, 9841212.67it/s] 83%|████████▎ | 150831104/182040794 [00:21<00:02, 12750626.13it/s] 84%|████████▍ | 153550848/182040794 [00:21<00:01, 15786251.65it/s] 86%|████████▌ | 156565504/182040794 [00:21<00:01, 18712242.75it/s] 87%|████████▋ | 158990336/182040794 [00:21<00:01, 20105213.14it/s] 89%|████████▊ | 161218560/182040794 [00:21<00:01, 20206385.70it/s] 90%|████████▉ | 163381248/182040794 [00:21<00:00, 20210561.96it/s] 91%|█████████ | 165511168/182040794 [00:24<00:07, 2210525.16it/s]  93%|█████████▎| 169836544/182040794 [00:24<00:03, 3865205.21it/s] 95%|█████████▍| 172097536/182040794 [00:26<00:03, 2934102.24it/s] 95%|█████████▌| 173735936/182040794 [00:26<00:02, 3354502.32it/s] 96%|█████████▌| 175112192/182040794 [00:26<00:01, 3814561.52it/s] 97%|█████████▋| 176357376/182040794 [00:26<00:01, 4417646.40it/s] 98%|█████████▊| 177831936/182040794 [00:26<00:00, 5340744.83it/s] 99%|█████████▊| 179470336/182040794 [00:26<00:00, 6635488.65it/s]100%|█████████▉| 181239808/182040794 [00:26<00:00, 8133931.67it/s]100%|██████████| 182040794/182040794 [00:27<00:00, 6739523.83it/s]
-Downloading http://ufldl.stanford.edu/housenumbers/test_32x32.mat to ./data/svhn-data/test_32x32.mat
-  0%|          | 0/64275384 [00:00<?, ?it/s]  0%|          | 32768/64275384 [00:00<03:31, 303547.35it/s]  0%|          | 98304/64275384 [00:00<02:14, 477615.25it/s]  0%|          | 196608/64275384 [00:00<01:35, 670868.29it/s]  1%|          | 393216/64275384 [00:00<00:57, 1115543.19it/s]  1%|          | 655360/64275384 [00:00<00:40, 1577681.21it/s]  2%|▏         | 1015808/64275384 [00:00<00:29, 2159638.63it/s]  2%|▏         | 1474560/64275384 [00:00<00:22, 2823209.72it/s]  3%|▎         | 2097152/64275384 [00:00<00:16, 3732887.02it/s]  4%|▍         | 2850816/64275384 [00:00<00:13, 4709562.83it/s]  6%|▌         | 3670016/64275384 [00:01<00:10, 5568886.13it/s]  7%|▋         | 4587520/64275384 [00:01<00:09, 6444669.36it/s]  9%|▉         | 5668864/64275384 [00:01<00:07, 7491992.79it/s] 11%|█         | 6979584/64275384 [00:01<00:06, 8850607.54it/s] 13%|█▎        | 8617984/64275384 [00:01<00:05, 10695858.12it/s] 16%|█▋        | 10584064/64275384 [00:01<00:04, 13138992.67it/s] 20%|█▉        | 12812288/64275384 [00:01<00:03, 15466588.35it/s] 24%|██▍       | 15433728/64275384 [00:01<00:02, 18017759.42it/s] 29%|██▊       | 18350080/64275384 [00:01<00:02, 20630546.26it/s] 32%|███▏      | 20414464/64275384 [00:02<00:02, 20584535.28it/s] 35%|███▍      | 22478848/64275384 [00:02<00:02, 20021590.83it/s] 38%|███▊      | 24510464/64275384 [00:02<00:01, 20097686.39it/s] 41%|████▏     | 26542080/64275384 [00:02<00:01, 19284257.78it/s] 44%|████▍     | 28573696/64275384 [00:02<00:01, 19544730.20it/s] 48%|████▊     | 30605312/64275384 [00:02<00:01, 19692129.27it/s] 51%|█████     | 32636928/64275384 [00:02<00:01, 19771062.17it/s] 54%|█████▍    | 34635776/64275384 [00:02<00:01, 19784612.20it/s] 57%|█████▋    | 36634624/64275384 [00:05<00:13, 2020891.90it/s]  64%|██████▍   | 41156608/64275384 [00:06<00:06, 3776588.05it/s] 67%|██████▋   | 43384832/64275384 [00:07<00:07, 2923281.75it/s] 70%|██████▉   | 44990464/64275384 [00:07<00:06, 3193374.69it/s] 72%|███████▏  | 46268416/64275384 [00:07<00:04, 3618249.68it/s] 74%|███████▍  | 47415296/64275384 [00:07<00:04, 4122932.76it/s] 76%|███████▌  | 48529408/64275384 [00:07<00:03, 4766827.44it/s] 78%|███████▊  | 49905664/64275384 [00:08<00:02, 5745070.53it/s] 80%|████████  | 51478528/64275384 [00:08<00:01, 7065696.03it/s] 83%|████████▎ | 53379072/64275384 [00:08<00:01, 8899334.67it/s] 86%|████████▋ | 55508992/64275384 [00:08<00:00, 11047541.06it/s] 90%|████████▉ | 57737216/64275384 [00:08<00:00, 13115096.82it/s] 93%|█████████▎| 59965440/64275384 [00:08<00:00, 14876070.93it/s] 97%|█████████▋| 62226432/64275384 [00:08<00:00, 16362380.38it/s]100%|██████████| 64275384/64275384 [00:08<00:00, 7300890.52it/s] 
+Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
+Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
 Out-distribution: svhn
 Temperature: 1 / noise: 0.0005
 Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
 Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
 Out-distribution: svhn
+0.24406139133117388
 Temperature: 1 / noise: 0.001
 Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
 Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
 Out-distribution: svhn
+0.3020592318371125
 Temperature: 1 / noise: 0.0014
 Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
 Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
 Out-distribution: svhn
+0.392719420021595
 Temperature: 1 / noise: 0.002
 Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
 Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
 Out-distribution: svhn
+0.5171602653092704
 Temperature: 1 / noise: 0.0024
 Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
 Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
 Out-distribution: svhn
+0.578860095634737
 Temperature: 1 / noise: 0.005
 Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
 Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
 Out-distribution: svhn
+0.7428659571186179
 Temperature: 1 / noise: 0.01
 Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
 Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
 Out-distribution: svhn
+0.7693583217646152
 Temperature: 1 / noise: 0.05
 Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
 Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
 Out-distribution: svhn
+0.0025836803948788845
 Temperature: 1 / noise: 0.1
 Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
 Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
 Out-distribution: svhn
+0.0012725590004627474
 Temperature: 1 / noise: 0.2
 Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
 Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
 Out-distribution: svhn
+0.007751041184636764
 Temperature: 10 / noise: 0
 Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
 Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
 Out-distribution: svhn
+0.5728829245719574
 Temperature: 10 / noise: 0.0005
 Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
 Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
 Out-distribution: svhn
+0.413735924726207
 Temperature: 10 / noise: 0.001
 Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
 Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
 Out-distribution: svhn
+0.40193583217646156
 Temperature: 10 / noise: 0.0014
 Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
 Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
 Out-distribution: svhn
+0.45330094092241247
 Temperature: 10 / noise: 0.002
 Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
 Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
 Out-distribution: svhn
+0.5322381613450563
 Temperature: 10 / noise: 0.0024
 Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
 Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
 Out-distribution: svhn
+0.5682554372975475
 Temperature: 10 / noise: 0.005
 Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
 Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
 Out-distribution: svhn
+0.7008715101033471
 Temperature: 10 / noise: 0.01
 Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
 Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
 Out-distribution: svhn
+0.7124016658954189
 Temperature: 10 / noise: 0.05
 Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
 Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
 Out-distribution: svhn
+0.0028150547585994445
 Temperature: 10 / noise: 0.1
 Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
 Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
 Out-distribution: svhn
+0.0009254974548820183
 Temperature: 10 / noise: 0.2
 Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
 Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
 Out-distribution: svhn
+0.00489742403208393
 Temperature: 100 / noise: 0
 Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
 Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
 Out-distribution: svhn
+0.5842202683942619
 Temperature: 100 / noise: 0.0005
 Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
 Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
 Out-distribution: svhn
+0.4242634582754897
 Temperature: 100 / noise: 0.001
 Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
 Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
 Out-distribution: svhn
+0.4138516119080673
 Temperature: 100 / noise: 0.0014
 Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
 Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
 Out-distribution: svhn
+0.4622088539256517
 Temperature: 100 / noise: 0.002
 Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
 Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
 Out-distribution: svhn
+0.5322381613450563
 Temperature: 100 / noise: 0.0024
 Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
 Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
 Out-distribution: svhn
+0.5616612679315132
 Temperature: 100 / noise: 0.005
 Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
 Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
 Out-distribution: svhn
+0.6720654018201451
 Temperature: 100 / noise: 0.01
 Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
 Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
 Out-distribution: svhn
+0.627178775258368
 Temperature: 100 / noise: 0.05
 Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
 Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
 Out-distribution: svhn
+0.0032778034860404537
 Temperature: 100 / noise: 0.1
 Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
 Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
 Out-distribution: svhn
+0.0011183094246490777
 Temperature: 100 / noise: 0.2
 Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
 Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
 Out-distribution: svhn
+0.005398735153478329
 Temperature: 1000 / noise: 0
 Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
 Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
 Out-distribution: svhn
+0.5840274564244948
 Temperature: 1000 / noise: 0.0005
 Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
 Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
 Out-distribution: svhn
+0.4247647693968841
 Temperature: 1000 / noise: 0.001
 Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
 Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
 Out-distribution: svhn
+0.4143143606355083
 Temperature: 1000 / noise: 0.0014
 Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
 Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
 Out-distribution: svhn
+0.46351997532006783
 Temperature: 1000 / noise: 0.002
 Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
 Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
 Out-distribution: svhn
+0.5329708468301713
 Temperature: 1000 / noise: 0.0024
 Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
 Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
 Out-distribution: svhn
+0.5604272713250038
 Temperature: 1000 / noise: 0.005
 Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
 Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
 Out-distribution: svhn
+0.6706385932438685
 Temperature: 1000 / noise: 0.01
 Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
 Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
 Out-distribution: svhn
+0.6210473546197748
 Temperature: 1000 / noise: 0.05
 Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
 Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
 Out-distribution: svhn
+0.003239241092086953
 Temperature: 1000 / noise: 0.1
 Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
 Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
 Out-distribution: svhn
+0.0011183094246490777
 Temperature: 1000 / noise: 0.2
 Using downloaded and verified file: ./data/svhn-data/train_32x32.mat
 Using downloaded and verified file: ./data/svhn-data/test_32x32.mat
 Out-distribution: svhn
+0.005398735153478329
 Baseline method: in_distribution: cifar10==========
 out_distribution: svhn
  TNR95  TNR99  AUROC  DTACC  AUIN   AUOUT 
- 74.92  10.57  89.76  83.90  85.09  94.23
+ 35.15  10.73  89.80  83.90  85.54  93.95
 
 ODIN method: in_distribution: cifar10==========
 out_distribution: svhn
  TNR95  TNR99  AUROC  DTACC  AUIN   AUOUT 
- 88.12  40.11  94.11  86.77  87.70  97.52
-temperature: 10
-magnitude: 0.01
+ 74.29  47.56  91.82  86.93  68.00  96.97
+temperature: 1
+magnitude: 0.005
 
 Traceback (most recent call last):
-  File "/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/OOD_Baseline_and_ODIN.py", line 231, in <module>
+  File "/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/OOD_Baseline_and_ODIN.py", line 324, in <module>
     main()
-  File "/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/OOD_Baseline_and_ODIN.py", line 215, in main
+  File "/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/OOD_Baseline_and_ODIN.py", line 225, in main
     print('out_distribution: ' + out_dist_list[count_out])
 IndexError: list index out of range
 Namespace(batch_size=200, dataset='cifar10', dataroot='./data', outf='./output/', num_classes=10, net_type='densenet', gpu=0)
@@ -261,6 +302,6 @@ Out-of-distribution:  svhn
 in_distribution: cifar10==========
 out_distribution: svhn
  TNR95  TNR99  AUROC  DTACC  AUIN   AUOUT 
- 98.34 63.00  98.14  93.51  96.47  99.20
-Input noise: Mahalanobis_0.01
+ 90.36 63.04  98.13  93.60  96.41  99.19
+Input noise: Mahalanobis_0.005
 

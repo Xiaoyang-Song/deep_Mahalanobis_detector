@@ -95,113 +95,158 @@ ic| len(dset): 60000
 ic| len(dset): 10000
 ic| len(dset): 60000
 ic| len(dset): 10000
-Namespace(batch_size=200, dataset='fm07', dataroot='./data', outf='output/', num_classes=10, net_type='densenet', gpu=0)
+Namespace(batch_size=100, dataset='fm07', dataroot='./data', outf='output/', num_classes=10, net_type='densenet', gpu=0, metric='original')
 load model: densenet
 load target data:  fm07
+Evaluating with original ODIN method (OOD samples are used for tuning parameters...)
+Note that this is an unfaithful comparison as the paper claims using no OOD samples.
 Temperature: 1 / noise: 0
 Out-distribution: fm89
 Temperature: 1 / noise: 0.0005
 Out-distribution: fm89
+0.5526315789473684
 Temperature: 1 / noise: 0.001
 Out-distribution: fm89
+0.631578947368421
 Temperature: 1 / noise: 0.0014
 Out-distribution: fm89
+0.6378947368421053
 Temperature: 1 / noise: 0.002
 Out-distribution: fm89
+0.631578947368421
 Temperature: 1 / noise: 0.0024
 Out-distribution: fm89
+0.6126315789473684
 Temperature: 1 / noise: 0.005
 Out-distribution: fm89
+0.49684210526315786
 Temperature: 1 / noise: 0.01
 Out-distribution: fm89
+0.2036842105263158
 Temperature: 1 / noise: 0.05
 Out-distribution: fm89
+0.021052631578947323
 Temperature: 1 / noise: 0.1
 Out-distribution: fm89
+0.021052631578947323
 Temperature: 1 / noise: 0.2
 Out-distribution: fm89
+0.1289473684210526
 Temperature: 10 / noise: 0
 Out-distribution: fm89
+0.6410526315789473
 Temperature: 10 / noise: 0.0005
 Out-distribution: fm89
+0.6936842105263158
 Temperature: 10 / noise: 0.001
 Out-distribution: fm89
+0.7178947368421053
 Temperature: 10 / noise: 0.0014
 Out-distribution: fm89
+0.7289473684210526
 Temperature: 10 / noise: 0.002
 Out-distribution: fm89
+0.7384210526315789
 Temperature: 10 / noise: 0.0024
 Out-distribution: fm89
+0.7236842105263157
 Temperature: 10 / noise: 0.005
 Out-distribution: fm89
+0.62
 Temperature: 10 / noise: 0.01
 Out-distribution: fm89
+0.3410526315789474
 Temperature: 10 / noise: 0.05
 Out-distribution: fm89
+0.02631578947368418
 Temperature: 10 / noise: 0.1
 Out-distribution: fm89
+0.03473684210526318
 Temperature: 10 / noise: 0.2
 Out-distribution: fm89
+0.12526315789473685
 Temperature: 100 / noise: 0
 Out-distribution: fm89
+0.658421052631579
 Temperature: 100 / noise: 0.0005
 Out-distribution: fm89
+0.7026315789473685
 Temperature: 100 / noise: 0.001
 Out-distribution: fm89
+0.7231578947368421
 Temperature: 100 / noise: 0.0014
 Out-distribution: fm89
+0.7373684210526316
 Temperature: 100 / noise: 0.002
 Out-distribution: fm89
+0.7321052631578948
 Temperature: 100 / noise: 0.0024
 Out-distribution: fm89
+0.7163157894736842
 Temperature: 100 / noise: 0.005
 Out-distribution: fm89
+0.6221052631578947
 Temperature: 100 / noise: 0.01
 Out-distribution: fm89
+0.3447368421052631
 Temperature: 100 / noise: 0.05
 Out-distribution: fm89
+0.03210526315789475
 Temperature: 100 / noise: 0.1
 Out-distribution: fm89
+0.042631578947368465
 Temperature: 100 / noise: 0.2
 Out-distribution: fm89
+0.15052631578947373
 Temperature: 1000 / noise: 0
 Out-distribution: fm89
+0.6605263157894736
 Temperature: 1000 / noise: 0.0005
 Out-distribution: fm89
+0.7042105263157894
 Temperature: 1000 / noise: 0.001
 Out-distribution: fm89
+0.7178947368421053
 Temperature: 1000 / noise: 0.0014
 Out-distribution: fm89
+0.7357894736842105
 Temperature: 1000 / noise: 0.002
 Out-distribution: fm89
+0.7431578947368421
 Temperature: 1000 / noise: 0.0024
 Out-distribution: fm89
+0.7189473684210526
 Temperature: 1000 / noise: 0.005
 Out-distribution: fm89
+0.618421052631579
 Temperature: 1000 / noise: 0.01
 Out-distribution: fm89
+0.3436842105263158
 Temperature: 1000 / noise: 0.05
 Out-distribution: fm89
+0.030526315789473735
 Temperature: 1000 / noise: 0.1
 Out-distribution: fm89
+0.04578947368421049
 Temperature: 1000 / noise: 0.2
 Out-distribution: fm89
+0.15000000000000002
 Baseline method: in_distribution: fm07==========
 out_distribution: fm89
  TNR95  TNR99  AUROC  DTACC  AUIN   AUOUT 
- 76.40  15.50  90.23  83.64  98.50  54.43
+ 42.26  15.63  90.09  83.19  97.53  65.69
 
 ODIN method: in_distribution: fm07==========
 out_distribution: fm89
  TNR95  TNR99  AUROC  DTACC  AUIN   AUOUT 
- 89.40  39.30  94.66  87.61  99.16  74.59
-temperature: 1000
-magnitude: 0.0005
+ 71.63  40.84  94.46  87.89  98.51  82.15
+temperature: 100
+magnitude: 0.0024
 
 Traceback (most recent call last):
-  File "/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/OOD_Baseline_and_ODIN.py", line 231, in <module>
+  File "/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/OOD_Baseline_and_ODIN.py", line 324, in <module>
     main()
-  File "/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/OOD_Baseline_and_ODIN.py", line 215, in main
+  File "/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/OOD_Baseline_and_ODIN.py", line 225, in main
     print('out_distribution: ' + out_dist_list[count_out])
 IndexError: list index out of range
 ic| len(dset): 60000
@@ -257,6 +302,6 @@ Out-of-distribution:  fm89
 in_distribution: fm07==========
 out_distribution: fm89
  TNR95  TNR99  AUROC  DTACC  AUIN   AUOUT 
- 89.80 44.90  94.86  88.55  99.13  77.70
-Input noise: Mahalanobis_0.0005
+ 79.30 50.10  95.31  88.95  99.23  78.29
+Input noise: Mahalanobis_0.0
 

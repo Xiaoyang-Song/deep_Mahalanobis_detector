@@ -50,113 +50,158 @@ ic| len(dset): 60000
 ic| len(dset): 60000
 ic| len(dset): 60000
 ic| len(dset): 60000
-Namespace(batch_size=200, dataset='mnist', dataroot='./data', outf='output/', num_classes=10, net_type='densenet', gpu=0)
+Namespace(batch_size=100, dataset='mnist', dataroot='./data', outf='output/', num_classes=10, net_type='densenet', gpu=0, metric='original')
 load model: densenet
 load target data:  mnist
+Evaluating with original ODIN method (OOD samples are used for tuning parameters...)
+Note that this is an unfaithful comparison as the paper claims using no OOD samples.
 Temperature: 1 / noise: 0
 Out-distribution: fm
 Temperature: 1 / noise: 0.0005
 Out-distribution: fm
+0.9807070707070707
 Temperature: 1 / noise: 0.001
 Out-distribution: fm
+0.9736363636363636
 Temperature: 1 / noise: 0.0014
 Out-distribution: fm
+0.9673737373737373
 Temperature: 1 / noise: 0.002
 Out-distribution: fm
+0.9580808080808081
 Temperature: 1 / noise: 0.0024
 Out-distribution: fm
+0.952020202020202
 Temperature: 1 / noise: 0.005
 Out-distribution: fm
+0.9312121212121212
 Temperature: 1 / noise: 0.01
 Out-distribution: fm
+0.9324242424242424
 Temperature: 1 / noise: 0.05
 Out-distribution: fm
+0.1425252525252525
 Temperature: 1 / noise: 0.1
 Out-distribution: fm
+0.024949494949494944
 Temperature: 1 / noise: 0.2
 Out-distribution: fm
+0.030101010101010073
 Temperature: 10 / noise: 0
 Out-distribution: fm
+0.9401010101010101
 Temperature: 10 / noise: 0.0005
 Out-distribution: fm
+0.9155555555555556
 Temperature: 10 / noise: 0.001
 Out-distribution: fm
+0.8955555555555555
 Temperature: 10 / noise: 0.0014
 Out-distribution: fm
+0.8806060606060606
 Temperature: 10 / noise: 0.002
 Out-distribution: fm
+0.8508080808080808
 Temperature: 10 / noise: 0.0024
 Out-distribution: fm
+0.8322222222222222
 Temperature: 10 / noise: 0.005
 Out-distribution: fm
+0.7702020202020202
 Temperature: 10 / noise: 0.01
 Out-distribution: fm
+0.7762626262626262
 Temperature: 10 / noise: 0.05
 Out-distribution: fm
+0.05969696969696969
 Temperature: 10 / noise: 0.1
 Out-distribution: fm
+0.014242424242424279
 Temperature: 10 / noise: 0.2
 Out-distribution: fm
+0.0059595959595959425
 Temperature: 100 / noise: 0
 Out-distribution: fm
+0.9212121212121213
 Temperature: 100 / noise: 0.0005
 Out-distribution: fm
+0.8983838383838384
 Temperature: 100 / noise: 0.001
 Out-distribution: fm
+0.8743434343434343
 Temperature: 100 / noise: 0.0014
 Out-distribution: fm
+0.8555555555555556
 Temperature: 100 / noise: 0.002
 Out-distribution: fm
+0.826060606060606
 Temperature: 100 / noise: 0.0024
 Out-distribution: fm
+0.8080808080808081
 Temperature: 100 / noise: 0.005
 Out-distribution: fm
+0.7443434343434343
 Temperature: 100 / noise: 0.01
 Out-distribution: fm
+0.7378787878787878
 Temperature: 100 / noise: 0.05
 Out-distribution: fm
+0.05818181818181822
 Temperature: 100 / noise: 0.1
 Out-distribution: fm
+0.012626262626262652
 Temperature: 100 / noise: 0.2
 Out-distribution: fm
+0.0047474747474747225
 Temperature: 1000 / noise: 0
 Out-distribution: fm
+0.92
 Temperature: 1000 / noise: 0.0005
 Out-distribution: fm
+0.8954545454545455
 Temperature: 1000 / noise: 0.001
 Out-distribution: fm
+0.8729292929292929
 Temperature: 1000 / noise: 0.0014
 Out-distribution: fm
+0.8534343434343434
 Temperature: 1000 / noise: 0.002
 Out-distribution: fm
+0.8237373737373738
 Temperature: 1000 / noise: 0.0024
 Out-distribution: fm
+0.8064646464646464
 Temperature: 1000 / noise: 0.005
 Out-distribution: fm
+0.7422222222222222
 Temperature: 1000 / noise: 0.01
 Out-distribution: fm
+0.7363636363636363
 Temperature: 1000 / noise: 0.05
 Out-distribution: fm
+0.05717171717171721
 Temperature: 1000 / noise: 0.1
 Out-distribution: fm
+0.011515151515151478
 Temperature: 1000 / noise: 0.2
 Out-distribution: fm
+0.004545454545454519
 Baseline method: in_distribution: mnist==========
 out_distribution: fm
  TNR95  TNR99  AUROC  DTACC  AUIN   AUOUT 
- 99.68  75.74  99.14  97.04  99.32  98.76
+ 98.62  76.37  99.16  97.11  99.34  98.78
 
 ODIN method: in_distribution: mnist==========
 out_distribution: fm
  TNR95  TNR99  AUROC  DTACC  AUIN   AUOUT 
- 99.67  71.69  99.00  96.61  99.21  98.46
+ 98.07  71.52  99.00  96.61  99.21  98.47
 temperature: 1
 magnitude: 0.0005
 
 Traceback (most recent call last):
-  File "/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/OOD_Baseline_and_ODIN.py", line 231, in <module>
+  File "/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/OOD_Baseline_and_ODIN.py", line 324, in <module>
     main()
-  File "/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/OOD_Baseline_and_ODIN.py", line 215, in main
+  File "/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/OOD_Baseline_and_ODIN.py", line 225, in main
     print('out_distribution: ' + out_dist_list[count_out])
 IndexError: list index out of range
 ic| len(dset): 60000

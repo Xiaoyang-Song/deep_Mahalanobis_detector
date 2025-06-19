@@ -1,0 +1,93 @@
+--------------------------------------------------
+METHOD: MSP
+Experiment: mnist
+TPR95: 97.72
+TPR99: 74.72
+AUROC: 99.00
+
+Experiment: fashionmnist
+TPR95: 42.26
+TPR99: 15.63
+AUROC: 90.09
+
+Experiment: mnist-fashionmnist
+TPR95: 98.62
+TPR99: 76.37
+AUROC: 99.16
+
+Experiment: svhn
+TPR95: 61.65
+TPR99: 19.40
+AUROC: 93.28
+
+Experiment: cifar10-svhn
+TPR95: 35.15
+TPR99: 10.73
+AUROC: 89.80
+
+--------------------------------------------------
+
+
+
+--------------------------------------------------
+METHOD: ODIN
+Experiment: mnist
+TPR95: 97.82
+TPR99: 76.05
+AUROC: 99.05
+
+Experiment: fashionmnist
+TPR95: 71.63
+TPR99: 40.84
+AUROC: 94.46
+
+Experiment: mnist-fashionmnist
+TPR95: 98.07
+TPR99: 71.52
+AUROC: 99.00
+
+Experiment: svhn
+TPR95: 70.14
+TPR99: 36.01
+AUROC: 93.72
+
+Experiment: cifar10-svhn
+TPR95: 74.29
+TPR99: 47.56
+AUROC: 91.82
+
+--------------------------------------------------
+
+
+
+--------------------------------------------------
+METHOD: MAHA
+Experiment: mnist
+TPR95: 98.17
+TPR99: 90.84
+AUROC: 99.57
+
+Experiment: fashionmnist
+TPR95: 79.30
+TPR99: 50.10
+AUROC: 95.31
+
+Experiment: mnist-fashionmnist
+TPR95: 100.00
+TPR99: 100.00
+AUROC: 100.00
+
+Experiment: svhn
+TPR95: 23.37
+TPR99: 4.70
+AUROC: 76.80
+
+Experiment: cifar10-svhn
+TPR95: 90.36
+TPR99: 63.04
+AUROC: 98.13
+
+--------------------------------------------------
+
+
+

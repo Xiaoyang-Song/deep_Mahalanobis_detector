@@ -95,11 +95,13 @@ ic| len(dset): 73257
 ic| len(dset): 26032
 ic| len(dset): 73257
 ic| len(dset): 26032
-Namespace(batch_size=200, dataset='svhn07', dataroot='./data', outf='output/', num_classes=10, net_type='densenet', gpu=0)
+Namespace(batch_size=100, dataset='svhn07', dataroot='./data', outf='output/', num_classes=10, net_type='densenet', gpu=0, metric='original')
 load model: densenet
 load target data:  svhn07
 Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
 Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
+Evaluating with original ODIN method (OOD samples are used for tuning parameters...)
+Note that this is an unfaithful comparison as the paper claims using no OOD samples.
 Temperature: 1 / noise: 0
 Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
 Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
@@ -108,190 +110,233 @@ Temperature: 1 / noise: 0.0005
 Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
 Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
 Out-distribution: svhn89
+0.6421553090332806
 Temperature: 1 / noise: 0.001
 Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
 Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
 Out-distribution: svhn89
+0.6535657686212362
 Temperature: 1 / noise: 0.0014
 Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
 Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
 Out-distribution: svhn89
+0.6522979397781299
 Temperature: 1 / noise: 0.002
 Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
 Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
 Out-distribution: svhn89
+0.6548335974643423
 Temperature: 1 / noise: 0.0024
 Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
 Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
 Out-distribution: svhn89
+0.6446909667194929
 Temperature: 1 / noise: 0.005
 Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
 Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
 Out-distribution: svhn89
+0.6057052297939778
 Temperature: 1 / noise: 0.01
 Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
 Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
 Out-distribution: svhn89
+0.5549920760697307
 Temperature: 1 / noise: 0.05
 Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
 Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
 Out-distribution: svhn89
+0.07606973058637079
 Temperature: 1 / noise: 0.1
 Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
 Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
 Out-distribution: svhn89
+0.054199683042789215
 Temperature: 1 / noise: 0.2
 Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
 Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
 Out-distribution: svhn89
+0.055784469096671896
 Temperature: 10 / noise: 0
 Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
 Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
 Out-distribution: svhn89
+0.6992076069730586
 Temperature: 10 / noise: 0.0005
 Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
 Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
 Out-distribution: svhn89
+0.7030110935023772
 Temperature: 10 / noise: 0.001
 Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
 Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
 Out-distribution: svhn89
+0.7014263074484944
 Temperature: 10 / noise: 0.0014
 Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
 Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
 Out-distribution: svhn89
+0.7007923930269413
 Temperature: 10 / noise: 0.002
 Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
 Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
 Out-distribution: svhn89
+0.6824088748019017
 Temperature: 10 / noise: 0.0024
 Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
 Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
 Out-distribution: svhn89
+0.6732171156893819
 Temperature: 10 / noise: 0.005
 Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
 Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
 Out-distribution: svhn89
+0.6136291600633914
 Temperature: 10 / noise: 0.01
 Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
 Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
 Out-distribution: svhn89
+0.5470681458003169
 Temperature: 10 / noise: 0.05
 Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
 Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
 Out-distribution: svhn89
+0.05990491283676702
 Temperature: 10 / noise: 0.1
 Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
 Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
 Out-distribution: svhn89
+0.058637083993660855
 Temperature: 10 / noise: 0.2
 Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
 Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
 Out-distribution: svhn89
+0.054833597464342354
 Temperature: 100 / noise: 0
 Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
 Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
 Out-distribution: svhn89
+0.7055467511885896
 Temperature: 100 / noise: 0.0005
 Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
 Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
 Out-distribution: svhn89
+0.7068145800316957
 Temperature: 100 / noise: 0.001
 Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
 Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
 Out-distribution: svhn89
+0.7033280507131537
 Temperature: 100 / noise: 0.0014
 Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
 Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
 Out-distribution: svhn89
+0.7052297939778129
 Temperature: 100 / noise: 0.002
 Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
 Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
 Out-distribution: svhn89
+0.6890649762282092
 Temperature: 100 / noise: 0.0024
 Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
 Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
 Out-distribution: svhn89
+0.6817749603803487
 Temperature: 100 / noise: 0.005
 Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
 Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
 Out-distribution: svhn89
+0.6196513470681457
 Temperature: 100 / noise: 0.01
 Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
 Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
 Out-distribution: svhn89
+0.5438985736925515
 Temperature: 100 / noise: 0.05
 Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
 Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
 Out-distribution: svhn89
+0.06370839936608563
 Temperature: 100 / noise: 0.1
 Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
 Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
 Out-distribution: svhn89
+0.0630744849445325
 Temperature: 100 / noise: 0.2
 Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
 Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
 Out-distribution: svhn89
+0.05546751188589538
 Temperature: 1000 / noise: 0
 Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
 Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
 Out-distribution: svhn89
+0.7061806656101426
 Temperature: 1000 / noise: 0.0005
 Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
 Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
 Out-distribution: svhn89
+0.7071315372424722
 Temperature: 1000 / noise: 0.001
 Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
 Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
 Out-distribution: svhn89
+0.7064976228209192
 Temperature: 1000 / noise: 0.0014
 Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
 Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
 Out-distribution: svhn89
+0.7036450079239303
 Temperature: 1000 / noise: 0.002
 Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
 Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
 Out-distribution: svhn89
+0.6858954041204437
 Temperature: 1000 / noise: 0.0024
 Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
 Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
 Out-distribution: svhn89
+0.6779714738510301
 Temperature: 1000 / noise: 0.005
 Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
 Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
 Out-distribution: svhn89
+0.6206022187004754
 Temperature: 1000 / noise: 0.01
 Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
 Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
 Out-distribution: svhn89
+0.5426307448494454
 Temperature: 1000 / noise: 0.05
 Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
 Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
 Out-distribution: svhn89
+0.06339144215530901
 Temperature: 1000 / noise: 0.1
 Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
 Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
 Out-distribution: svhn89
+0.0630744849445325
 Temperature: 1000 / noise: 0.2
 Using downloaded and verified file: ./Datasets/SVHN/train_32x32.mat
 Using downloaded and verified file: ./Datasets/SVHN/test_32x32.mat
 Out-distribution: svhn89
+0.05832012678288434
 Baseline method: in_distribution: svhn07==========
 out_distribution: svhn89
  TNR95  TNR99  AUROC  DTACC  AUIN   AUOUT 
- 88.56  18.71  93.17  87.12  99.20  57.14
+ 61.65  19.40  93.28  87.11  98.96  63.98
 
 ODIN method: in_distribution: svhn07==========
 out_distribution: svhn89
  TNR95  TNR99  AUROC  DTACC  AUIN   AUOUT 
- 89.00  33.26  93.87  87.27  99.25  65.65
+ 70.14  36.01  93.72  86.98  98.97  71.87
 temperature: 10
-magnitude: 0.0005
+magnitude: 0.001
 
 Traceback (most recent call last):
-  File "/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/OOD_Baseline_and_ODIN.py", line 231, in <module>
+  File "/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/OOD_Baseline_and_ODIN.py", line 324, in <module>
     main()
-  File "/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/OOD_Baseline_and_ODIN.py", line 215, in main
+  File "/gpfs/accounts/sunwbgt_root/sunwbgt98/xysong/deep_Mahalanobis_detector/OOD_Baseline_and_ODIN.py", line 225, in main
     print('out_distribution: ' + out_dist_list[count_out])
 IndexError: list index out of range
 ic| len(dset): 73257
@@ -363,6 +408,6 @@ Out-of-distribution:  svhn89
 in_distribution: svhn07==========
 out_distribution: svhn89
  TNR95  TNR99  AUROC  DTACC  AUIN   AUOUT 
- 48.03  4.70  76.80  70.66  96.63  24.41
+ 23.37  4.70  76.80  70.66  96.63  24.41
 Input noise: Mahalanobis_0.01
 
